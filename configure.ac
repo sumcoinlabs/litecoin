@@ -462,7 +462,7 @@ AC_ARG_ENABLE([util-wallet],
   [build_litecoin_wallet=$enableval],
   [build_litecoin_wallet=$build_litecoin_utils])
 =======
-  [build litecoin-cli bitcoin-tx (default=yes)])],
+  [build litecoin-cli litecoin-tx (default=yes)])],
   [build_bitcoin_utils=$withval],
   [build_bitcoin_utils=yes])
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5

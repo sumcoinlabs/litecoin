@@ -22,7 +22,7 @@ from test_framework.util import assert_equal, get_bip9_status, satoshi_round, sy
 =======
 VB_TOP_BITS = 0x20000000
 
-# TestP2PConn: A peer we use to send messages to bitcoind, and store responses.
+# TestP2PConn: A peer we use to send messages to litecoind, and store responses.
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 class TestP2PConn(P2PInterface):
     def __init__(self):

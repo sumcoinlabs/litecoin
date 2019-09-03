@@ -805,7 +805,7 @@
 <<<<<<< HEAD
         <location filename="../litecoin.cpp" line="+392"/>
 =======
-        <location filename="../bitcoin.cpp" line="+529"/>
+        <location filename="../litecoin.cpp" line="+529"/>
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>A fatal error occurred. Litecoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>

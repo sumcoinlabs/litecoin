@@ -278,7 +278,7 @@ or building and depending on a local version of Berkeley DB 4.8. The readily ava
 <<<<<<< HEAD
 `--with-incompatible-bdb` according to the [PKGBUILD](https://projects.archlinux.org/svntogit/community.git/tree/litecoin/trunk/PKGBUILD).
 =======
-`--with-incompatible-bdb` according to the [PKGBUILD](https://projects.archlinux.org/svntogit/community.git/tree/bitcoin/trunk/PKGBUILD).
+`--with-incompatible-bdb` according to the [PKGBUILD](https://projects.archlinux.org/svntogit/community.git/tree/litecoin/trunk/PKGBUILD).
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 As mentioned above, when maintaining portability of the wallet between the standard Litecoin Core distributions and independently built
 node software is desired, Berkeley DB 4.8 must be used.

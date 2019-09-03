@@ -31,8 +31,8 @@ These are the dependencies currently used by Litecoin Core. You can find instruc
 | ZeroMQ | [4.3.1](https://github.com/zeromq/libzmq/releases) | 4.0.0 | No |  |  |
 =======
 | Qt | [5.9.6](https://download.qt.io/official_releases/qt/) | 5.x | No |  |  |
-| XCB |  |  |  |  | [Yes](https://github.com/bitcoin/bitcoin/blob/master/depends/packages/qt.mk#L87) (Linux only) |
-| xkbcommon |  |  |  |  | [Yes](https://github.com/bitcoin/bitcoin/blob/master/depends/packages/qt.mk#L86) (Linux only) |
+| XCB |  |  |  |  | [Yes](https://github.com/litecoin/litecoin/blob/master/depends/packages/qt.mk#L87) (Linux only) |
+| xkbcommon |  |  |  |  | [Yes](https://github.com/litecoin/litecoin/blob/master/depends/packages/qt.mk#L86) (Linux only) |
 | ZeroMQ | [4.3.1](https://github.com/zeromq/libzmq/releases) |  | No |  |  |
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 | zlib | [1.2.11](https://zlib.net/) |  |  |  | No |

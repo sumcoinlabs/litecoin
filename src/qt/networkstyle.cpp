@@ -37,7 +37,7 @@ NetworkStyle::NetworkStyle(const QString &_appName, const int iconColorHueShift,
 =======
     QPixmap pixmap;
     if (std::char_traits<char>::length(_titleAddText) == 0) {
-        pixmap.load(":/icons/bitcoin");
+        pixmap.load(":/icons/litecoin");
     } else {
         pixmap.load(":/icons/litecoin_splash");
     }

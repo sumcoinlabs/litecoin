@@ -452,7 +452,7 @@ $(QT_MOC_CPP): $(PROTOBUF_H)
 <<<<<<< HEAD
 # litecoin-qt binary #
 =======
-# bitcoin-qt binary #
+# litecoin-qt binary #
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 qt_litecoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
@@ -465,7 +465,7 @@ if TARGET_WINDOWS
 endif
 qt_litecoin_qt_LDADD = qt/liblitecoinqt.a $(LIBBITCOIN_SERVER)
 =======
-qt_litecoin_qt_SOURCES = qt/bitcoin.cpp
+qt_litecoin_qt_SOURCES = qt/litecoin.cpp
 if TARGET_DARWIN
   qt_litecoin_qt_SOURCES += $(BITCOIN_MM)
 endif

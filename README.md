@@ -89,7 +89,7 @@ Translations
 Changes to translations as well as new translations can be submitted to
 [Litecoin Core's Transifex page](https://www.transifex.com/projects/p/litecoin/).
 =======
-We only accept translation fixes that are submitted through [Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/bitcoin/).
+We only accept translation fixes that are submitted through [Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/litecoin/).
 Translations are converted to Litecoin periodically.
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 

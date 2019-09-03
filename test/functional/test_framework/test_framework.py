@@ -164,7 +164,7 @@ class BitcoinTestFramework(metaclass=BitcoinTestMetaClass):
         self.options.litecoind = os.getenv("BITCOIND", default=config["environment"]["BUILDDIR"] + '/src/litecoind' + config["environment"]["EXEEXT"])
         self.options.litecoincli = os.getenv("BITCOINCLI", default=config["environment"]["BUILDDIR"] + '/src/litecoin-cli' + config["environment"]["EXEEXT"])
 =======
-        self.options.bitcoind = os.getenv("LITECOIND", default=config["environment"]["BUILDDIR"] + '/src/litecoind' + config["environment"]["EXEEXT"])
+        self.options.litecoind = os.getenv("LITECOIND", default=config["environment"]["BUILDDIR"] + '/src/litecoind' + config["environment"]["EXEEXT"])
         self.options.bitcoincli = os.getenv("LITECOINCLI", default=config["environment"]["BUILDDIR"] + '/src/litecoin-cli' + config["environment"]["EXEEXT"])
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
@@ -526,7 +526,7 @@ class BitcoinTestFramework(metaclass=BitcoinTestMetaClass):
 <<<<<<< HEAD
                 args = [self.options.litecoind, "-datadir=" + datadir, '-disablewallet']
 =======
-                args = [self.options.bitcoind, "-datadir=" + datadir, '-disablewallet']
+                args = [self.options.litecoind, "-datadir=" + datadir, '-disablewallet']
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
                 if i > 0:
                     args.append("-connect=127.0.0.1:" + str(p2p_port(0)))
@@ -621,9 +621,9 @@ class BitcoinTestFramework(metaclass=BitcoinTestMetaClass):
             raise SkipTest("litecoind has not been built with zmq enabled.")
 =======
     def skip_if_no_bitcoind_zmq(self):
-        """Skip the running test if bitcoind has not been compiled with zmq support."""
+        """Skip the running test if litecoind has not been compiled with zmq support."""
         if not self.is_zmq_compiled():
-            raise SkipTest("bitcoind has not been built with zmq enabled.")
+            raise SkipTest("litecoind has not been built with zmq enabled.")
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
     def skip_if_no_wallet(self):
@@ -644,12 +644,12 @@ class BitcoinTestFramework(metaclass=BitcoinTestMetaClass):
 
         return config["components"].getboolean("ENABLE_CLI")
 =======
-        """Skip the running test if bitcoin-cli has not been compiled."""
+        """Skip the running test if litecoin-cli has not been compiled."""
         if not self.is_cli_compiled():
-            raise SkipTest("bitcoin-cli has not been compiled.")
+            raise SkipTest("litecoin-cli has not been compiled.")
 
     def is_cli_compiled(self):
-        """Checks whether bitcoin-cli was compiled."""
+        """Checks whether litecoin-cli was compiled."""
         config = configparser.ConfigParser()
         config.read_file(open(self.options.configfile))
 

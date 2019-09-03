@@ -3,7 +3,7 @@
 <<<<<<< HEAD
         <file alias="litecoin">res/icons/litecoin.png</file>
 =======
-        <file alias="bitcoin">res/icons/bitcoin.png</file>
+        <file alias="litecoin">res/icons/litecoin.png</file>
         <file alias="litecoin_splash">res/icons/litecoin_splash.png</file>
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <file alias="address-book">res/icons/address-book.png</file>

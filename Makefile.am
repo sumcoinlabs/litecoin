@@ -116,7 +116,7 @@ OSX_APP_BUILT=$(OSX_APP)/Contents/PkgInfo $(OSX_APP)/Contents/Resources/empty.lp
 <<<<<<< HEAD
   $(OSX_APP)/Contents/Resources/litecoin.icns $(OSX_APP)/Contents/Info.plist \
 =======
-  $(OSX_APP)/Contents/Resources/bitcoin.icns $(OSX_APP)/Contents/Info.plist \
+  $(OSX_APP)/Contents/Resources/litecoin.icns $(OSX_APP)/Contents/Info.plist \
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
   $(OSX_APP)/Contents/MacOS/Litecoin-Qt $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings
 

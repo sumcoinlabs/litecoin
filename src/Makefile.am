@@ -499,8 +499,8 @@ nodist_liblitecoin_util_a_SOURCES = $(srcdir)/obj/build.h
 # litecoind binary #
 litecoind_SOURCES = litecoind.cpp
 =======
-# bitcoind binary #
-litecoind_SOURCES = bitcoind.cpp
+# litecoind binary #
+litecoind_SOURCES = litecoind.cpp
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 litecoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 litecoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -510,7 +510,7 @@ if TARGET_WINDOWS
 <<<<<<< HEAD
 litecoind_SOURCES += litecoind-res.rc
 =======
-litecoind_SOURCES += bitcoind-res.rc
+litecoind_SOURCES += litecoind-res.rc
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 endif
 
@@ -537,8 +537,8 @@ litecoin_cli_SOURCES = litecoin-cli.cpp
 =======
 litecoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# bitcoin-cli binary #
-litecoin_cli_SOURCES = bitcoin-cli.cpp
+# litecoin-cli binary #
+litecoin_cli_SOURCES = litecoin-cli.cpp
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 litecoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
 litecoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -548,7 +548,7 @@ if TARGET_WINDOWS
 <<<<<<< HEAD
 litecoin_cli_SOURCES += litecoin-cli-res.rc
 =======
-litecoin_cli_SOURCES += bitcoin-cli-res.rc
+litecoin_cli_SOURCES += litecoin-cli-res.rc
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 endif
 
@@ -568,8 +568,8 @@ litecoin_tx_SOURCES = litecoin-tx.cpp
 litecoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# bitcoin-tx binary #
-litecoin_tx_SOURCES = bitcoin-tx.cpp
+# litecoin-tx binary #
+litecoin_tx_SOURCES = litecoin-tx.cpp
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 litecoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 litecoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -579,7 +579,7 @@ if TARGET_WINDOWS
 <<<<<<< HEAD
 litecoin_tx_SOURCES += litecoin-tx-res.rc
 =======
-litecoin_tx_SOURCES += bitcoin-tx-res.rc
+litecoin_tx_SOURCES += litecoin-tx-res.rc
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 endif
 

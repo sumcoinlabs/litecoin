@@ -67,7 +67,7 @@ SplashScreen::SplashScreen(interfaces::Node& node, Qt::WindowFlags f, const Netw
     // draw the litecoin icon, expected size of PNG: 1024x1024
     QRect rectIcon(QPoint(-150,-122), QSize(430,430));
 =======
-    // draw the bitcoin icon, expected size of PNG: 1024x1024
+    // draw the litecoin icon, expected size of PNG: 1024x1024
     QRect rectIcon(QPoint(-70,-30), QSize(300,300));
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 

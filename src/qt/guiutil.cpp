@@ -116,7 +116,7 @@ bool parseLitecoinURI(const QUrl &uri, SendCoinsRecipient *out)
 <<<<<<< HEAD
     // return if URI is not valid or is no litecoin: URI
 =======
-    // return if URI is not valid or is no bitcoin: URI
+    // return if URI is not valid or is no litecoin: URI
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     if(!uri.isValid() || uri.scheme() != QString("litecoin"))
         return false;
