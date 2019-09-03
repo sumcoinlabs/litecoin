@@ -1,12 +1,10 @@
 Litecoin Core integration/staging tree
 =====================================
 
-<<<<<<< HEAD
-[![Build Status](https://travis-ci.org/litecoin/litecoin.svg?branch=master)](https://travis-ci.org/litecoin/litecoin)
+
 
 https://litecoincore.org
-=======
-[![Build Status](https://travis-ci.org/litecoin-project/litecoin.svg?branch=master)](https://travis-ci.org/litecoin-project/litecoin)
+
 
 https://litecoin.org
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
