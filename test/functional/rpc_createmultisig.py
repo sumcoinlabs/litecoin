@@ -25,9 +25,15 @@ class RpcCreateMultiSigTest(LitecoinTestFramework):
 
     def get_keys(self):
         node0, node1, node2 = self.nodes
+<<<<<<< HEAD
         add = [node1.getnewaddress() for _ in range(self.nkeys)]
         self.pub = [node1.getaddressinfo(a)["pubkey"] for a in add]
         self.priv = [node1.dumpprivkey(a) for a in add]
+=======
+        self.add = [node1.getnewaddress() for _ in range(self.nkeys)]
+        self.pub = [node1.getaddressinfo(a)["pubkey"] for a in self.add]
+        self.priv = [node1.dumpprivkey(a) for a in self.add]
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         self.final = node2.getnewaddress()
 
     def run_test(self):
@@ -104,7 +110,7 @@ class RpcCreateMultiSigTest(LitecoinTestFramework):
         madd = msig["address"]
         mredeem = msig["redeemScript"]
         if self.output_type == 'bech32':
-            assert madd[0:4] == "bcrt"  # actually a bech32 address
+            assert madd[0:4] == "rltc"  # actually a bech32 address
 
         # compare against addmultisigaddress
         msigw = node1.addmultisigaddress(self.nsigs, self.pub, None, self.output_type)

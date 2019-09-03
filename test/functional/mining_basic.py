@@ -57,6 +57,9 @@ class MiningTest(LitecoinTestFramework):
         self.restart_node(0)
         connect_nodes_bi(self.nodes, 0, 1)
 
+    def skip_test_if_missing_module(self):
+        self.skip_if_no_wallet()
+
     def run_test(self):
         self.mine_chain()
         node = self.nodes[0]

@@ -24,6 +24,7 @@ pkg install python3
 
 See [dependencies.md](dependencies.md) for a complete overview.
 
+<<<<<<< HEAD
 ### Building BerkeleyDB
 
 BerkeleyDB is only necessary for the wallet functionality. To skip this, pass
@@ -32,6 +33,11 @@ BerkeleyDB is only necessary for the wallet functionality. To skip this, pass
 ```shell
 ./contrib/install_db4.sh `pwd`
 export BDB_PREFIX="$PWD/db4"
+=======
+Download the source code:
+```
+git clone https://github.com/litecoin-project/litecoin
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 ```
 
 ## Building Litecoin Core

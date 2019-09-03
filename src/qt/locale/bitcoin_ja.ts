@@ -67,11 +67,19 @@
     </message>
     <message>
         <source>These are your Litecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+<<<<<<< HEAD
         <translation>これらは、あなたが知っている支払い送り先の Litecoin アドレスです。コインを送る前に、必ず金額と送金先アドレスを確認してください。</translation>
     </message>
     <message>
         <source>These are your Litecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>これらは支払いを受け取るための、あなたの Litecoin アドレスです。トランザクションごとに新しい受け取り用アドレスを作成することが推奨されます。</translation>
+=======
+        <translation>これらは支払いを送信するためのあなたの Litecoin アドレスです。コインを送信する前に、常に額と受信アドレスを確認してください。</translation>
+    </message>
+    <message>
+        <source>These are your Litecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>これらは支払いを受け取るためのビットコインアドレスです。トランザクションごとに新しい受け取り用アドレスを作成することが推奨されます。</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +184,13 @@
         <translation>ウォレットの暗号化の承諾</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
         <translation>警告: もしもあなたのウォレットを暗号化してパスフレーズを忘れてしまったら、&lt;b&gt;あなたの Litecoin はすべて失われます&lt;/b&gt;！</translation>
+=======
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LITECOINS&lt;/b&gt;!</source>
+        <translation>警告: もしもあなたのウォレットを暗号化してパスフレーズを失ってしまったなら、&lt;b&gt;あなたの Litecoin はすべて失われます&lt;/b&gt;!</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,8 +201,13 @@
         <translation>ウォレットの暗号化の完了</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
         <translation>ウォレットの暗号化処理が完了しました。ウォレットを暗号化しても、コンピュータに感染したマルウェアなどによる Litecoin の盗難を完全に防ぐことはできないことにご注意ください。</translation>
+=======
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
+        <translation>暗号化処理を完了させるため %1 をいますぐ終了します。ウォレットの暗号化では、コンピュータに感染したマルウェアなどによるビットコインの盗難から完全に守ることはできないことにご注意ください。</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -368,6 +386,13 @@
     <message>
         <source>Litecoin</source>
         <translation>Litecoin</translation>
+<<<<<<< HEAD
+=======
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>ウォレット</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Send</source>
@@ -391,11 +416,19 @@
     </message>
     <message>
         <source>Sign messages with your Litecoin addresses to prove you own them</source>
+<<<<<<< HEAD
         <translation>Litecoin アドレスでメッセージに署名して、アドレスを所有していることを証明する</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Litecoin addresses</source>
         <translation>メッセージを検証して、指定された Litecoin アドレスで署名されたことを確認する</translation>
+=======
+        <translation>あなたが所有していることを証明するために、あなたの Litecoin アドレスでメッセージに署名してください</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Litecoin addresses</source>
+        <translation>指定された Litecoin アドレスで署名されたことを確認するためにメッセージを検証します</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;File</source>
@@ -415,7 +448,11 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and litecoin: URIs)</source>
+<<<<<<< HEAD
         <translation>支払いをリクエストする (QRコードと litecoin: URIを生成する)&lt;</translation>
+=======
+        <translation>支払いを要求する (QRコードとlitecoin:ではじまるURIを生成する)</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -427,7 +464,11 @@
     </message>
     <message>
         <source>Open a litecoin: URI or payment request</source>
+<<<<<<< HEAD
         <translation>litecoin: URIや支払いリクエストを開く</translation>
+=======
+        <translation>litecoin: URIまたは支払いリクエストを開く</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -435,7 +476,11 @@
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to Litecoin network</source>
+<<<<<<< HEAD
         <translation><numerusform>Litecoin ネットワークへのアクティブな接続は %n 個</numerusform></translation>
+=======
+        <translation><numerusform>%n の Litecoin ネットワークへのアクティブな接続</numerusform></translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -478,6 +523,7 @@
         <translation>ブロックは最新</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>&amp;Sending addresses</source>
         <translation>送金先アドレス一覧(&amp;S)...</translation>
     </message>
@@ -536,6 +582,10 @@
     <message>
         <source>Main Window</source>
         <translation>メインウィンドウ</translation>
+=======
+        <source>Show the %1 help message to get a list with possible Litecoin command-line options</source>
+        <translation>有効な Litecoin のコマンドライン オプションを見るために %1 のヘルプメッセージを表示します。</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>%1 client</source>
@@ -615,7 +665,11 @@
     </message>
     <message>
         <source>A fatal error occurred. Litecoin can no longer continue safely and will quit.</source>
+<<<<<<< HEAD
         <translation>致命的なエラーが発生しました。Litecoin を安全に動作し続けることができないため終了します。</translation>
+=======
+        <translation>致命的なエラーが発生しました。Litecoin は安全に継続することができず終了するでしょう。</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
 </context>
 <context>
@@ -914,7 +968,11 @@
     </message>
     <message>
         <source>%1 will download and store a copy of the Litecoin block chain.</source>
+<<<<<<< HEAD
         <translation>%1 は Litecoin ブロックチェーンのコピーをダウンロードし保存します。</translation>
+=======
+        <translation>%1はLitecoinのブロックチェーンの複製をダウンロードし保存します。</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -945,11 +1003,19 @@
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the litecoin network, as detailed below.</source>
+<<<<<<< HEAD
         <translation>最近の取引がまだ表示されていない可能性があります。そのため、ウォレットの残高が正しく表示されていないかもしれません。この情報は、ウォレットが Litecoin ネットワークへの同期が完了すると正確なものとなります。詳細は下記を参照してください。</translation>
     </message>
     <message>
         <source>Attempting to spend litecoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>まだ表示されていない取引が関係する Litecoin を使用しようとすると、ネットワークから認証を受けられません。</translation>
+=======
+        <translation>確認できない最近のトランザクションがあるかもしれません。これによりウォレットの残高は不正確なものである可能性があります。この情報はウォレットが一度ビットコインネットワークへの同期が完了すると正確なものとなります。詳細は下記を参照してください。</translation>
+    </message>
+    <message>
+        <source>Attempting to spend litecoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>まだ表示されていないトランザクションが影響するビットコインを使用しようとすると、ネットワークから認証がなされないでしょう。</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1127,7 +1193,11 @@
     </message>
     <message>
         <source>Automatically open the Litecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+<<<<<<< HEAD
         <translation>自動的にルーター上の Litecoin クライアントのポートを開放します。あなたのルーターが UPnP に対応していて、それが有効になっている場合のみ動作します。</translation>
+=======
+        <translation>自動的にルーター上の Litecoin クライアントのポートを開きます。あなたのルーターが UPnP に対応していて、それが有効になっている場合に作動します。</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1143,7 +1213,11 @@
     </message>
     <message>
         <source>Connect to the Litecoin network through a SOCKS5 proxy.</source>
+<<<<<<< HEAD
         <translation>SOCKS5 プロキシ経由で Litecoin ネットワークに接続する。</translation>
+=======
+        <translation>SOCKS5 プロキシ経由でLitecoinネットワークに接続する</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1179,7 +1253,11 @@
     </message>
     <message>
         <source>Connect to the Litecoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+<<<<<<< HEAD
         <translation>Tor秘匿サービスを利用するため、専用の SOCKS5 プロキシ経由で Litecoin ネットワークに接続する。</translation>
+=======
+        <translation>Tor秘匿サービスを利用するため、独立なSOCKS5プロキシ経由でLitecoinネットワークに接続する</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1290,7 +1368,11 @@
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Litecoin network after a connection is established, but this process has not completed yet.</source>
+<<<<<<< HEAD
         <translation>表示されている情報は古い可能性があります。ウォレットは接続確立後に Litecoin ネットワークと自動的に同期しますが、同期処理はまだ完了していません。</translation>
+=======
+        <translation>表示された情報は古いかもしれません。接続が確立されると、あなたのウォレットは Litecoin ネットワークと自動的に同期しますが、このプロセスはまだ完了していません。</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1376,8 +1458,13 @@
         <translation>'litecoin://' は正しいURIではありません｡ 'litecoin:'を使用してください｡</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>You are using a BIP70 URL which will be unsupported in the future.</source>
         <translation>将来サポートされなくなる予定のBIP70形式のURLをお使いです。</translation>
+=======
+        <source>'litecoin://' is not a valid URI. Use 'litecoin:' instead.</source>
+        <translation>'litecoin://' は正しいURIではありません｡ 'litecoin:'を利用してください｡</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -1393,7 +1480,11 @@
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Litecoin address or malformed URI parameters.</source>
+<<<<<<< HEAD
         <translation>URIを解析できませんでした！ Litecoin アドレスが無効であるか、URIパラメーターが不正な形式である可能性があります。</translation>
+=======
+        <translation>URI を解析できません! これは無効な Litecoin アドレスあるいは不正な形式の URI パラメーターによって引き起こされる場合があります。</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1495,7 +1586,11 @@
     </message>
     <message>
         <source>Enter a Litecoin address (e.g. %1)</source>
+<<<<<<< HEAD
         <translation>Litecoin アドレスを入力してください (例: %1)</translation>
+=======
+        <translation>Litecoinアドレスを入力してください (例 %1)</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>%1 d</source>
@@ -1951,7 +2046,11 @@
     </message>
     <message>
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Litecoin network.</source>
+<<<<<<< HEAD
         <translation>支払いリクエストに添付するメッセージ（任意）。支払リクエスト開始時に表示されます。注意: メッセージは Litecoin ネットワーク上へ送信されません。</translation>
+=======
+        <translation>支払リクエストが開始された時に表示される、支払リクエストに添える任意のメッセージです。注意：メッセージはLitecoinネットワークを通じて、支払と共に送られるわけではありません。</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2203,6 +2302,17 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>隠す</translation>
     </message>
     <message>
+<<<<<<< HEAD
+=======
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for litecoin transactions than the network can process.</source>
+        <translation>ブロックの容量に比べてトランザクション流量が少ないうちは最小手数料のみの支払で十分です。しかしながらネットワークが処理しきれないほどlitecoinトランザクションの需要がひとたび生まれてしまった場合には、永遠に検証がされないトランザクションになってしまう可能性があることに注意してください。</translation>
+    </message>
+    <message>
+        <source>(read the tooltip)</source>
+        <translation>（ツールチップをお読みください）</translation>
+    </message>
+    <message>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Recommended:</source>
         <translation>推奨:</translation>
     </message>
@@ -2380,7 +2490,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     <message>
         <source>Warning: Invalid Litecoin address</source>
+<<<<<<< HEAD
         <translation>警告: 無効な Litecoin アドレス</translation>
+=======
+        <translation>警告：無効なLitecoinアドレスです</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2423,7 +2537,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     <message>
         <source>The Litecoin address to send the payment to</source>
+<<<<<<< HEAD
         <translation>支払い先 Litecoin アドレス</translation>
+=======
+        <translation>支払の送金先Litecoinアドレス</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Alt+A</source>
@@ -2443,7 +2561,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     <message>
         <source>The fee will be deducted from the amount being sent. The recipient will receive less litecoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+<<<<<<< HEAD
         <translation>手数料は送金する金額から差し引かれます。送金先には金額欄で指定した額よりも少ない Litecoin が送られます。送金先が複数ある場合は、手数料は均等に分けられます。</translation>
+=======
+        <translation>送金する金額から手数料が差し引かれます。受取人は数量フィールドで指定した量よりも少ないビットコインを受け取ります。受取人が複数いる場合には、手数料は均等割されます。</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2471,7 +2593,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     <message>
         <source>A message that was attached to the litecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Litecoin network.</source>
+<<<<<<< HEAD
         <translation>litecoin: URIに添付されていたメッセージです。これは参照用として取引とともに保存されます。注意: メッセージは Litecoin ネットワーク上へ送信されません。</translation>
+=======
+        <translation>litecoin: URIに添付されていたメッセージです。これは参照用としてトランザクションとともに保存されます。注意：このメッセージはLitecoinネットワークを通して送信されるわけではありません。</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Pay To:</source>
@@ -2516,11 +2642,19 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     <message>
         <source>You can sign messages/agreements with your addresses to prove you can receive litecoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+<<<<<<< HEAD
         <translation>あなたが所有しているアドレスでメッセージや契約書に署名をすることで、それらのアドレスへ送られた Litecoin を受け取ることができることを証明できます。フィッシング攻撃者があなたを騙して、あなたの身分情報に署名させようとしている可能性があるため、よくわからないものやランダムな文字列に対して署名しないでください。あなたが同意した、よく詳細の記された文言にのみ署名するようにしてください。</translation>
     </message>
     <message>
         <source>The Litecoin address to sign the message with</source>
         <translation>メッセージの署名に使用する Litecoin アドレス</translation>
+=======
+        <translation>あなたの所有しているアドレスによりメッセージや合意書に署名をすることで、それらアドレスに対して送られたビットコインを受け取ることができることを証明できます。フィッシング攻撃により不正にあなたの識別情報を署名させられてしまうことを防ぐために、不明確なものやランダムなものに対して署名しないよう注意してください。あなたが同意した、よく詳細の記された文言にのみ署名するようにしてください。</translation>
+    </message>
+    <message>
+        <source>The Litecoin address to sign the message with</source>
+        <translation>メッセージを署名するLitecoinアドレス</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2552,7 +2686,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     <message>
         <source>Sign the message to prove you own this Litecoin address</source>
+<<<<<<< HEAD
         <translation>メッセージに署名してこの Litecoin アドレスを所有していることを証明</translation>
+=======
+        <translation>この Litecoin アドレスを所有していることを証明するためにメッセージに署名</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2576,11 +2714,19 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     <message>
         <source>The Litecoin address the message was signed with</source>
+<<<<<<< HEAD
         <translation>メッセージの署名に使われた Litecoin アドレス</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified Litecoin address</source>
         <translation>メッセージを検証して指定された Litecoin アドレスで署名されたことを確認</translation>
+=======
+        <translation>メッセージの署名に使われたLitecoinアドレス</translation>
+    </message>
+    <message>
+        <source>Verify the message to ensure it was signed with the specified Litecoin address</source>
+        <translation>指定された Litecoin アドレスで署名されたことを保証するメッセージを検証</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3248,7 +3394,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     <message>
         <source>Litecoin Core</source>
+<<<<<<< HEAD
         <translation>Litecoin コア</translation>
+=======
+        <translation>Litecoin のコア</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>The %s developers</source>
@@ -3269,6 +3419,10 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Error reading %s! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
         <translation>%s の読み込み中にエラーが発生しました！ 全ての鍵は正しく読み込めましたが、取引データやアドレス帳の項目が失われたか、正しくない可能性があります。</translation>
+    </message>
+    <message>
+        <source>Group outputs by address, selecting all or none, instead of selecting on a per-output basis. Privacy is improved as an address is only used once (unless someone sends to it after spending from it), but may result in slightly higher fees as suboptimal coin selection may result due to the added limitation (default: %u)</source>
+        <translation>出力ごとではなく、アドレス単位に出力をまとめて選択します。(後からまたそのアドレスに支払われない限り)アドレスが一度しか使用されないためプライバシーが向上します。ただし追加の制限により最適ではないコイン選択が発生した場合に、わずかに高い手数料となる可能性があります。(初期値: %u)</translation>
     </message>
     <message>
         <source>Please check that your computer's date and time are correct! If your clock is wrong, %s will not work properly.</source>
@@ -3419,6 +3573,10 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>PIDファイルの作成に失敗しました ('%s': %s)</translation>
     </message>
     <message>
+        <source>Specified blocks directory "%s" does not exist.</source>
+        <translation>指定のブロックディレクトリ"%s"は存在しません｡</translation>
+    </message>
+    <message>
         <source>Upgrading txindex database</source>
         <translation>txindex データベースの更新中</translation>
     </message>
@@ -3551,12 +3709,15 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>取引の署名に失敗しました</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The specified config file %s does not exist
 </source>
         <translation>指定された設定ファイル %s が存在しません｡
 </translation>
     </message>
     <message>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>The transaction amount is too small to pay the fee</source>
         <translation>取引の手数料差引後金額が小さすぎるため、送金できません。</translation>
     </message>

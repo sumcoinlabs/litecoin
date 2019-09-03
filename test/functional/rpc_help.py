@@ -1,16 +1,28 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2018 The Litecoin Core developers
+=======
+# Copyright (c) 2018 The Bitcoin Core developers
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test RPC help output."""
 
+<<<<<<< HEAD
 from test_framework.test_framework import LitecoinTestFramework
+=======
+from test_framework.test_framework import BitcoinTestFramework
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 from test_framework.util import assert_equal, assert_raises_rpc_error
 
 import os
 
 
+<<<<<<< HEAD
 class HelpRpcTest(LitecoinTestFramework):
+=======
+class HelpRpcTest(BitcoinTestFramework):
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     def set_test_params(self):
         self.num_nodes = 1
 

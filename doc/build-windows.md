@@ -5,9 +5,15 @@ Below are some notes on how to build Litecoin Core for Windows.
 
 The options known to work for building Litecoin Core on Windows are:
 
+<<<<<<< HEAD
 * On Linux, using the [Mingw-w64](https://mingw-w64.org/doku.php) cross compiler tool chain. Ubuntu Bionic 18.04 is required
 and is the platform used to build the Litecoin Core Windows release binaries.
 * On Windows, using [Windows
+=======
+* On Linux using the [Mingw-w64](https://mingw-w64.org/doku.php) cross compiler tool chain. Ubuntu Bionic 18.04 is required
+and is the platform used to build the Litecoin Core Windows release binaries.
+* On Windows using [Windows
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 Subsystem for Linux (WSL)](https://msdn.microsoft.com/commandline/wsl/about) and the Mingw-w64 cross compiler tool chain.
 
 Other options which may work, but which have not been extensively tested are (please contribute instructions):
@@ -85,11 +91,19 @@ Once the toolchain is installed the build steps are common:
 
 Note that for WSL the Litecoin Core source path MUST be somewhere in the default mount file system, for
 example /usr/src/litecoin, AND not under /mnt/d/. If this is not the case the dependency autoconf scripts will fail.
+<<<<<<< HEAD
 This means you cannot use a directory that is located directly on the host Windows file system to perform the build.
 
 Acquire the source in the usual way:
 
     git clone https://github.com/litecoin/litecoin.git
+=======
+This means you cannot use a directory that located directly on the host Windows file system to perform the build.
+
+Acquire the source in the usual way:
+
+    git clone https://github.com/litecoin-project/litecoin.git
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 Once the source code is ready the build steps are below:
 
@@ -117,7 +131,11 @@ This means you cannot use a directory that located directly on the host Windows 
 
 Acquire the source in the usual way:
 
+<<<<<<< HEAD
     git clone https://github.com/litecoin/litecoin.git
+=======
+    git clone https://github.com/litecoin-project/litecoin.git
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 Then build using:
 
@@ -140,12 +158,17 @@ After building using the Windows subsystem it can be useful to copy the compiled
 executables to a directory on the Windows drive in the same directory structure
 as they appear in the release `.zip` archive. This can be done in the following
 way. This will install to `c:\workspace\litecoin`, for example:
+<<<<<<< HEAD
 
     make install DESTDIR=/mnt/c/workspace/litecoin
 
 You can also create an installer using:
 
     make deploy
+=======
+
+    make install DESTDIR=/mnt/c/workspace/litecoin
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 Footnotes
 ---------
@@ -153,6 +176,10 @@ Footnotes
 <a name="footnote1">1</a>: Starting from Ubuntu Xenial 16.04, both the 32 and 64 bit Mingw-w64 packages install two different
 compiler options to allow a choice between either posix or win32 threads. The default option is win32 threads which is the more
 efficient since it will result in binary code that links directly with the Windows kernel32.lib. Unfortunately, the headers
+<<<<<<< HEAD
 required to support win32 threads conflict with some of the classes in the C++11 standard library, in particular std::mutex.
+=======
+required to support win32 threads conflict with some of the classes in the C++11 standard library in particular std::mutex.
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 It's not possible to build the Litecoin Core code using the win32 version of the Mingw-w64 cross compilers (at least not without
 modifying headers in the Litecoin Core source code).

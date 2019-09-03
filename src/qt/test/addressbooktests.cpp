@@ -149,7 +149,11 @@ void AddressBookTests::addressBookTests()
         // and fails to handle returned nulls
         // (https://bugreports.qt.io/browse/QTBUG-49686).
         QWARN("Skipping AddressBookTests on mac build with 'minimal' platform set due to Qt bugs. To run AppTests, invoke "
+<<<<<<< HEAD
               "with 'test_litecoin-qt -platform cocoa' on mac, or else use a linux or windows build.");
+=======
+              "with 'test_bitcoin-qt -platform cocoa' on mac, or else use a linux or windows build.");
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         return;
     }
 #endif

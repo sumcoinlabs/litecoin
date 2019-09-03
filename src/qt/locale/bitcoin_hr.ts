@@ -71,7 +71,11 @@
     </message>
     <message>
         <source>These are your Litecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+<<<<<<< HEAD
         <translation>Ovo su vaše Litecoin adrese za primanje novca. Preporučeno je da koristite novu primateljsku adresu za svaku transakciju.</translation>
+=======
+        <translation>Ovo su vaše Litecoin adrese za primanje novca. Preporučamo da koristite novu adresu za primanje za svaku transakciju.</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +180,8 @@
         <translation>Potvrdite šifriranje novčanika</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Upozorenje: Ako šifrirate vaš novčanik i izgubite lozinku, &lt;b&gt;IZGUBIT ĆETE SVE SVOJE BITCOINE!&lt;/b&gt;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LITECOINS&lt;/b&gt;!</source>
+        <translation>Upozorenje: Ako šifrirate vaš novčanik i izgubite lozinku, &lt;b&gt;IZGUBIT ĆETE SVE SVOJE LITECOINE!&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -334,12 +338,17 @@
         <translation>Re-indeksiranje blokova na disku...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Proxy is &lt;b&gt;enabled&lt;/b&gt;: %1</source>
         <translation>Proxy je &lt;b&gt;uključen&lt;/b&gt;: %1</translation>
     </message>
     <message>
         <source>Send coins to a Litecoin address</source>
         <translation>Pošaljite novac na Litecoin adresu</translation>
+=======
+        <source>Send coins to a Litecoin address</source>
+        <translation>Slanje novca na litecoin adresu</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -364,6 +373,13 @@
     <message>
         <source>Litecoin</source>
         <translation>Litecoin</translation>
+<<<<<<< HEAD
+=======
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Novčanik</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Send</source>
@@ -387,11 +403,19 @@
     </message>
     <message>
         <source>Sign messages with your Litecoin addresses to prove you own them</source>
+<<<<<<< HEAD
         <translation>Poruku potpišemo s Litecoin adresom, kako bi dokazali vlasništvo nad tom adresom</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Litecoin addresses</source>
         <translation>Provjerite poruku da je potpisana s navedenom Litecoin adresom</translation>
+=======
+        <translation>Poruku potpišemo s litecoin adresom, kako bi dokazali vlasništvo nad tom adresom</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Litecoin addresses</source>
+        <translation>Provjeravanje poruke, kao dokaz, da je potpisana navedenom litecoin adresom</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;File</source>
@@ -411,7 +435,11 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and litecoin: URIs)</source>
+<<<<<<< HEAD
         <translation>Zatražite uplatu (stvara QR kod i litecoin: URI adresu)</translation>
+=======
+        <translation>Zatraži uplatu (stvara QR kod i litecoin: URI adresu)</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -423,7 +451,11 @@
     </message>
     <message>
         <source>Open a litecoin: URI or payment request</source>
+<<<<<<< HEAD
         <translation>Otvorite litecoin: URI adresu ili zahtjev za uplatu</translation>
+=======
+        <translation>Otvori litecoin: URI adresu ili zahtjev za uplatu</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -724,11 +756,19 @@
     </message>
     <message>
         <source>The label associated with this address list entry</source>
+<<<<<<< HEAD
         <translation>Oznaka ovog zapisa u adresaru</translation>
     </message>
     <message>
         <source>The address associated with this address list entry. This can only be modified for sending addresses.</source>
         <translation>Adresa ovog zapisa u adresaru. Može se mijenjati samo kod adresa za slanje.</translation>
+=======
+        <translation>Oznaka litecoin adrese</translation>
+    </message>
+    <message>
+        <source>The address associated with this address list entry. This can only be modified for sending addresses.</source>
+        <translation>Litecoin adresa. Izmjene adrese su moguće samo za adrese za slanje.</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Address</source>
@@ -748,6 +788,7 @@
     </message>
     <message>
         <source>The entered address "%1" is not a valid Litecoin address.</source>
+<<<<<<< HEAD
         <translation>Upisana adresa "%1" nije valjana Litecoin adresa.</translation>
     </message>
     <message>
@@ -757,6 +798,9 @@
     <message>
         <source>The entered address "%1" is already in the address book with label "%2".</source>
         <translation>Unesena adresa "%1" postoji već u imeniku pod oznakom "%2".</translation>
+=======
+        <translation>Upisana adresa "%1" nije valjana litecoin adresa.</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -816,6 +860,7 @@
         <translation>Dobrodošli</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Welcome to %1.</source>
         <translation>Dobrodošli u %1.</translation>
     </message>
@@ -866,6 +911,10 @@
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
         <translation>Greška: Zadana podatkovna mapa "%1" ne može biti stvorena.</translation>
+=======
+        <source>Litecoin</source>
+        <translation>Litecoin</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Error</source>
@@ -1151,6 +1200,7 @@
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
         <translation>Izaberite željeni najmanji dio litecoina koji će biti prikazan u sučelju i koji će se koristiti za plaćanje.</translation>
+<<<<<<< HEAD
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1159,6 +1209,8 @@
     <message>
         <source>&amp;Third party transaction URLs</source>
         <translation>&amp;URL-ovi treće stranke o transakciji</translation>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;OK</source>
@@ -3526,8 +3578,13 @@ Napomena: Budući da se naknada računa po bajtu, naknada od "100 satošija po k
         <translation>Ovo je transakcijska naknada koju ćete platiti ako pošaljete transakciju.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Transaction amounts must not be negative</source>
         <translation>Iznosi transakcije ne smiju biti negativni</translation>
+=======
+        <source>Litecoin Core</source>
+        <translation>Litecoin Core</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Transaction has too long of a mempool chain</source>

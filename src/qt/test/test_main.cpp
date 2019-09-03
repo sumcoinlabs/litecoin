@@ -71,7 +71,11 @@ int main(int argc, char *argv[])
 
     // Don't remove this, it's needed to access
     // QApplication:: and QCoreApplication:: in the tests
+<<<<<<< HEAD
     LitecoinApplication app(*node, argc, argv);
+=======
+    QApplication app(argc, argv);
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     app.setApplicationName("Litecoin-Qt-test");
 
     SSL_library_init();

@@ -338,10 +338,13 @@
         <translation>Blokai iš naujo indeksuojami...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Proxy is &lt;b&gt;enabled&lt;/b&gt;: %1</source>
         <translation>Tarpinis serveris yra &lt;b&gt;įgalintas&lt;/b&gt;: %1</translation>
     </message>
     <message>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Send coins to a Litecoin address</source>
         <translation>Siųsti monetas Litecoin adresui</translation>
     </message>
@@ -368,6 +371,13 @@
     <message>
         <source>Litecoin</source>
         <translation>Litecoin</translation>
+<<<<<<< HEAD
+=======
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Piniginė</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Send</source>
@@ -717,8 +727,13 @@
         <translation>Kopijuoti kiekį</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Copy fee</source>
         <translation>Kopijuoti mokestį</translation>
+=======
+        <source>Litecoin</source>
+        <translation>Litecoin</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Copy after fee</source>
@@ -761,6 +776,7 @@
         <translation>(nėra žymės)</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>change from %1 (%2)</source>
         <translation>pakeisti nuo %1 (%2)</translation>
     </message>
@@ -1126,6 +1142,8 @@
         <translation>&amp;Išleiskite nepatvirtintus pakeitimus</translation>
     </message>
     <message>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Automatically open the Litecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Automatiškai atidaryti Litecoin kliento prievadą maršrutizatoriuje. Tai veikia tik tada, kai jūsų maršrutizatorius palaiko UPnP ir ji įjungta.</translation>
     </message>
@@ -3283,8 +3301,13 @@ Pastaba: Kadangi mokestis apskaičiuojamas pagal baitą, mokestis už „100 sat
         <translation>Tikrinami blokai...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Information</source>
         <translation>Informacija</translation>
+=======
+        <source>Sign the message to prove you own this Litecoin address</source>
+        <translation>Registruotis žinute įrodymuii, kad turite šį adresą</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>This is experimental software.</source>
@@ -3299,8 +3322,13 @@ Pastaba: Kadangi mokestis apskaičiuojamas pagal baitą, mokestis už „100 sat
         <translation>Sandoris yra per didelis</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Unable to generate initial keys</source>
         <translation>Nepavyko generuoti pradinių raktų</translation>
+=======
+        <source>Verify the message to ensure it was signed with the specified Litecoin address</source>
+        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Litecoin adresas</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Verifying wallet(s)...</source>
@@ -3323,8 +3351,13 @@ Pastaba: Kadangi mokestis apskaičiuojamas pagal baitą, mokestis už „100 sat
         <translation>Įkeliant piniginę %s įvyko klaida. Dvigubo -wallet pavadinimas.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Starting network threads...</source>
         <translation>Pradėti tinklo temas...</translation>
+=======
+        <source>Litecoin Core</source>
+        <translation>Litecoin branduolys</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>The wallet will avoid paying less than the minimum relay fee.</source>

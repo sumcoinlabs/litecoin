@@ -176,7 +176,7 @@
         <translation>Підтвердіть шифрування гаманця</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LITECOINS&lt;/b&gt;!</source>
         <translation>УВАГА: Якщо ви зашифруєте гаманець і забудете пароль, ви &lt;b&gt;ВТРАТИТЕ ВСІ СВОЇ БІТКОІНИ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -188,8 +188,13 @@
         <translation>Гаманець зашифровано</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
         <translation>Ваш гаманець зашифровано. Пам'ятайте, шифрування гаманця не гарантує абсолютний захист біткоінів від крадіжки шкідливим програмним забезпеченням, яке вразило комп'ютер.</translation>
+=======
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 буде закрито зараз, щоб завершити процес шифрування. Пам'ятайте, що шифрування гаманця не може повністю захистити ваші litecoinи від крадіжки шкідливими програмами, у випадку якщо ваш комп'ютер буде інфіковано.</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -368,6 +373,13 @@
     <message>
         <source>Litecoin</source>
         <translation>Litecoin</translation>
+<<<<<<< HEAD
+=======
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Гаманець</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Send</source>
@@ -478,6 +490,7 @@
         <translation>Синхронізовано</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>&amp;Sending addresses</source>
         <translation>&amp;Адреси для відправлення</translation>
     </message>
@@ -486,6 +499,8 @@
         <translation>&amp;Адреси для отримання</translation>
     </message>
     <message>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Show the %1 help message to get a list with possible Litecoin command-line options</source>
         <translation>Показати довідку %1 для отримання переліку можливих параметрів командного рядка.</translation>
     </message>
@@ -913,11 +928,19 @@
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the litecoin network, as detailed below.</source>
+<<<<<<< HEAD
         <translation>Нещодавні транзакції ще не відображаються, тому баланс вашого гаманця може бути неточним. Ця інформація буде вірною після того, як ваш гаманець завершить синхронізацію з мережею біткойн, врахровуйте показники нижче.</translation>
     </message>
     <message>
         <source>Attempting to spend litecoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>Спроба відправити біткоїни, які ще не відображаються, не буде прийнята мережею.</translation>
+=======
+        <translation>Нещодавні транзакції ще не відображаються, тому баланс вашого гаманця може бути неточним. Ця інформація буде вірною після того, як ваш гаманець завершить синхронізацію з мережею litecoin, врахровуйте показники нижче.</translation>
+    </message>
+    <message>
+        <source>Attempting to spend litecoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Спроба видправити litecoinи, які ще не відображаються, не буде прийнята мережею.</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1325,7 +1348,11 @@
     </message>
     <message>
         <source>Cannot start litecoin: click-to-pay handler</source>
+<<<<<<< HEAD
         <translation>Не вдається запустити біткойн: обробник клацни-плати</translation>
+=======
+        <translation>Не вдається запустити litecoin: обробник клацни-плати</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>URI handling</source>
@@ -1334,10 +1361,13 @@
     <message>
         <source>'litecoin://' is not a valid URI. Use 'litecoin:' instead.</source>
         <translation>'litecoin://' не вірний URI. Використовуйте 'litecoin:'.</translation>
+<<<<<<< HEAD
     </message>
     <message>
         <source>You are using a BIP70 URL which will be unsupported in the future.</source>
         <translation>Ви використовуєте BIP70 посилання, яке в майбутньому не буде підтримуватись.</translation>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -1353,7 +1383,11 @@
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Litecoin address or malformed URI parameters.</source>
+<<<<<<< HEAD
         <translation>Неможливо обробити URI! Причиною цього може бути некоректна Біткойн-адреса або неправильні параметри URI.</translation>
+=======
+        <translation>Неможливо обробити URI! Причиною цього може бути некоректна Litecoin-адреса або неправильні параметри URI.</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -2165,6 +2199,17 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Приховати</translation>
     </message>
     <message>
+<<<<<<< HEAD
+=======
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for litecoin transactions than the network can process.</source>
+        <translation>Оплата тільки мінімальної комісії є прийнятною, допоки обсяг транзакцій є меншим простору в блоках. Але майте на увазі, що це може анулювати транзакцію, якщо попит на Litecoin транзакції стане більшим, ніж мережа зможе обробити.</translation>
+    </message>
+    <message>
+        <source>(read the tooltip)</source>
+        <translation>(читати підказки)</translation>
+    </message>
+    <message>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Recommended:</source>
         <translation>Рекомендовано:</translation>
     </message>
@@ -2342,7 +2387,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     <message>
         <source>Warning: Invalid Litecoin address</source>
+<<<<<<< HEAD
         <translation>Увага: Неприпустима Біткойн-адреса.</translation>
+=======
+        <translation>Увага: Неприпустима Litecoin-адреса.</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -3505,11 +3554,14 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Вказаний шлях -walletdir "%s" не є каталогом</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The specified config file %s does not exist
 </source>
         <translation>Зазначений файл конфігурації %s не існує</translation>
     </message>
     <message>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>The transaction amount is too small to pay the fee</source>
         <translation>Неможливо сплатити комісію із-за малої суми транзакції</translation>
     </message>

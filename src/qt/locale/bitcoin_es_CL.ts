@@ -176,8 +176,8 @@
         <translation>Confirmar cifrado del monedero</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Advertencia: Si encriptas tu billetera y pierdes tu contraseña, vas a perder&lt;b&gt;TODOS TUS BITCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LITECOINS&lt;/b&gt;!</source>
+        <translation>Advertencia: Si encriptas tu billetera y pierdes tu contraseña, vas a perder&lt;b&gt;TODOS TUS LITECOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,6 +188,13 @@
         <translation>Billetera codificada</translation>
     </message>
     <message>
+<<<<<<< HEAD
+=======
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 se cerrará para finalizar el proceso de encriptación. Recuerda que encriptar tu billetera no protege completamente a tus litecoins de ser robados por virus y malwares en tu computadora.</translation>
+    </message>
+    <message>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
         <translation>IMPORTANTE: Cualquier respaldo anterior que hayas hecho del archivo de tu billetera debe ser reemplazado por el nuevo archivo encriptado que has generado. Por razones de seguridad, todos los respaldos realizados anteriormente serán inutilizables al momento de que utilices tu nueva billetera encriptada.</translation>
     </message>
@@ -356,6 +363,13 @@
     <message>
         <source>Litecoin</source>
         <translation>Litecoin</translation>
+<<<<<<< HEAD
+=======
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Cartera</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Send</source>
@@ -468,11 +482,14 @@
     <message>
         <source>Show the %1 help message to get a list with possible Litecoin command-line options</source>
         <translation>Mostrar el mensaje de ayuda %1 para obtener una lista de los posibles comandos de Litecoin</translation>
+<<<<<<< HEAD
     </message>
     <message>
         <source>&amp;Window</source>
         <translation>y windows
 </translation>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>%1 client</source>
@@ -2030,6 +2047,13 @@
         <translation>Solicitud de pago expirada</translation>
     </message>
     <message>
+<<<<<<< HEAD
+=======
+        <source>Pay only the required fee of %1</source>
+        <translation>Pagar únicamente la comisión requerida de %1</translation>
+    </message>
+    <message>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Warning: Invalid Litecoin address</source>
         <translation>Peligro: Dirección de Litecoin inválida</translation>
     </message>

@@ -250,6 +250,17 @@
         <translation>Cambiar contraseña</translation>
     </message>
     <message>
+<<<<<<< HEAD
+=======
+        <source>&amp;Sending addresses...</source>
+        <translation>Enviando direcciones</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>Recibiendo direcciones</translation>
+    </message>
+    <message>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Send coins to a Litecoin address</source>
         <translation>Enviar monedas a una dirección Litecoin</translation>
     </message>
@@ -260,6 +271,13 @@
     <message>
         <source>Litecoin</source>
         <translation>Litecoin</translation>
+<<<<<<< HEAD
+=======
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Billetera</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Show / Hide</source>

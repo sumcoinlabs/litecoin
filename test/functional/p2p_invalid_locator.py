@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2015-2018 The Litecoin Core developers
+=======
+# Copyright (c) 2015-2018 The Bitcoin Core developers
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test node responses to invalid locators.
@@ -14,6 +18,9 @@ class InvalidLocatorTest(LitecoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = False
+
+    def skip_test_if_missing_module(self):
+        self.skip_if_no_wallet()
 
     def run_test(self):
         node = self.nodes[0]  # convenience reference to the node

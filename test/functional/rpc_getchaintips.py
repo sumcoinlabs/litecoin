@@ -17,6 +17,12 @@ class GetChainTipsTest (LitecoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 4
 
+<<<<<<< HEAD
+=======
+    def skip_test_if_missing_module(self):
+        self.skip_if_no_wallet()
+
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     def run_test(self):
         tips = self.nodes[0].getchaintips()
         assert_equal(len(tips), 1)
@@ -26,8 +32,13 @@ class GetChainTipsTest (LitecoinTestFramework):
 
         # Split the network and build two chains of different lengths.
         self.split_network()
+<<<<<<< HEAD
         self.nodes[0].generatetoaddress(10, self.nodes[0].get_deterministic_priv_key().address)
         self.nodes[2].generatetoaddress(20, self.nodes[2].get_deterministic_priv_key().address)
+=======
+        self.nodes[0].generate(10)
+        self.nodes[2].generate(20)
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         self.sync_all([self.nodes[:2], self.nodes[2:]])
 
         tips = self.nodes[1].getchaintips ()

@@ -176,7 +176,11 @@
         <translation>確認錢包加密</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+=======
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LITECOINS&lt;/b&gt;!</source>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <translation>警告: 如果把錢包加密後又忘記密碼，你就會從此&lt;b&gt;失去其中所有的 Litecoin 了&lt;/b&gt;！</translation>
     </message>
     <message>
@@ -188,8 +192,13 @@
         <translation>錢包已加密</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
         <translation>錢包已經加密了。請注意，加密錢包不能完全防止入侵你的電腦的惡意程式偷取錢幣。</translation>
+=======
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 現在要關閉，好完成加密程序。請注意，加密錢包不能完全防止入侵你的電腦的惡意程式偷取錢幣。</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -368,6 +377,13 @@
     <message>
         <source>Litecoin</source>
         <translation>Litecoin</translation>
+<<<<<<< HEAD
+=======
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>錢包</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Send</source>
@@ -478,6 +494,7 @@
         <translation>最新狀態</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>&amp;Sending addresses</source>
         <translation>付款位址(&amp;S)</translation>
     </message>
@@ -502,6 +519,8 @@
         <translation>關上錢包</translation>
     </message>
     <message>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Show the %1 help message to get a list with possible Litecoin command-line options</source>
         <translation>顯示 %1 的說明訊息，來取得可用命令列選項的列表</translation>
     </message>
@@ -2163,6 +2182,17 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>隱藏</translation>
     </message>
     <message>
+<<<<<<< HEAD
+=======
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for litecoin transactions than the network can process.</source>
+        <translation>當交易量少於區塊可容納的空間時，只付最低手續費不會有什麽問題。但是當交易量的需求成長到超過整體網路可以處理的量時，可能會造成一筆一直不會被確認的交易。</translation>
+    </message>
+    <message>
+        <source>(read the tooltip)</source>
+        <translation>(請看提示)</translation>
+    </message>
+    <message>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Recommended:</source>
         <translation>建議值:</translation>
     </message>
@@ -2331,6 +2361,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>付款的要求過期了。</translation>
     </message>
     <message>
+<<<<<<< HEAD
+=======
+        <source>Pay only the required fee of %1</source>
+        <translation>只付必要的手續費 %1</translation>
+    </message>
+    <message>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Warning: Invalid Litecoin address</source>
         <translation>警告: Litecoin 位址無效</translation>
     </message>

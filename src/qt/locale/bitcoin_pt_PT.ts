@@ -67,11 +67,19 @@
     </message>
     <message>
         <source>These are your Litecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+<<<<<<< HEAD
         <translation>Estes são os seus endereços Litecoin para enviar pagamentos. Verifique sempre o valor e o endereço de receção antes de enviar moedas.</translation>
     </message>
     <message>
         <source>These are your Litecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Estes são os seus endereços Litecoin para receber pagamentos. É recomendado que utilize um endereço de receção novo para cada transação.</translation>
+=======
+        <translation>Estes são os seus endereços Litecoin para enviar pagamentos. Verifique sempre o valor e o endereço de envio antes de enviar moedas.</translation>
+    </message>
+    <message>
+        <source>These are your Litecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estes são os seus endereços Litecoin para receber pagamentos. É recomendado que utilize um endereço novo para cada transacção.</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +184,8 @@
         <translation>Confirmar encriptação da carteira</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Aviso: se encriptar a sua carteira e perder a sua frase de segurnça, &lt;b&gt;PERDERÁ TODOS OS SEUS BITCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LITECOINS&lt;/b&gt;!</source>
+        <translation>Aviso: se encriptar a sua carteira e perder a sua frase de segurnça, &lt;b&gt;PERDERÁ TODOS OS SEUS LITECOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,8 +196,13 @@
         <translation>Carteira encriptada</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
         <translation>A sua carteira está agora encriptada. Lembre-se que pelo facto da sua carteira estar encriptada, isto não protege totalmente os seus litecoins de serem roubados por programas maliciosos se estes existirem no seu computador.</translation>
+=======
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 irá agora ser fechado para terminar o processo de encriptação. Recorde que a encriptação da sua carteira não protegerá totalmente os seus litecoins de serem roubados por programas maliciosos que infectem o seu computador.</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -368,6 +381,13 @@
     <message>
         <source>Litecoin</source>
         <translation>Litecoin</translation>
+<<<<<<< HEAD
+=======
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Carteira</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Send</source>
@@ -478,6 +498,7 @@
         <translation>Atualizado</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>&amp;Sending addresses</source>
         <translation>&amp;Endereço de envio</translation>
     </message>
@@ -502,6 +523,8 @@
         <translation>Fechar a carteira</translation>
     </message>
     <message>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Show the %1 help message to get a list with possible Litecoin command-line options</source>
         <translation>Mostrar a mensagem de ajuda %1 para obter uma lista com possíveis opções a usar na linha de comandos.</translation>
     </message>
@@ -806,6 +829,7 @@
     <message>
         <source>The entered address "%1" is not a valid Litecoin address.</source>
         <translation>O endereço introduzido "%1" não é um endereço litecoin válido.</translation>
+<<<<<<< HEAD
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -814,6 +838,8 @@
     <message>
         <source>The entered address "%1" is already in the address book with label "%2".</source>
         <translation>O endereço inserido "%1" já está no livro de endereços com a etiqueta "%2".</translation>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -1375,10 +1401,13 @@
     <message>
         <source>'litecoin://' is not a valid URI. Use 'litecoin:' instead.</source>
         <translation>'litecoin://' não é um URI válido. Utilize 'litecoin:'.</translation>
+<<<<<<< HEAD
     </message>
     <message>
         <source>You are using a BIP70 URL which will be unsupported in the future.</source>
         <translation>Está a usar uma URL do BIP70 que será desativado no futuro.</translation>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -1394,7 +1423,11 @@
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Litecoin address or malformed URI parameters.</source>
+<<<<<<< HEAD
         <translation>URI não foi lido corretamente! Isto pode ser causado por um endereço Litecoin inválido ou por parâmetros URI malformados.</translation>
+=======
+        <translation>URI não foi lido correctamente! Isto pode ser causado por um endereço Litecoin inválido ou por parâmetros URI malformados.</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1496,7 +1529,11 @@
     </message>
     <message>
         <source>Enter a Litecoin address (e.g. %1)</source>
+<<<<<<< HEAD
         <translation>Introduza um endereço Litecoin (ex. %1)</translation>
+=======
+        <translation>Entre um endereço Litecoin (ex. %1)</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>%1 d</source>
@@ -2200,6 +2237,17 @@ Nota: como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por u
         <translation>Esconder</translation>
     </message>
     <message>
+<<<<<<< HEAD
+=======
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for litecoin transactions than the network can process.</source>
+        <translation>Pode pagar somente a taxa minima desde que haja um volume de transações inferior ao espaço nos blocos. No entanto tenha em atenção que esta opção poderá acabar em uma transação nunca confirmada assim que os pedidos de transações excedam a capacidade de processamento da rede.</translation>
+    </message>
+    <message>
+        <source>(read the tooltip)</source>
+        <translation>(leia a dica)</translation>
+    </message>
+    <message>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Recommended:</source>
         <translation>Recomendado:</translation>
     </message>
@@ -2373,6 +2421,13 @@ Nota: como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por u
         <translation>Pedido de pagamento expirado.</translation>
     </message>
     <message>
+<<<<<<< HEAD
+=======
+        <source>Pay only the required fee of %1</source>
+        <translation>Pague apenas a taxa obrigatória de %1</translation>
+    </message>
+    <message>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Warning: Invalid Litecoin address</source>
         <translation>Aviso: endereço Litecoin inválido</translation>
     </message>

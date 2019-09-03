@@ -2,6 +2,7 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
+<<<<<<< HEAD
 
 FUZZ_TARGETS = \
   test/fuzz/address_deserialize \
@@ -32,6 +33,10 @@ else
 bin_PROGRAMS += test/test_litecoin
 endif
 
+=======
+bin_PROGRAMS += test/test_litecoin
+noinst_PROGRAMS += test/test_litecoin_fuzzy
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 TEST_SRCDIR = test
 TEST_BINARY=test/test_litecoin$(EXEEXT)
 
@@ -72,8 +77,11 @@ BITCOIN_TESTS =\
   test/bech32_tests.cpp \
   test/bip32_tests.cpp \
   test/blockchain_tests.cpp \
+<<<<<<< HEAD
   test/blockencodings_tests.cpp \
   test/blockfilter_tests.cpp \
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
   test/bloom_tests.cpp \
   test/bswap_tests.cpp \
   test/checkqueue_tests.cpp \
@@ -113,6 +121,7 @@ BITCOIN_TESTS =\
   test/script_tests.cpp \
   test/script_standard_tests.cpp \
   test/scriptnum_tests.cpp \
+  test/scrypt_tests.cpp \
   test/serialize_tests.cpp \
   test/sighash_tests.cpp \
   test/sigopcount_tests.cpp \
@@ -166,12 +175,17 @@ test_test_litecoin_LDADD += $(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) $(LIBBITCOIN_
   $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) $(BOOST_LIBS) $(BOOST_UNIT_TEST_FRAMEWORK_LIB) $(LIBSECP256K1) $(EVENT_LIBS) $(EVENT_PTHREADS_LIBS)
 test_test_litecoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
+<<<<<<< HEAD
 test_test_litecoin_LDADD += $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(RAPIDCHECK_LIBS)
+=======
+test_test_litecoin_LDADD += $(LIBBITCOIN_CONSENSUS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS)
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 test_test_litecoin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
 
 if ENABLE_ZMQ
 test_test_litecoin_LDADD += $(ZMQ_LIBS)
 endif
+<<<<<<< HEAD
 
 if ENABLE_FUZZ
 test_fuzz_block_deserialize_SOURCES = $(FUZZ_SUITE) test/fuzz/deserialize.cpp
@@ -531,6 +545,30 @@ test_fuzz_blocktransactionsrequest_deserialize_LDADD = \
  $(LIBSECP256K1)
 test_fuzz_blocktransactionsrequest_deserialize_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 endif # ENABLE_FUZZ
+=======
+#
+
+# test_bitcoin_fuzzy binary #
+test_test_litecoin_fuzzy_SOURCES = test/test_bitcoin_fuzzy.cpp
+test_test_litecoin_fuzzy_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+test_test_litecoin_fuzzy_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+test_test_litecoin_fuzzy_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+
+test_test_litecoin_fuzzy_LDADD = \
+  $(LIBUNIVALUE) \
+  $(LIBBITCOIN_SERVER) \
+  $(LIBBITCOIN_COMMON) \
+  $(LIBBITCOIN_UTIL) \
+  $(LIBBITCOIN_CONSENSUS) \
+  $(LIBBITCOIN_CRYPTO) \
+  $(LIBBITCOIN_CRYPTO_SSE41) \
+  $(LIBBITCOIN_CRYPTO_AVX2) \
+  $(LIBBITCOIN_CRYPTO_SHANI) \
+  $(LIBSECP256K1)
+
+test_test_litecoin_fuzzy_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+#
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 nodist_test_test_litecoin_SOURCES = $(GENERATED_TEST_FILES)
 

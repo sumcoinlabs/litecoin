@@ -24,6 +24,9 @@ class InvalidBlockRequestTest(LitecoinTestFramework):
         self.setup_clean_chain = True
         self.extra_args = [["-whitelist=127.0.0.1"]]
 
+    def skip_test_if_missing_module(self):
+        self.skip_if_no_wallet()
+
     def run_test(self):
         # Add p2p connection to node0
         node = self.nodes[0]  # convenience reference to the node
@@ -38,6 +41,7 @@ class InvalidBlockRequestTest(LitecoinTestFramework):
 
         height = 1
         block = create_block(tip, create_coinbase(height), block_time)
+        block.nVersion = 0x20000000
         block.solve()
         # Save the coinbase for later
         block1 = block
@@ -60,6 +64,7 @@ class InvalidBlockRequestTest(LitecoinTestFramework):
         self.log.info("Test merkle root malleability.")
 
         block2 = create_block(tip, create_coinbase(height), block_time)
+        block2.nVersion = 0x20000000
         block_time += 1
 
         # b'0x51' is OP_TRUE
@@ -78,22 +83,36 @@ class InvalidBlockRequestTest(LitecoinTestFramework):
         assert_equal(block2.hashMerkleRoot, block2.calc_merkle_root())
         assert_equal(orig_hash, block2.rehash())
         assert block2_orig.vtx != block2.vtx
+<<<<<<< HEAD
 
         node.p2p.send_blocks_and_test([block2], node, success=False, reject_reason='bad-txns-duplicate')
 
         # Check transactions for duplicate inputs
         self.log.info("Test duplicate input block.")
 
+=======
+
+        node.p2p.send_blocks_and_test([block2], node, success=False, reject_code=16, reject_reason=b'bad-txns-duplicate')
+
+        # Check transactions for duplicate inputs
+        self.log.info("Test duplicate input block.")
+
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         block2_orig.vtx[2].vin.append(block2_orig.vtx[2].vin[0])
         block2_orig.vtx[2].rehash()
         block2_orig.hashMerkleRoot = block2_orig.calc_merkle_root()
         block2_orig.rehash()
         block2_orig.solve()
+<<<<<<< HEAD
         node.p2p.send_blocks_and_test([block2_orig], node, success=False, reject_reason='bad-txns-inputs-duplicate')
+=======
+        node.p2p.send_blocks_and_test([block2_orig], node, success=False, reject_reason=b'bad-txns-inputs-duplicate')
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
         self.log.info("Test very broken block.")
 
         block3 = create_block(tip, create_coinbase(height), block_time)
+        block3.nVersion = 0x20000000
         block_time += 1
         block3.vtx[0].vout[0].nValue = 100 * COIN  # Too high!
         block3.vtx[0].sha256 = None
@@ -102,8 +121,12 @@ class InvalidBlockRequestTest(LitecoinTestFramework):
         block3.rehash()
         block3.solve()
 
+<<<<<<< HEAD
         node.p2p.send_blocks_and_test([block3], node, success=False, reject_reason='bad-cb-amount')
 
+=======
+        node.p2p.send_blocks_and_test([block3], node, success=False, reject_code=16, reject_reason=b'bad-cb-amount')
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 if __name__ == '__main__':
     InvalidBlockRequestTest().main()

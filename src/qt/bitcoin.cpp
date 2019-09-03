@@ -389,7 +389,11 @@ void LitecoinApplication::shutdownResult()
 
 void LitecoinApplication::handleRunawayException(const QString &message)
 {
+<<<<<<< HEAD
     QMessageBox::critical(nullptr, "Runaway exception", LitecoinGUI::tr("A fatal error occurred. Litecoin can no longer continue safely and will quit.") + QString("\n\n") + message);
+=======
+    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. Litecoin can no longer continue safely and will quit.") + QString("\n\n") + message);
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     ::exit(EXIT_FAILURE);
 }
 
@@ -445,8 +449,11 @@ int GuiMain(int argc, char* argv[])
 #ifdef Q_OS_MAC
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
+<<<<<<< HEAD
 
     LitecoinApplication app(*node, argc, argv);
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
     // Register meta types used for QMetaObject::invokeMethod
     qRegisterMetaType< bool* >();

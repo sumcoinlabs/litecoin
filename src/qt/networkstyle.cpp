@@ -16,8 +16,13 @@ static const struct {
     const char *titleAddText;
 } network_styles[] = {
     {"main", QAPP_APP_NAME_DEFAULT, 0, 0, ""},
+<<<<<<< HEAD
     {"test", QAPP_APP_NAME_TESTNET, 70, 30, QT_TRANSLATE_NOOP("SplashScreen", "[testnet]")},
     {"regtest", QAPP_APP_NAME_REGTEST, 160, 30, "[regtest]"}
+=======
+    {"test", QAPP_APP_NAME_TESTNET, 0, 0, QT_TRANSLATE_NOOP("SplashScreen", "[testnet]")},
+    {"regtest", QAPP_APP_NAME_TESTNET, 60, 1, "[regtest]"}
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 };
 static const unsigned network_styles_count = sizeof(network_styles)/sizeof(*network_styles);
 
@@ -27,7 +32,16 @@ NetworkStyle::NetworkStyle(const QString &_appName, const int iconColorHueShift,
     titleAddText(qApp->translate("SplashScreen", _titleAddText))
 {
     // load pixmap
+<<<<<<< HEAD
     QPixmap pixmap(":/icons/litecoin");
+=======
+    QPixmap pixmap;
+    if (std::char_traits<char>::length(_titleAddText) == 0) {
+        pixmap.load(":/icons/bitcoin");
+    } else {
+        pixmap.load(":/icons/litecoin_splash");
+    }
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
     if(iconColorHueShift != 0 && iconColorSaturationReduction != 0)
     {

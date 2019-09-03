@@ -30,4 +30,8 @@ bool EnsureWalletIsAvailable(CWallet *, bool avoidException);
 
 UniValue getaddressinfo(const JSONRPCRequest& request);
 UniValue signrawtransactionwithwallet(const JSONRPCRequest& request);
+<<<<<<< HEAD
+=======
+bool FillPSBT(const CWallet* pwallet, PartiallySignedTransaction& psbtx, int sighash_type = 1 /* SIGHASH_ALL */, bool sign = true, bool bip32derivs = false);
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 #endif //BITCOIN_WALLET_RPCWALLET_H

@@ -765,6 +765,7 @@ static UniValue getblockheader(const JSONRPCRequest& request)
                     },
                     RPCResult{"for verbose=false",
             "\"data\"             (string) A string that is serialized, hex-encoded data for block 'hash'.\n"
+<<<<<<< HEAD
                     },
                 },
                 RPCExamples{
@@ -772,6 +773,14 @@ static UniValue getblockheader(const JSONRPCRequest& request)
             + HelpExampleRpc("getblockheader", "\"00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09\"")
                 },
             }.ToString());
+=======
+            "\nExamples:\n"
+            + HelpExampleCli("getblockheader", "\"e2acdf2dd19a702e5d12a925f1e984b01e47a933562ca893656d4afb38b44ee3\"")
+            + HelpExampleRpc("getblockheader", "\"e2acdf2dd19a702e5d12a925f1e984b01e47a933562ca893656d4afb38b44ee3\"")
+        );
+
+    LOCK(cs_main);
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
     uint256 hash(ParseHashV(request.params[0], "hash"));
 
@@ -871,6 +880,7 @@ static UniValue getblock(const JSONRPCRequest& request)
             "  ],\n"
             "  ,...                     Same output as verbosity = 1.\n"
             "}\n"
+<<<<<<< HEAD
                     },
                 },
                 RPCExamples{
@@ -878,6 +888,12 @@ static UniValue getblock(const JSONRPCRequest& request)
             + HelpExampleRpc("getblock", "\"00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09\"")
                 },
             }.ToString());
+=======
+            "\nExamples:\n"
+            + HelpExampleCli("getblock", "\"e2acdf2dd19a702e5d12a925f1e984b01e47a933562ca893656d4afb38b44ee3\"")
+            + HelpExampleRpc("getblock", "\"e2acdf2dd19a702e5d12a925f1e984b01e47a933562ca893656d4afb38b44ee3\"")
+        );
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
     LOCK(cs_main);
 
@@ -2138,6 +2154,7 @@ UniValue scantxoutset(const JSONRPCRequest& request)
 {
     if (request.fHelp || request.params.size() < 1 || request.params.size() > 2)
         throw std::runtime_error(
+<<<<<<< HEAD
             RPCHelpMan{"scantxoutset",
                 "\nEXPERIMENTAL warning: this call may be removed or changed in future releases.\n"
                 "\nScans the unspent transaction output set for entries that match certain output descriptors.\n"
@@ -2154,6 +2171,24 @@ UniValue scantxoutset(const JSONRPCRequest& request)
                 "For more information on output descriptors, see the documentation in the doc/descriptors.md file.\n",
                 {
                     {"action", RPCArg::Type::STR, RPCArg::Optional::NO, "The action to execute\n"
+=======
+            "scantxoutset <action> ( <scanobjects> )\n"
+            "\nEXPERIMENTAL warning: this call may be removed or changed in future releases.\n"
+            "\nScans the unspent transaction output set for entries that match certain output descriptors.\n"
+            "Examples of output descriptors are:\n"
+            "    addr(<address>)                      Outputs whose scriptPubKey corresponds to the specified address (does not include P2PK)\n"
+            "    raw(<hex script>)                    Outputs whose scriptPubKey equals the specified hex scripts\n"
+            "    combo(<pubkey>)                      P2PK, P2PKH, P2WPKH, and P2SH-P2WPKH outputs for the given pubkey\n"
+            "    pkh(<pubkey>)                        P2PKH outputs for the given pubkey\n"
+            "    sh(multi(<n>,<pubkey>,<pubkey>,...)) P2SH-multisig outputs for the given threshold and pubkeys\n"
+            "\nIn the above, <pubkey> either refers to a fixed public key in hexadecimal notation, or to an xpub/xprv optionally followed by one\n"
+            "or more path elements separated by \"/\", and optionally ending in \"/*\" (unhardened), or \"/*'\" or \"/*h\" (hardened) to specify all\n"
+            "unhardened or hardened child keys.\n"
+            "In the latter case, a range needs to be specified by below if different from 1000.\n"
+            "For more information on output descriptors, see the documentation in the doc/descriptors.md file.\n"
+            "\nArguments:\n"
+            "1. \"action\"                       (string, required) The action to execute\n"
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
             "                                      \"start\" for starting a scan\n"
             "                                      \"abort\" for aborting the current scan (returns true when abort was successful)\n"
             "                                      \"status\" for progress report (in %) of the current scan"},

@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 name: "litecoin-win-0.18"
+=======
+name: "litecoin-win-0.17"
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 enable_cache: true
 suites:
 - "bionic"
@@ -23,7 +27,11 @@ packages:
 - "python"
 - "rename"
 remotes:
+<<<<<<< HEAD
 - "url": "https://github.com/litecoin/litecoin.git"
+=======
+- "url": "https://github.com/litecoin-project/litecoin.git"
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
   "dir": "litecoin"
 files: []
 script: |
@@ -164,9 +172,13 @@ script: |
     mv ${DISTNAME}/bin/*.dll ${DISTNAME}/lib/
     find . -name "lib*.la" -delete
     find . -name "lib*.a" -delete
+    # Litecoin: Delete libbitcoin from binary distribution for now, see #192
+    rm -rf ${DISTNAME}/lib/
+    rm -rf ${DISTNAME}/include/
+    # Litecoin: ends
     rm -rf ${DISTNAME}/lib/pkgconfig
     find ${DISTNAME}/bin -type f -executable -exec ${i}-objcopy --only-keep-debug {} {}.dbg \; -exec ${i}-strip -s {} \; -exec ${i}-objcopy --add-gnu-debuglink={}.dbg {} \;
-    find ${DISTNAME}/lib -type f -exec ${i}-objcopy --only-keep-debug {} {}.dbg \; -exec ${i}-strip -s {} \; -exec ${i}-objcopy --add-gnu-debuglink={}.dbg {} \;
+    # Litecon: find ${DISTNAME}/lib -type f -exec ${i}-objcopy --only-keep-debug {} {}.dbg \; -exec ${i}-strip -s {} \; -exec ${i}-objcopy --add-gnu-debuglink={}.dbg {} \;
     find ${DISTNAME} -not -name "*.dbg"  -type f | sort | zip -X@ ${OUTDIR}/${DISTNAME}-${i}.zip
     find ${DISTNAME} -name "*.dbg"  -type f | sort | zip -X@ ${OUTDIR}/${DISTNAME}-${i}-debug.zip
     cd ../../

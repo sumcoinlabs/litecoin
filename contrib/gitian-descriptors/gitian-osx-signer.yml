@@ -7,7 +7,11 @@ architectures:
 packages:
 - "faketime"
 remotes:
+<<<<<<< HEAD
 - "url": "https://github.com/litecoin-core/litecoin-detached-sigs.git"
+=======
+- "url": "https://github.com/litecoin-project/litecoin-detached-sigs.git"
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
   "dir": "signature"
 files:
 - "litecoin-osx-unsigned.tar.gz"

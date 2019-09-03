@@ -168,6 +168,7 @@ BASE_SCRIPTS = [
     'wallet_listsinceblock.py',
     'p2p_leak.py',
     'wallet_encryption.py',
+    'wallet_scriptaddress2.py',
     'feature_dersig.py',
     'feature_cltv.py',
     'rpc_uptime.py',
@@ -250,15 +251,31 @@ def main():
     logging.basicConfig(format='%(message)s', level=logging_level)
 
     # Create base test directory
+<<<<<<< HEAD
     tmpdir = "%s/test_runner_₿_🏃_%s" % (args.tmpdirprefix, datetime.datetime.now().strftime("%Y%m%d_%H%M%S"))
 
+=======
+    tmpdir = "%s/test_runner_Ł_🏃_%s" % (args.tmpdirprefix, datetime.datetime.now().strftime("%Y%m%d_%H%M%S"))
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     os.makedirs(tmpdir)
 
     logging.debug("Temporary test directory at %s" % tmpdir)
 
+<<<<<<< HEAD
     enable_litecoind = config["components"].getboolean("ENABLE_BITCOIND")
 
     if not enable_litecoind:
+=======
+    enable_bitcoind = config["components"].getboolean("ENABLE_BITCOIND")
+
+    if config["environment"]["EXEEXT"] == ".exe" and not args.force:
+        # https://github.com/bitcoin/bitcoin/commit/d52802551752140cf41f0d9a225a43e84404d3e9
+        # https://github.com/bitcoin/bitcoin/pull/5677#issuecomment-136646964
+        print("Tests currently disabled on Windows by default. Use --force option to enable")
+        sys.exit(0)
+
+    if not enable_bitcoind:
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         print("No functional tests to run.")
         print("Rerun ./configure with --with-daemon and then make")
         sys.exit(0)

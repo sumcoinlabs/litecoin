@@ -172,8 +172,8 @@
         <translation>Conferma criptaggio portafoglio</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Attenzione: Se cripti il tuo portafoglio e perdi la password, &lt;b&gt;PERDERAI TUTTI I TUOI BITCOIN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LITECOINS&lt;/b&gt;!</source>
+        <translation>Attenzione: Se cripti il tuo portafoglio e perdi la password, &lt;b&gt;PERDERAI TUTTI I TUOI LITECOIN&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -184,6 +184,13 @@
         <translation>Portafoglio criptato</translation>
     </message>
     <message>
+<<<<<<< HEAD
+=======
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 ora si chiuderà per concludere il processo di criptaggio. Ricorda che criptare il tuo portafoglio non può definitivamente proteggere i tuoi litecoin da furti tramite malware che infetta il tuo computer.</translation>
+    </message>
+    <message>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
         <translation>IMPORTANTE: Qualsiasi backup precedentemente effettuato del tuo portafoglio dovrebbe essere sostituito con il nuovo file criptato generato. Per questioni di sicurezza, backup precedenti del portafoglio non criptati diverranno inutili non appena inizi ad usare il nuovo portafoglio criptato.</translation>
     </message>
@@ -356,6 +363,13 @@
     <message>
         <source>Litecoin</source>
         <translation>Litecoin</translation>
+<<<<<<< HEAD
+=======
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Portafoglio</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Send</source>
@@ -460,10 +474,13 @@
     <message>
         <source>Show the %1 help message to get a list with possible Litecoin command-line options</source>
         <translation>Mostra il %1 messaggio d'aiuto per ottenere una lista con le possibili opzioni per la riga di comando di Litecoin</translation>
+<<<<<<< HEAD
     </message>
     <message>
         <source>default wallet</source>
         <translation>Portafoglio predefinito</translation>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Date: %1
@@ -504,6 +521,7 @@
         <translation>Transazione in arrivo</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
         <translation>Generazione  di chiavi HD &lt;b&gt;abilitata&lt;/b&gt;</translation>
     </message>
@@ -512,6 +530,8 @@
         <translation>Generazione di chiavi HD &lt;b&gt;disabilitata&lt;/b&gt;</translation>
     </message>
     <message>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>A fatal error occurred. Litecoin can no longer continue safely and will quit.</source>
         <translation>Si è verificato un errore fatale. Litecoin non può continuare in maniera sicura e sarà chiuso.</translation>
     </message>

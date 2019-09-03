@@ -47,7 +47,11 @@ class RawTransactionsTest(LitecoinTestFramework):
     def skip_test_if_missing_module(self):
         self.skip_if_no_wallet()
 
+<<<<<<< HEAD
     def setup_network(self):
+=======
+    def setup_network(self, split=False):
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         super().setup_network()
         connect_nodes_bi(self.nodes, 0, 2)
 

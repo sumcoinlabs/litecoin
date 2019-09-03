@@ -726,6 +726,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>发现重复地址：每个地址只能使用一次。</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Transaction creation failed!</source>
         <translation>交易创建失败!</translation>
     </message>
@@ -748,6 +749,10 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Warning: Invalid Litecoin address</source>
         <translation>警告：比特币地址无效</translation>
+=======
+        <source>Warning: Invalid Litecoin address</source>
+        <translation>警告：莱特币地址无效</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>The address you selected for change is not part of this wallet. Any or all funds in your wallet may be sent to this address. Are you sure?</source>

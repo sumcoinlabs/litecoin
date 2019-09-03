@@ -10,7 +10,10 @@ litecoind and litecoin-qt by interacting with them through the RPC and P2P
 interfaces.
 - [util](/test/util) which tests the litecoin utilities, currently only
 litecoin-tx.
+<<<<<<< HEAD
 - [lint](/test/lint/) which perform various static analysis checks.
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 The util tests are run as part of `make check` target. The functional
 tests and lint scripts are run by the travis continuous build process whenever a pull
@@ -173,6 +176,7 @@ use the directory path to get the pid from the pid file:
 ```bash
 cat /tmp/user/1000/testo9vsdjo3/node1/regtest/litecoind.pid
 gdb /home/example/litecoind <pid>
+<<<<<<< HEAD
 ```
 
 Note: gdb attach step may require ptrace_scope to be modified, or `sudo` preceding the `gdb`.
@@ -193,6 +197,8 @@ To see render the output to text, run
 
 ```sh
 perf report -i /path/to/datadir/send-big-msgs.perf.data.xxxx --stdio | c++filt | less
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 ```
 
 For ways to generate more granular profiles, see the README in

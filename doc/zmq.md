@@ -33,10 +33,15 @@ buffering or reassembly.
 
 ## Prerequisites
 
+<<<<<<< HEAD
 The ZeroMQ feature in Litecoin Core requires the ZeroMQ API >= 4.0.0
 [libzmq](https://github.com/zeromq/libzmq/releases).
 For version information, see [dependencies.md](dependencies.md).
 Typically, it is packaged by distributions as something like
+=======
+The ZeroMQ feature in Litecoin Core requires ZeroMQ API version 4.x or
+newer. Typically, it is packaged by distributions as something like
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 *libzmq3-dev*. The C++ wrapper for ZeroMQ is *not* needed.
 
 In order to run the example Python client scripts in contrib/ one must
@@ -79,8 +84,12 @@ The high water mark value must be an integer greater than or equal to 0.
 For instance:
 
     $ litecoind -zmqpubhashtx=tcp://127.0.0.1:28332 \
+<<<<<<< HEAD
                -zmqpubrawtx=ipc:///tmp/litecoind.tx.raw \
                -zmqpubhashtxhwm=10000
+=======
+               -zmqpubrawtx=ipc:///tmp/litecoind.tx.raw
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 Each PUB notification has a topic and body, where the header
 corresponds to the notification type. For instance, for the

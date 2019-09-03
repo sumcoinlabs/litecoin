@@ -42,10 +42,17 @@ QString LitecoinUnits::longName(int unit)
 {
     switch(unit)
     {
+<<<<<<< HEAD
     case LTC: return QString("LTC");
     case mLTC: return QString("mLTC");
     case uLTC: return QString::fromUtf8("µLTC (bits)");
     case SAT: return QString("Satoshi (sat)");
+=======
+    case BTC: return QString("LTC");
+    case mBTC: return QString("lites");
+    case uBTC: return QString("photons");
+    case SAT: return QString("liteoshi");
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     default: return QString("???");
     }
 }
@@ -64,10 +71,17 @@ QString LitecoinUnits::description(int unit)
 {
     switch(unit)
     {
+<<<<<<< HEAD
     case LTC: return QString("Litecoins");
     case mLTC: return QString("Milli-Litecoins (1 / 1" THIN_SP_UTF8 "000)");
     case uLTC: return QString("Micro-Litecoins (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     case SAT: return QString("Satoshi (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+=======
+    case BTC: return QString("Litecoins");
+    case mBTC: return QString("Lites (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Photons (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case SAT: return QString("Liteoshis (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     default: return QString("???");
     }
 }

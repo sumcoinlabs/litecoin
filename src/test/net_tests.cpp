@@ -227,6 +227,7 @@ BOOST_AUTO_TEST_CASE(ipv4_peer_with_ipv6_addrMe_test)
     BOOST_CHECK(1);
 }
 
+<<<<<<< HEAD
 
 BOOST_AUTO_TEST_CASE(LimitedAndReachable_Network)
 {
@@ -303,4 +304,6 @@ BOOST_AUTO_TEST_CASE(LocalAddress_BasicLifecycle)
 }
 
 
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 BOOST_AUTO_TEST_SUITE_END()

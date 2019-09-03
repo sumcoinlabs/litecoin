@@ -62,7 +62,11 @@ def make_utxo(node, amount, confirmed=True, scriptPubKey=CScript([1])):
     return COutPoint(int(txid, 16), 0)
 
 
+<<<<<<< HEAD
 class ReplaceByFeeTest(LitecoinTestFramework):
+=======
+class ReplaceByFeeTest(BitcoinTestFramework):
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     def set_test_params(self):
         self.num_nodes = 2
         self.extra_args = [

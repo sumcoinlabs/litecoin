@@ -67,10 +67,17 @@ def custom_function():
     # self.log.info("running custom_function")  # Oops! Can't run self.log outside the LitecoinTestFramework
     pass
 
+<<<<<<< HEAD
 
 class ExampleTest(LitecoinTestFramework):
     # Each functional test is a subclass of the LitecoinTestFramework class.
 
+=======
+
+class ExampleTest(BitcoinTestFramework):
+    # Each functional test is a subclass of the BitcoinTestFramework class.
+
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     # Override the set_test_params(), skip_test_if_missing_module(), add_options(), setup_chain(), setup_network()
     # and setup_nodes() methods to customize the test setup as required.
 
@@ -85,8 +92,11 @@ class ExampleTest(LitecoinTestFramework):
 
         # self.log.info("I've finished set_test_params")  # Oops! Can't run self.log before run_test()
 
+<<<<<<< HEAD
     # Use skip_test_if_missing_module() to skip the test if your test requires certain modules to be present.
     # This test uses generate which requires wallet to be compiled
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     def skip_test_if_missing_module(self):
         self.skip_if_no_wallet()
 

@@ -290,8 +290,13 @@
         <translation>கைப்பை:</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Click to disable network activity.</source>
         <translation>பிணைய செயல்பாட்டை முடக்க கிளிக் செய்க.</translation>
+=======
+        <source>Litecoin</source>
+        <translation>Litecoin</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Network activity disabled.</source>
@@ -601,8 +606,13 @@
         <translation>லேபிளை நகலெடு</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Copy amount</source>
         <translation>நகல் நகல்</translation>
+=======
+        <source>Litecoin</source>
+        <translation>Litecoin</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Copy transaction ID</source>

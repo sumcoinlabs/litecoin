@@ -21,6 +21,7 @@ from test_framework.test_framework import LitecoinTestFramework
 from test_framework.util import assert_equal, assert_raises_rpc_error, bytes_to_hex_str
 
 NULLDUMMY_ERROR = "non-mandatory-script-verify-flag (Dummy CHECKMULTISIG argument must be zero) (code 64)"
+VB_TOP_BITS = 0x20000000
 
 def trueDummy(tx):
     scriptSig = CScript(tx.vin[0].scriptSig)
@@ -46,10 +47,17 @@ class NULLDUMMYTest(LitecoinTestFramework):
     def skip_test_if_missing_module(self):
         self.skip_if_no_wallet()
 
+    def skip_test_if_missing_module(self):
+        self.skip_if_no_wallet()
+
     def run_test(self):
         self.address = self.nodes[0].getnewaddress()
         self.ms_address = self.nodes[0].addmultisigaddress(1, [self.address])['address']
+<<<<<<< HEAD
         self.wit_address = self.nodes[0].getnewaddress(address_type='p2sh-segwit')
+=======
+        self.wit_address = self.nodes[0].addwitnessaddress(self.address)
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         self.wit_ms_address = self.nodes[0].addmultisigaddress(1, [self.address], '', 'p2sh-segwit')['address']
 
         self.coinbase_blocks = self.nodes[0].generate(2)  # Block 2
@@ -96,11 +104,16 @@ class NULLDUMMYTest(LitecoinTestFramework):
         self.log.info("Test 6: NULLDUMMY compliant base/witness transactions should be accepted to mempool and in block after activation [432]")
         for i in test6txs:
             self.nodes[0].sendrawtransaction(bytes_to_hex_str(i.serialize_with_witness()), True)
-        self.block_submit(self.nodes[0], test6txs, True, True)
+        self.block_submit(self.nodes[0], test6txs, True, True, VB_TOP_BITS)
 
+<<<<<<< HEAD
     def block_submit(self, node, txs, witness=False, accept=False):
+=======
+
+    def block_submit(self, node, txs, witness = False, accept = False, version=4):
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         block = create_block(self.tip, create_coinbase(self.lastblockheight + 1), self.lastblocktime + 1)
-        block.nVersion = 4
+        block.nVersion = version
         for tx in txs:
             tx.rehash()
             block.vtx.append(tx)

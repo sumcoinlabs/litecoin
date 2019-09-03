@@ -1,4 +1,4 @@
-# TOR SUPPORT IN BITCOIN
+# TOR SUPPORT IN LITECOIN
 
 It is possible to run Litecoin Core as a Tor hidden service, and connect to such services.
 
@@ -45,11 +45,19 @@ config file): *Needed for Tor version 0.2.7.0 and older versions of Tor only. Fo
 versions of Tor see [Section 3](#3-automatically-listen-on-tor).*
 
 	HiddenServiceDir /var/lib/tor/litecoin-service/
+<<<<<<< HEAD
 	HiddenServicePort 8333 127.0.0.1:8333
 	HiddenServicePort 18333 127.0.0.1:18333
 
 The directory can be different of course, but (both) port numbers should be equal to
 your litecoind's P2P listen port (8333 by default).
+=======
+	HiddenServicePort 9333 127.0.0.1:9333
+	HiddenServicePort 19335 127.0.0.1:19335
+
+The directory can be different of course, but (both) port numbers should be equal to
+your litecoind's P2P listen port (9333 by default).
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 	-externalip=X   You can tell litecoin about its publicly reachable address using
 	                this option, and this can be a .onion address. Given the above
@@ -84,7 +92,7 @@ as well, use `discover` instead:
 
 	./litecoind ... -discover
 
-and open port 8333 on your firewall (or use -upnp).
+and open port 9333 on your firewall (or use -upnp).
 
 If you only want to use Tor to reach .onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:
@@ -98,7 +106,11 @@ API, to create and destroy 'ephemeral' hidden services programmatically.
 Litecoin Core has been updated to make use of this.
 
 This means that if Tor is running (and proper authentication has been configured),
+<<<<<<< HEAD
 Litecoin Core automatically creates a hidden service to listen on. This will positively
+=======
+Litecoin Core automatically creates a hidden service to listen on. This will positively 
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 affect the number of available .onion nodes.
 
 This new feature is enabled by default if Litecoin Core is listening (`-listen`), and
@@ -107,13 +119,19 @@ and, if not disabled, configured using the `-torcontrol` and `-torpassword` sett
 To show verbose debugging information, pass `-debug=tor`.
 
 Connecting to Tor's control socket API requires one of two authentication methods to be
+<<<<<<< HEAD
 configured. It also requires the control socket to be enabled, e.g. put `ControlPort 9051`
 in `torrc` config file. For cookie authentication the user running litecoind must have read
 access to the `CookieAuthFile` specified in Tor configuration. In some cases this is
+=======
+configured. For cookie authentication the user running litecoind must have write access
+to the `CookieAuthFile` specified in Tor configuration. In some cases, this is
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 preconfigured and the creation of a hidden service is automatic. If permission problems
 are seen with `-debug=tor` they can be resolved by adding both the user running Tor and
 the user running litecoind to the same group and setting permissions appropriately. On
 Debian-based systems the user running litecoind can be added to the debian-tor group,
+<<<<<<< HEAD
 which has the appropriate permissions.
 
 An alternative authentication method is the use
@@ -121,6 +139,11 @@ of the `-torpassword=password` option. The `password` is the clear text form tha
 was used when generating the hashed password for the `HashedControlPassword` option
 in the tor configuration file. The hashed password can be obtained with the command
 `tor --hash-password password` (read the tor manual for more details).
+=======
+which has the appropriate permissions. An alternative authentication method is the use
+of the `-torpassword` flag and a `hash-password` which can be enabled and specified in
+Tor configuration.
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 ## 4. Privacy recommendations
 

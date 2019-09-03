@@ -42,7 +42,10 @@ qt_test_test_litecoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN
   $(QT_INCLUDES) $(QT_TEST_INCLUDES) $(PROTOBUF_CFLAGS)
 
 qt_test_test_litecoin_qt_SOURCES = \
+<<<<<<< HEAD
   qt/test/apptests.cpp \
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
   qt/test/compattests.cpp \
   qt/test/rpcnestedtests.cpp \
   qt/test/test_main.cpp \
@@ -82,9 +85,15 @@ CLEAN_BITCOIN_QT_TEST = $(TEST_QT_MOC_CPP) qt/test/*.gcda qt/test/*.gcno
 
 CLEANFILES += $(CLEAN_BITCOIN_QT_TEST)
 
+<<<<<<< HEAD
 test_litecoin_qt : qt/test/test_litecoin-qt$(EXEEXT)
 
 test_litecoin_qt_check : qt/test/test_litecoin-qt$(EXEEXT) FORCE
+=======
+test_bitcoin_qt : qt/test/test_litecoin-qt$(EXEEXT)
+
+test_bitcoin_qt_check : qt/test/test_litecoin-qt$(EXEEXT) FORCE
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 	$(MAKE) check-TESTS TESTS=$^
 
 test_litecoin_qt_clean: FORCE

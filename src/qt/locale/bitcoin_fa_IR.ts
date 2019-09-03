@@ -176,8 +176,8 @@
         <translation>تایید رمزگذاری کیف پول</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>اخطار: اگر کیف‌پول خود را رمزگذاری کرده و رمز خود را فراموش کنید، شما &lt;b&gt;تمام بیت‌کوین‌های خود را از دست خواهید داد&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LITECOINS&lt;/b&gt;!</source>
+        <translation>اخطار: اگر کیف‌پول خود را رمزگذاری کرده و رمز خود را فراموش کنید، شما &lt;b&gt;تمام Litecoin‌های خود را از دست خواهید داد&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,6 +188,13 @@
         <translation>کیف پول رمزگذاری شده است</translation>
     </message>
     <message>
+<<<<<<< HEAD
+=======
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 برای اتمام فرایند رمزگذاری بسته خواهد شد. به خاطر داشته باشید که رمزگذاری WALLET شما،  کامپیوتر شما را از آلودگی به بدافزارها مصون نمی دارد.</translation>
+    </message>
+    <message>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
         <translation>مهم: هر بک‌آپ قبلی که از کیف‌پول خود گرفته‌اید، با نسخه‌ی جدید رمزنگاری‌شده جایگزین خواهد شد. به دلایل امنیتی، پس از رمزنگاری کیف‌پول، بک‌آپ‌های قدیمی شما بلااستفاده خواهد شد.</translation>
     </message>
@@ -335,7 +342,11 @@
     </message>
     <message>
         <source>Send coins to a Litecoin address</source>
+<<<<<<< HEAD
         <translation>ارسال کوین به آدرس بیت کوین</translation>
+=======
+        <translation>ارسال کوین به آدرس litecoin</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -359,7 +370,11 @@
     </message>
     <message>
         <source>Litecoin</source>
+<<<<<<< HEAD
         <translation>بیت کوین</translation>
+=======
+        <translation>litecoin</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Send</source>
@@ -383,11 +398,19 @@
     </message>
     <message>
         <source>Sign messages with your Litecoin addresses to prove you own them</source>
+<<<<<<< HEAD
         <translation>پیام‌ها را با آدرس بیت‌کوین خود امضا کنید تا مالکیت آن‌ها را اثبات کنید</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Litecoin addresses</source>
         <translation>پیام‌ها را تائید کنید تا از امضاشدن آن‌ها با آدرس بیت‌کوین مطمئن شوید</translation>
+=======
+        <translation>پیام‌ها را با آدرس Litecoin خود امضا کنید تا مالکیت آن‌ها را اثبات کنید</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Litecoin addresses</source>
+        <translation>پیام‌ها را تائید کنید تا از امضاشدن آن‌ها با آدرس Litecoin مطمئن شوید</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;File</source>
@@ -407,7 +430,11 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and litecoin: URIs)</source>
+<<<<<<< HEAD
         <translation>درخواست پرداخت (ساخت کد QR و بیت‌کوین: URIs)</translation>
+=======
+        <translation>درخواست پرداخت (ساخت کد QR و Litecoin: URIs)</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -419,7 +446,11 @@
     </message>
     <message>
         <source>Open a litecoin: URI or payment request</source>
+<<<<<<< HEAD
         <translation>بازکردن بیت‌کوین: آدرس یا درخواست پرداخت</translation>
+=======
+        <translation>بازکردن Litecoin: آدرس یا درخواست پرداخت</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -427,7 +458,11 @@
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to Litecoin network</source>
+<<<<<<< HEAD
         <translation><numerusform>%n ارتباط فعال به شبکه بیت‌کوین</numerusform><numerusform>%n ارتباط فعال به شبکه بیت‌کوین</numerusform></translation>
+=======
+        <translation><numerusform>%n ارتباط فعال به شبکه Litecoin</numerusform><numerusform>%n ارتباط فعال به شبکه Litecoin</numerusform></translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -697,7 +732,11 @@
     </message>
     <message>
         <source>The entered address "%1" is not a valid Litecoin address.</source>
+<<<<<<< HEAD
         <translation>آدرس وارد شده "%1" آدرس معتبر بیت کوین نیست.</translation>
+=======
+        <translation>آدرس وارد شده "%1" آدرس معتبر litecoin نیست.</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -745,6 +784,7 @@
         <translation>به %1 خوش آمدید.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Use the default data directory</source>
         <translation>استفاده کردن از پوشه داده پیشفرض</translation>
     </message>
@@ -755,6 +795,10 @@
     <message>
         <source>Litecoin</source>
         <translation>بیت کوین</translation>
+=======
+        <source>Litecoin</source>
+        <translation>litecoin</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -992,10 +1036,13 @@
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Litecoin network after a connection is established, but this process has not completed yet.</source>
         <translation>اطلاعات نمایش داده شده ممکن است روزآمد نباشد. wallet شما به صورت خودکار بعد از برقراری اتصال با شبکه litecoin به روز می شود اما این فرایند هنوز تکمیل نشده است.</translation>
+<<<<<<< HEAD
     </message>
     <message>
         <source>Watch-only:</source>
         <translation>فقط قابل-مشاهده:</translation>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Available:</source>

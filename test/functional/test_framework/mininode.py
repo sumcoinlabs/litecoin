@@ -83,8 +83,8 @@ MESSAGEMAP = {
 }
 
 MAGIC_BYTES = {
-    "mainnet": b"\xf9\xbe\xb4\xd9",   # mainnet
-    "testnet3": b"\x0b\x11\x09\x07",  # testnet3
+    "mainnet": b"\xfb\xc0\xb6\xdb",   # mainnet
+    "testnet4": b"\xfd\xd2\xc8\xf1",  # testnet3
     "regtest": b"\xfa\xbf\xb5\xda",   # regtest
 }
 
@@ -118,7 +118,11 @@ class P2PConnection(asyncio.Protocol):
         # The initial message to send after the connection was made:
         self.on_connection_send_msg = None
         self.recvbuf = b""
+<<<<<<< HEAD
         self.magic_bytes = MAGIC_BYTES[net]
+=======
+        self.network = net
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         logger.debug('Connecting to Litecoin Node: %s:%d' % (self.dstaddr, self.dstport))
 
         loop = NetworkThread.network_event_loop
@@ -519,7 +523,16 @@ class P2PDataStore(P2PInterface):
         if response is not None:
             self.send_message(response)
 
+<<<<<<< HEAD
     def send_blocks_and_test(self, blocks, node, *, success=True, force_send=False, reject_reason=None, expect_disconnect=False, timeout=60):
+=======
+    def on_reject(self, message):
+        """Store reject reason and code for testing."""
+        self.reject_code_received = message.code
+        self.reject_reason_received = message.reason
+
+    def send_blocks_and_test(self, blocks, node, *, success=True, request_block=True, reject_code=None, reject_reason=None, timeout=60):
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         """Send blocks to test node and test whether the tip advances.
 
          - add all blocks to our block_store
@@ -545,17 +558,28 @@ class P2PDataStore(P2PInterface):
                 self.send_message(msg_headers([CBlockHeader(blocks[-1])]))
                 wait_until(lambda: blocks[-1].sha256 in self.getdata_requests, timeout=timeout, lock=mininode_lock)
 
+<<<<<<< HEAD
             if expect_disconnect:
                 self.wait_for_disconnect(timeout=timeout)
             else:
                 self.sync_with_ping(timeout=timeout)
+=======
+        if success:
+            wait_until(lambda: node.getbestblockhash() == blocks[-1].hash, timeout=timeout)
+        else:
+            assert node.getbestblockhash() != blocks[-1].hash
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
             if success:
                 wait_until(lambda: node.getbestblockhash() == blocks[-1].hash, timeout=timeout)
             else:
                 assert node.getbestblockhash() != blocks[-1].hash
 
+<<<<<<< HEAD
     def send_txs_and_test(self, txs, node, *, success=True, expect_disconnect=False, reject_reason=None):
+=======
+    def send_txs_and_test(self, txs, node, *, success=True, expect_disconnect=False, reject_code=None, reject_reason=None):
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         """Send txs to test node and test whether they're accepted to the mempool.
 
          - add all txs to our tx_store
@@ -568,8 +592,26 @@ class P2PDataStore(P2PInterface):
             for tx in txs:
                 self.tx_store[tx.sha256] = tx
 
+<<<<<<< HEAD
         reject_reason = [reject_reason] if reject_reason else []
         with node.assert_debug_log(expected_msgs=reject_reason):
+=======
+        for tx in txs:
+            self.send_message(msg_tx(tx))
+
+        if expect_disconnect:
+            self.wait_for_disconnect()
+        else:
+            self.sync_with_ping()
+
+        raw_mempool = node.getrawmempool()
+        if success:
+            # Check that all txs are now in the mempool
+            for tx in txs:
+                assert tx.hash in raw_mempool, "{} not found in mempool".format(tx.hash)
+        else:
+            # Check that none of the txs are now in the mempool
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
             for tx in txs:
                 self.send_message(msg_tx(tx))
 

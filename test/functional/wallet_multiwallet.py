@@ -277,7 +277,15 @@ class MultiWalletTest(LitecoinTestFramework):
 
         # Successfully unload the wallet referenced by the request endpoint
         # Also ensure unload works during walletpassphrase timeout
+<<<<<<< HEAD
         w2.encryptwallet('test')
+=======
+        wallets = node.listwallets()
+        w2.encryptwallet('test')
+        self.restart_node(0, ['-wallet={}'.format(wallet) for wallet in wallets])
+        w1 = node.get_wallet_rpc(wallet_names[0])
+        w2 = node.get_wallet_rpc(wallet_names[1])
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         w2.walletpassphrase('test', 1)
         w2.unloadwallet()
         time.sleep(1.1)

@@ -5,8 +5,12 @@
 """Test the ZMQ notification interface."""
 import struct
 
+<<<<<<< HEAD
 from test_framework.address import ADDRESS_BCRT1_UNSPENDABLE
 from test_framework.test_framework import LitecoinTestFramework
+=======
+from test_framework.test_framework import BitcoinTestFramework
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 from test_framework.messages import CTransaction
 from test_framework.util import (
     assert_equal,
@@ -15,7 +19,10 @@ from test_framework.util import (
 )
 from io import BytesIO
 
+<<<<<<< HEAD
 ADDRESS = "tcp://127.0.0.1:28332"
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 class ZMQSubscriber:
     def __init__(self, socket, topic):
@@ -42,9 +49,22 @@ class ZMQTest (LitecoinTestFramework):
 
     def skip_test_if_missing_module(self):
         self.skip_if_no_py3_zmq()
+<<<<<<< HEAD
         self.skip_if_no_litecoind_zmq()
 
     def setup_nodes(self):
+=======
+        self.skip_if_no_bitcoind_zmq()
+        self.skip_if_no_wallet()
+
+    def setup_nodes(self):
+        # Import keys
+        self.add_nodes(self.num_nodes)
+        self.start_nodes()
+        super().import_deterministic_coinbase_privkeys()
+        self.stop_nodes()
+
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         import zmq
 
         # Initialize ZMQ context and socket.
@@ -63,13 +83,20 @@ class ZMQTest (LitecoinTestFramework):
         self.rawblock = ZMQSubscriber(socket, b"rawblock")
         self.rawtx = ZMQSubscriber(socket, b"rawtx")
 
+<<<<<<< HEAD
         self.extra_args = [
             ["-zmqpub%s=%s" % (sub.topic.decode(), ADDRESS) for sub in [self.hashblock, self.hashtx, self.rawblock, self.rawtx]],
             [],
         ]
         self.add_nodes(self.num_nodes, self.extra_args)
+=======
+        self.nodes[0].extra_args = ["-zmqpub%s=%s" % (sub.topic.decode(), address) for sub in [self.hashblock, self.hashtx, self.rawblock, self.rawtx]]
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         self.start_nodes()
         self.import_deterministic_coinbase_privkeys()
+
+    def import_deterministic_coinbase_privkeys(self):
+        pass
 
     def run_test(self):
         try:

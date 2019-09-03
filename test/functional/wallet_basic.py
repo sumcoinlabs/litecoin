@@ -232,7 +232,11 @@ class WalletTest(LitecoinTestFramework):
         assert_equal(set(relayed), {txid1, txid2})
         sync_mempools(self.nodes)
 
+<<<<<<< HEAD
         assert txid1 in self.nodes[3].getrawmempool()
+=======
+        assert(txid1 in self.nodes[3].getrawmempool())
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
         # check if we can list zero value tx as available coins
         # 1. create raw_tx

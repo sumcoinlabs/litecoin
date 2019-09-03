@@ -6,8 +6,13 @@ Some notes on how to build Litecoin Core in Unix.
 
 Note
 ---------------------
+<<<<<<< HEAD
 Always use absolute paths to configure and compile Litecoin Core and the dependencies.
 For example, when specifying the path of the dependency:
+=======
+Always use absolute paths to configure and compile Litecoin Core and the dependencies,
+for example, when specifying the path of the dependency:
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 	../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
 
@@ -24,7 +29,11 @@ make
 make install # optional
 ```
 
+<<<<<<< HEAD
 This will build litecoin-qt as well, if the dependencies are met.
+=======
+This will build litecoin-qt as well if the dependencies are met.
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 Dependencies
 ---------------------
@@ -83,10 +92,14 @@ BerkeleyDB 5.1 or later. This will break binary wallet compatibility with the di
 are based on BerkeleyDB 4.8. If you do not care about wallet compatibility,
 pass `--with-incompatible-bdb` to configure.
 
+<<<<<<< HEAD
 Otherwise, you can build from self-compiled `depends` (see above).
 
 To build Litecoin Core without wallet, see [*Disable-wallet mode*](/doc/build-unix.md#disable-wallet-mode)
 
+=======
+See the section "Disable-wallet mode" to build Litecoin Core without wallet.
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 Optional (see --with-miniupnpc and --enable-upnp-default):
 
@@ -206,7 +219,12 @@ Hardening enables the following features:
      TYPE
     ET_DYN
 
+<<<<<<< HEAD
 * _Non-executable Stack_: If the stack is executable then trivial stack-based buffer overflow exploits are possible if
+=======
+* Non-executable Stack
+    If the stack is executable then trivial stack-based buffer overflow exploits are possible if
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     vulnerable buffers are found. By default, Litecoin Core should be built with a non-executable stack,
     but if one of the libraries it uses asks for an executable stack or someone makes a mistake
     and uses a compiler extension which requires an executable stack, it will silently build an
@@ -244,7 +262,11 @@ Setup and Build Example: Arch Linux
 This example lists the steps necessary to setup and build a command line only, non-wallet distribution of the latest changes on Arch Linux:
 
     pacman -S git base-devel boost libevent python
+<<<<<<< HEAD
     git clone https://github.com/litecoin/litecoin.git
+=======
+    git clone https://github.com/litecoin-project/litecoin.git
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     cd litecoin/
     ./autogen.sh
     ./configure --disable-wallet --without-gui --without-miniupnpc
@@ -253,7 +275,11 @@ This example lists the steps necessary to setup and build a command line only, n
 Note:
 Enabling wallet support requires either compiling against a Berkeley DB newer than 4.8 (package `db`) using `--with-incompatible-bdb`,
 or building and depending on a local version of Berkeley DB 4.8. The readily available Arch Linux packages are currently built using
+<<<<<<< HEAD
 `--with-incompatible-bdb` according to the [PKGBUILD](https://projects.archlinux.org/svntogit/community.git/tree/litecoin/trunk/PKGBUILD).
+=======
+`--with-incompatible-bdb` according to the [PKGBUILD](https://projects.archlinux.org/svntogit/community.git/tree/bitcoin/trunk/PKGBUILD).
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 As mentioned above, when maintaining portability of the wallet between the standard Litecoin Core distributions and independently built
 node software is desired, Berkeley DB 4.8 must be used.
 

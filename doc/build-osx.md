@@ -41,9 +41,15 @@ from the root of the repository.
 Build Litecoin Core
 ------------------------
 
+<<<<<<< HEAD
 1. Clone the Litecoin Core source code:
 
         git clone https://github.com/litecoin/litecoin
+=======
+1. Clone the Litecoin Core source code and cd into `litecoin`
+
+        git clone https://github.com/litecoin-project/litecoin
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         cd litecoin
 
 2.  Build Litecoin Core:
@@ -64,6 +70,7 @@ Build Litecoin Core
 
         make deploy
 
+<<<<<<< HEAD
 Disable-wallet mode
 --------------------
 When the intention is to run only a P2P node without a wallet, Litecoin Core may be compiled in
@@ -74,6 +81,17 @@ disable-wallet mode with:
 In this case there is no dependency on Berkeley DB 4.8.
 
 Mining is also possible in disable-wallet mode using the `getblocktemplate` RPC call.
+=======
+5.  Installation into user directories (optional):
+
+        make install
+
+    or
+
+        cd ~/litecoin/src
+        cp litecoind /usr/local/bin/
+        cp litecoin-cli /usr/local/bin/
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 Running
 -------
@@ -82,6 +100,7 @@ Litecoin Core is now available at `./src/litecoind`
 
 Before running, you may create an empty configuration file:
 
+<<<<<<< HEAD
     mkdir -p "/Users/${USER}/Library/Application Support/Litecoin"
 
     touch "/Users/${USER}/Library/Application Support/Litecoin/litecoin.conf"
@@ -89,6 +108,13 @@ Before running, you may create an empty configuration file:
     chmod 600 "/Users/${USER}/Library/Application Support/Litecoin/litecoin.conf"
 
 The first time you run litecoind, it will start downloading the blockchain. This process could take many hours, or even days on slower than average systems.
+=======
+    echo -e "rpcuser=litecoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Litecoin/litecoin.conf"
+
+    chmod 600 "/Users/${USER}/Library/Application Support/Litecoin/litecoin.conf"
+
+The first time you run litecoind, it will start downloading the blockchain. This process could take several hours.
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 You can monitor the download process by looking at the debug.log file:
 

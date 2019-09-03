@@ -1,8 +1,14 @@
 <!-- This issue tracker is only for technical issues related to Litecoin Core.
 
+<<<<<<< HEAD
 General litecoin questions and/or support requests are best directed to the Litecoin StackExchange at https://litecoin.stackexchange.com.
 
 For reporting security issues, please read instructions at https://litecoincore.org/en/contact/.
+=======
+General litecoin questions and/or support requests and are best directed to the [litecointalk.io forums](https://litecointalk.io/).
+
+For reporting security issues, please contact the Litecoin developers on the #litecoin-dev Freenode IRC channel or alternatively you can email us at contact@litecoin.org.
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 If the node is "stuck" during sync or giving "block checksum mismatch" errors, please ensure your hardware is stable by running memtest and observe CPU temperature with a load-test tool such as linpack before creating an issue! -->
 

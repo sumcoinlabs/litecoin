@@ -22,11 +22,18 @@ libtool
 pkg-config
 python37
 
+<<<<<<< HEAD
 git clone https://github.com/litecoin/litecoin.git
+=======
+Download the source code:
+```
+git clone https://github.com/litecoin-project/litecoin
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.
 
+<<<<<<< HEAD
 ### Building BerkeleyDB
 
 BerkeleyDB is only necessary for the wallet functionality. To skip this, pass
@@ -47,6 +54,8 @@ from the root of the repository. Then set `BDB_PREFIX` for the next section:
 export BDB_PREFIX="$PWD/db4"
 ```
 
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 ### Building Litecoin Core
 
 **Important**: Use `gmake` (the non-GNU `make` will exit with an error).

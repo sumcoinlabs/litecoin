@@ -49,7 +49,10 @@
 
 const int BITCOIN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
 const QString BITCOIN_IPC_PREFIX("litecoin:");
+<<<<<<< HEAD
 #ifdef ENABLE_BIP70
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 // BIP70 payment protocol messages
 const char* BIP70_MESSAGE_PAYMENTACK = "PaymentACK";
 const char* BIP70_MESSAGE_PAYMENTREQUEST = "PaymentRequest";
@@ -57,7 +60,25 @@ const char* BIP70_MESSAGE_PAYMENTREQUEST = "PaymentRequest";
 const char* BIP71_MIMETYPE_PAYMENT = "application/litecoin-payment";
 const char* BIP71_MIMETYPE_PAYMENTACK = "application/litecoin-paymentack";
 const char* BIP71_MIMETYPE_PAYMENTREQUEST = "application/litecoin-paymentrequest";
+<<<<<<< HEAD
 #endif
+=======
+
+struct X509StoreDeleter {
+      void operator()(X509_STORE* b) {
+          X509_STORE_free(b);
+      }
+};
+
+struct X509Deleter {
+      void operator()(X509* b) { X509_free(b); }
+};
+
+namespace // Anon namespace
+{
+    std::unique_ptr<X509_STORE, X509StoreDeleter> certStore;
+}
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 //
 // Create a name that is unique for:
@@ -223,7 +244,11 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
 
         if (!uriServer->listen(name)) {
             // constructor is called early in init, so don't use "Q_EMIT message()" here
+<<<<<<< HEAD
             QMessageBox::critical(nullptr, tr("Payment request error"),
+=======
+            QMessageBox::critical(0, tr("Payment request error"),
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
                 tr("Cannot start litecoin: click-to-pay handler"));
         }
         else {

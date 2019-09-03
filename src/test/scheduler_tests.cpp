@@ -137,6 +137,7 @@ BOOST_AUTO_TEST_CASE(singlethreadedscheduler_ordered)
     // the callbacks should run in exactly the order in which they were enqueued
     for (int i = 0; i < 100; ++i) {
         queue1.AddToProcessQueue([i, &counter1]() {
+<<<<<<< HEAD
             bool expectation = i == counter1++;
             assert(expectation);
         });
@@ -144,6 +145,13 @@ BOOST_AUTO_TEST_CASE(singlethreadedscheduler_ordered)
         queue2.AddToProcessQueue([i, &counter2]() {
             bool expectation = i == counter2++;
             assert(expectation);
+=======
+            assert(i == counter1++);
+        });
+
+        queue2.AddToProcessQueue([i, &counter2]() {
+            assert(i == counter2++);
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         });
     }
 

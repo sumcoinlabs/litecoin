@@ -239,7 +239,11 @@ debug.log file if inconsistencies are detected.
 
 Valgrind is a programming tool for memory debugging, memory leak detection, and
 profiling. The repo contains a Valgrind suppressions file
+<<<<<<< HEAD
 ([`valgrind.supp`](https://github.com/litecoin/litecoin/blob/master/contrib/valgrind.supp))
+=======
+([`valgrind.supp`](https://github.com/litecoin-project/litecoin/blob/master/contrib/valgrind.supp))
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 which includes known Valgrind warnings in our dependencies that cannot be fixed
 in-tree. Example use:
 
@@ -264,6 +268,7 @@ make
 make cov
 
 # A coverage report will now be accessible at `./test_litecoin.coverage/index.html`.
+<<<<<<< HEAD
 ```
 
 ### Performance profiling with perf
@@ -304,6 +309,8 @@ You could then analyze the results by running
 
 ```sh
 perf report --stdio | c++filt | less
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 ```
 
 or using a graphical tool like [Hotspot](https://github.com/KDAB/hotspot).
@@ -392,7 +399,7 @@ Threads
 
 - ThreadMapPort : Universal plug-and-play startup/shutdown
 
-- ThreadSocketHandler : Sends/Receives data from peers on port 8333.
+- ThreadSocketHandler : Sends/Receives data from peers on port 9333.
 
 - ThreadOpenAddedConnections : Opens network connections to added nodes.
 
@@ -402,7 +409,7 @@ Threads
 
 - DumpAddresses : Dumps IP addresses of nodes to peers.dat.
 
-- ThreadRPCServer : Remote procedure call handler, listens on port 8332 for connections and services them.
+- ThreadRPCServer : Remote procedure call handler, listens on port 9332 for connections and services them.
 
 - Shutdown : Does an orderly shutdown of everything.
 
@@ -844,6 +851,57 @@ would be to revert the upstream fix before applying the updates to Litecoin's
 copy of LevelDB. In general you should be wary of any upstream changes affecting
 what data is returned from LevelDB queries.
 
+<<<<<<< HEAD
+=======
+Git and GitHub tips
+---------------------
+
+- For resolving merge/rebase conflicts, it can be useful to enable diff3 style using
+  `git config merge.conflictstyle diff3`. Instead of
+
+        <<<
+        yours
+        ===
+        theirs
+        >>>
+
+  you will see
+
+        <<<
+        yours
+        |||
+        original
+        ===
+        theirs
+        >>>
+
+  This may make it much clearer what caused the conflict. In this style, you can often just look
+  at what changed between *original* and *theirs*, and mechanically apply that to *yours* (or the other way around).
+
+- When reviewing patches which change indentation in C++ files, use `git diff -w` and `git show -w`. This makes
+  the diff algorithm ignore whitespace changes. This feature is also available on github.com, by adding `?w=1`
+  at the end of any URL which shows a diff.
+
+- When reviewing patches that change symbol names in many places, use `git diff --word-diff`. This will instead
+  of showing the patch as deleted/added *lines*, show deleted/added *words*.
+
+- When reviewing patches that move code around, try using
+  `git diff --patience commit~:old/file.cpp commit:new/file/name.cpp`, and ignoring everything except the
+  moved body of code which should show up as neither `+` or `-` lines. In case it was not a pure move, this may
+  even work when combined with the `-w` or `--word-diff` options described above.
+
+- When looking at other's pull requests, it may make sense to add the following section to your `.git/config`
+  file:
+
+        [remote "upstream-pull"]
+                fetch = +refs/pull/*:refs/remotes/upstream-pull/*
+                url = git@github.com:litecoin-project/litecoin.git
+
+  This will add an `upstream-pull` remote to your git repository, which can be fetched using `git fetch --all`
+  or `git fetch upstream-pull`. Afterwards, you can use `upstream-pull/NUMBER/head` in arguments to `git show`,
+  `git checkout` and anywhere a commit id would be acceptable to see the changes from pull request NUMBER.
+
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 Scripted diffs
 --------------
 

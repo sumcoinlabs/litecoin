@@ -53,8 +53,20 @@ class SkipTest(Exception):
         self.message = message
 
 
+<<<<<<< HEAD
 class LitecoinTestMetaClass(type):
     """Metaclass for LitecoinTestFramework.
+=======
+class SkipTest(Exception):
+    """This exception is raised to skip a test"""
+
+    def __init__(self, message):
+        self.message = message
+
+
+class BitcoinTestMetaClass(type):
+    """Metaclass for BitcoinTestFramework.
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
     Ensures that any attempt to register a subclass of `LitecoinTestFramework`
     adheres to a standard whereby the subclass overrides `set_test_params` and
@@ -73,7 +85,11 @@ class LitecoinTestMetaClass(type):
         return super().__new__(cls, clsname, bases, dct)
 
 
+<<<<<<< HEAD
 class LitecoinTestFramework(metaclass=LitecoinTestMetaClass):
+=======
+class BitcoinTestFramework(metaclass=BitcoinTestMetaClass):
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     """Base class for a litecoin test script.
 
     Individual litecoin test scripts should subclass this class and override the set_test_params() and run_test() methods.
@@ -127,8 +143,11 @@ class LitecoinTestFramework(metaclass=LitecoinTestMetaClass):
                             help="Attach a python debugger if test fails")
         parser.add_argument("--usecli", dest="usecli", default=False, action="store_true",
                             help="use litecoin-cli instead of RPC for all commands")
+<<<<<<< HEAD
         parser.add_argument("--perf", dest="perf", default=False, action="store_true",
                             help="profile running nodes with perf for the duration of the test")
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         self.add_options(parser)
         self.options = parser.parse_args()
 
@@ -140,9 +159,14 @@ class LitecoinTestFramework(metaclass=LitecoinTestMetaClass):
 
         config = configparser.ConfigParser()
         config.read_file(open(self.options.configfile))
+<<<<<<< HEAD
         self.config = config
         self.options.litecoind = os.getenv("BITCOIND", default=config["environment"]["BUILDDIR"] + '/src/litecoind' + config["environment"]["EXEEXT"])
         self.options.litecoincli = os.getenv("BITCOINCLI", default=config["environment"]["BUILDDIR"] + '/src/litecoin-cli' + config["environment"]["EXEEXT"])
+=======
+        self.options.bitcoind = os.getenv("LITECOIND", default=config["environment"]["BUILDDIR"] + '/src/litecoind' + config["environment"]["EXEEXT"])
+        self.options.bitcoincli = os.getenv("LITECOINCLI", default=config["environment"]["BUILDDIR"] + '/src/litecoin-cli' + config["environment"]["EXEEXT"])
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
         os.environ['PATH'] = os.pathsep.join([
             os.path.join(config['environment']['BUILDDIR'], 'src'),
@@ -165,13 +189,19 @@ class LitecoinTestFramework(metaclass=LitecoinTestMetaClass):
         success = TestStatus.FAILED
 
         try:
+<<<<<<< HEAD
             if self.options.usecli:
                 if not self.supports_cli:
                     raise SkipTest("--usecli specified but test does not support using CLI")
                 self.skip_if_no_cli()
+=======
+            if self.options.usecli and not self.supports_cli:
+                raise SkipTest("--usecli specified but test does not support using CLI")
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
             self.skip_test_if_missing_module()
             self.setup_chain()
             self.setup_network()
+            self.import_deterministic_coinbase_privkeys()
             self.run_test()
             success = TestStatus.PASSED
         except JSONRPCException as e:
@@ -203,6 +233,7 @@ class LitecoinTestFramework(metaclass=LitecoinTestMetaClass):
                 node.cleanup_on_exit = False
             self.log.info("Note: litecoinds were not stopped and may still be running")
 
+<<<<<<< HEAD
         should_clean_up = (
             not self.options.nocleanup and
             not self.options.noshutdown and
@@ -210,6 +241,9 @@ class LitecoinTestFramework(metaclass=LitecoinTestMetaClass):
             not self.options.perf
         )
         if should_clean_up:
+=======
+        if not self.options.nocleanup and not self.options.noshutdown and success != TestStatus.FAILED:
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
             self.log.info("Cleaning up {} on exit".format(self.options.tmpdir))
             cleanup_tree_on_exit = True
         elif self.options.perf:
@@ -298,6 +332,19 @@ class LitecoinTestFramework(metaclass=LitecoinTestMetaClass):
 
             n.importprivkey(privkey=n.get_deterministic_priv_key().key, label='coinbase')
 
+    def import_deterministic_coinbase_privkeys(self):
+        if self.setup_clean_chain:
+            return
+
+        for n in self.nodes:
+            try:
+                n.getwalletinfo()
+            except JSONRPCException as e:
+                assert str(e).startswith('Method not found')
+                continue
+
+            n.importprivkey(n.get_deterministic_priv_key()[1])
+
     def run_test(self):
         """Tests must override this method to define test logic"""
         raise NotImplementedError
@@ -367,12 +414,21 @@ class LitecoinTestFramework(metaclass=LitecoinTestMetaClass):
             for node in self.nodes:
                 coverage.write_all_rpc_commands(self.options.coveragedir, node.rpc)
 
+<<<<<<< HEAD
     def stop_node(self, i, expected_stderr='', wait=0):
         """Stop a litecoind test node"""
         self.nodes[i].stop_node(expected_stderr, wait=wait)
         self.nodes[i].wait_until_stopped()
 
     def stop_nodes(self, wait=0):
+=======
+    def stop_node(self, i, expected_stderr=''):
+        """Stop a litecoind test node"""
+        self.nodes[i].stop_node(expected_stderr)
+        self.nodes[i].wait_until_stopped()
+
+    def stop_nodes(self):
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         """Stop multiple litecoind test nodes"""
         for node in self.nodes:
             # Issue RPC to stop nodes
@@ -467,7 +523,11 @@ class LitecoinTestFramework(metaclass=LitecoinTestMetaClass):
             # Create cache directories, run litecoinds:
             for i in range(MAX_NODES):
                 datadir = initialize_datadir(self.options.cachedir, i)
+<<<<<<< HEAD
                 args = [self.options.litecoind, "-datadir=" + datadir, '-disablewallet']
+=======
+                args = [self.options.bitcoind, "-datadir=" + datadir, '-disablewallet']
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
                 if i > 0:
                     args.append("-connect=127.0.0.1:" + str(p2p_port(0)))
                 self.nodes.append(TestNode(
@@ -491,6 +551,7 @@ class LitecoinTestFramework(metaclass=LitecoinTestMetaClass):
 
             # Create a 199-block-long chain; each of the 4 first nodes
             # gets 25 mature blocks and 25 immature.
+<<<<<<< HEAD
             # The 4th node gets only 24 immature blocks so that the very last
             # block in the cache does not age too much (have an old tip age).
             # This is needed so that we are out of IBD when the test starts,
@@ -501,6 +562,23 @@ class LitecoinTestFramework(metaclass=LitecoinTestMetaClass):
 
             for n in self.nodes:
                 assert_equal(n.getblockchaininfo()["blocks"], 199)
+=======
+            # Note: To preserve compatibility with older versions of
+            # initialize_chain, only 4 nodes will generate coins.
+            #
+            # blocks are created with timestamps 10 minutes apart
+            # starting from 2010 minutes in the past
+            self.enable_mocktime()
+            block_time = self.mocktime - (201 * 10 * 60)
+            for i in range(2):
+                for peer in range(4):
+                    for j in range(25):
+                        set_node_times(self.nodes, block_time)
+                        self.nodes[peer].generatetoaddress(1, self.nodes[peer].get_deterministic_priv_key()[0])
+                        block_time += 10 * 60
+                    # Must sync before next peer starts generating blocks
+                    sync_blocks(self.nodes)
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
             # Shut them down, and clean up cache directories:
             self.stop_nodes()
@@ -536,10 +614,17 @@ class LitecoinTestFramework(metaclass=LitecoinTestMetaClass):
         except ImportError:
             raise SkipTest("python3-zmq module not available.")
 
+<<<<<<< HEAD
     def skip_if_no_litecoind_zmq(self):
         """Skip the running test if litecoind has not been compiled with zmq support."""
         if not self.is_zmq_compiled():
             raise SkipTest("litecoind has not been built with zmq enabled.")
+=======
+    def skip_if_no_bitcoind_zmq(self):
+        """Skip the running test if bitcoind has not been compiled with zmq support."""
+        if not self.is_zmq_compiled():
+            raise SkipTest("bitcoind has not been built with zmq enabled.")
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
     def skip_if_no_wallet(self):
         """Skip the running test if wallet has not been compiled."""
@@ -547,6 +632,7 @@ class LitecoinTestFramework(metaclass=LitecoinTestMetaClass):
             raise SkipTest("wallet has not been compiled.")
 
     def skip_if_no_cli(self):
+<<<<<<< HEAD
         """Skip the running test if litecoin-cli has not been compiled."""
         if not self.is_cli_compiled():
             raise SkipTest("litecoin-cli has not been compiled.")
@@ -557,6 +643,18 @@ class LitecoinTestFramework(metaclass=LitecoinTestMetaClass):
         config.read_file(open(self.options.configfile))
 
         return config["components"].getboolean("ENABLE_CLI")
+=======
+        """Skip the running test if bitcoin-cli has not been compiled."""
+        if not self.is_cli_compiled():
+            raise SkipTest("bitcoin-cli has not been compiled.")
+
+    def is_cli_compiled(self):
+        """Checks whether bitcoin-cli was compiled."""
+        config = configparser.ConfigParser()
+        config.read_file(open(self.options.configfile))
+
+        return config["components"].getboolean("ENABLE_UTILS")
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
     def is_wallet_compiled(self):
         """Checks whether the wallet module was compiled."""

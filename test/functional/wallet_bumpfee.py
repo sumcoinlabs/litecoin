@@ -18,7 +18,11 @@ import io
 
 from test_framework.blocktools import add_witness_commitment, create_block, create_coinbase, send_to_witness
 from test_framework.messages import BIP125_SEQUENCE_NUMBER, CTransaction
+<<<<<<< HEAD
 from test_framework.test_framework import LitecoinTestFramework
+=======
+from test_framework.test_framework import BitcoinTestFramework, SkipTest
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 from test_framework.util import assert_equal, assert_greater_than, assert_raises_rpc_error, bytes_to_hex_str, connect_nodes_bi, hex_str_to_bytes, sync_mempools
 
 WALLET_PASSPHRASE = "test"
@@ -29,14 +33,21 @@ class BumpFeeTest(LitecoinTestFramework):
         self.num_nodes = 2
         self.setup_clean_chain = True
         self.extra_args = [[
+<<<<<<< HEAD
             "-walletrbf={}".format(i),
             "-mintxfee=0.00002",
+=======
+            "-deprecatedrpc=addwitnessaddress",
+            "-walletrbf={}".format(i),
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         ] for i in range(self.num_nodes)]
 
     def skip_test_if_missing_module(self):
         self.skip_if_no_wallet()
 
     def run_test(self):
+        raise SkipTest("Litecoin doesn't support RBF.")
+
         # Encrypt wallet for test_locked_wallet_fails test
         self.nodes[1].encryptwallet(WALLET_PASSPHRASE)
         self.nodes[1].walletpassphrase(WALLET_PASSPHRASE, WALLET_PASSPHRASE_TIMEOUT)

@@ -6,9 +6,15 @@ for cryptographic algorithms (e.g. SHA1, SHA256, SHA512, RIPEMD160), as well as 
 
 Running
 ---------------------
+<<<<<<< HEAD
 After compiling litecoin-core, the benchmarks can be run with:
 
     src/bench/bench_litecoin
+=======
+After compiling Litecoin-core, the benchmarks can be run with:
+
+    src/bench/bench_Litecoin
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 The output will look similar to:
 ```
@@ -43,7 +49,11 @@ Help
 ---------------------
 `-?` will print a list of options and exit:
 
+<<<<<<< HEAD
     src/bench/bench_litecoin -?
+=======
+    src/bench/bench_Litecoin -?
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 Notes
 ---------------------

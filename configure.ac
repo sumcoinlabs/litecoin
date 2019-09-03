@@ -1,15 +1,25 @@
 dnl require autoconf 2.60 (AS_ECHO/AS_ECHO_N)
 AC_PREREQ([2.60])
 define(_CLIENT_VERSION_MAJOR, 0)
+<<<<<<< HEAD
 define(_CLIENT_VERSION_MINOR, 18)
 define(_CLIENT_VERSION_REVISION, 1)
 define(_CLIENT_VERSION_BUILD, 0)
 define(_CLIENT_VERSION_RC, 0)
+=======
+define(_CLIENT_VERSION_MINOR, 17)
+define(_CLIENT_VERSION_REVISION, 1)
+define(_CLIENT_VERSION_BUILD, 0)
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2019)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
 define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Litecoin Core]])
+<<<<<<< HEAD
 AC_INIT([Litecoin Core],m4_join([.], _CLIENT_VERSION_MAJOR, _CLIENT_VERSION_MINOR, _CLIENT_VERSION_REVISION, m4_if(_CLIENT_VERSION_BUILD, [0], [], _CLIENT_VERSION_BUILD))m4_if(_CLIENT_VERSION_RC, [0], [], [rc]_CLIENT_VERSION_RC),[https://github.com/litecoin/litecoin/issues],[litecoin],[https://litecoincore.org/])
+=======
+AC_INIT([Litecoin Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/litecoin-project/litecoin/issues],[litecoin],[https://litecoin.org/])
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 AC_CONFIG_SRCDIR([src/validation.cpp])
 AC_CONFIG_HEADERS([src/config/litecoin-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
@@ -19,7 +29,10 @@ BITCOIN_DAEMON_NAME=litecoind
 BITCOIN_GUI_NAME=litecoin-qt
 BITCOIN_CLI_NAME=litecoin-cli
 BITCOIN_TX_NAME=litecoin-tx
+<<<<<<< HEAD
 BITCOIN_WALLET_TOOL_NAME=litecoin-wallet
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 AC_ARG_VAR(ARFLAGS, [Flags for the archiver, defaults to <cr> if not set])
@@ -221,6 +234,12 @@ AC_ARG_ENABLE([bip70],
   [enable_bip70=$enableval],
   [enable_bip70=auto])
 
+AC_ARG_ENABLE([sse2],
+    [AS_HELP_STRING([--enable-sse2],
+    [enable SSE2 instructions in the scrypt library. (default is disabled)])],
+    [use_sse2=$enableval],
+    [use_sse2=no])
+
 AC_ARG_WITH([protoc-bindir],[AS_HELP_STRING([--with-protoc-bindir=BIN_DIR],[specify protoc bin path])], [protoc_bin_path=$withval], [])
 
 AC_ARG_ENABLE(man,
@@ -420,6 +439,7 @@ CPPFLAGS="$CPPFLAGS -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS"
 
 AC_ARG_WITH([utils],
   [AS_HELP_STRING([--with-utils],
+<<<<<<< HEAD
   [build litecoin-cli litecoin-tx litecoin-wallet (default=yes)])],
   [build_litecoin_utils=$withval],
   [build_litecoin_utils=yes])
@@ -441,6 +461,11 @@ AC_ARG_ENABLE([util-wallet],
   [build litecoin-wallet])],
   [build_litecoin_wallet=$enableval],
   [build_litecoin_wallet=$build_litecoin_utils])
+=======
+  [build litecoin-cli bitcoin-tx (default=yes)])],
+  [build_bitcoin_utils=$withval],
+  [build_bitcoin_utils=yes])
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 AC_ARG_WITH([libs],
   [AS_HELP_STRING([--with-libs],
@@ -451,8 +476,13 @@ AC_ARG_WITH([libs],
 AC_ARG_WITH([daemon],
   [AS_HELP_STRING([--with-daemon],
   [build litecoind daemon (default=yes)])],
+<<<<<<< HEAD
   [build_litecoind=$withval],
   [build_litecoind=yes])
+=======
+  [build_bitcoind=$withval],
+  [build_bitcoind=yes])
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 use_pkgconfig=yes
 case $host in
@@ -1242,6 +1272,7 @@ AC_SUBST(UNIVALUE_CFLAGS)
 AC_SUBST(UNIVALUE_LIBS)
 
 
+<<<<<<< HEAD
 if test x$have_protobuf != xno &&
    test x$enable_bip70 != xno; then
   BITCOIN_QT_PATH_PROGS([PROTOC], [protoc],$protoc_bin_path)
@@ -1262,6 +1293,15 @@ AC_MSG_RESULT($build_litecoin_tx)
 AC_MSG_CHECKING([whether to build litecoin-wallet])
 AM_CONDITIONAL([BUILD_BITCOIN_WALLET], [test x$build_litecoin_wallet = xyes])
 AC_MSG_RESULT($build_litecoin_wallet)
+=======
+AC_MSG_CHECKING([whether to build litecoind])
+AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_bitcoind = xyes])
+AC_MSG_RESULT($build_bitcoind)
+
+AC_MSG_CHECKING([whether to build utils (litecoin-cli litecoin-tx)])
+AM_CONDITIONAL([BUILD_BITCOIN_UTILS], [test x$build_bitcoin_utils = xyes])
+AC_MSG_RESULT($build_bitcoin_utils)
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 AC_MSG_CHECKING([whether to build libraries])
 AM_CONDITIONAL([BUILD_BITCOIN_LIBS], [test x$build_litecoin_libs = xyes])
@@ -1361,7 +1401,11 @@ if test x$litecoin_enable_qt != xno; then
   fi
 
   AC_MSG_CHECKING([whether to build test_litecoin-qt])
+<<<<<<< HEAD
   if test x$use_gui_tests$litecoin_enable_qt_test = xyesyes; then
+=======
+  if test x$use_gui_tests$bitcoin_enable_qt_test = xyesyes; then
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     AC_MSG_RESULT([yes])
     BUILD_TEST_QT="yes"
   else
@@ -1397,6 +1441,16 @@ else
   BUILD_TEST=""
 fi
 
+AC_MSG_CHECKING([whether to enable sse2 instructions])
+if test x$use_sse2 != xno; then
+  AC_MSG_RESULT(yes)
+  AC_DEFINE([USE_SSE2],[1],[Define if SSE2 support should be compiled in])
+  use_sse2=yes
+  CPPFLAGS="$CPPFLAGS -DUSE_SSE2=1"
+else
+  AC_MSG_RESULT(no)
+fi
+
 AC_MSG_CHECKING([whether to reduce exports])
 if test x$use_reduce_exports = xyes; then
   AC_MSG_RESULT([yes])
@@ -1419,6 +1473,7 @@ AM_CONDITIONAL([ENABLE_QT_TESTS],[test x$BUILD_TEST_QT = xyes])
 AM_CONDITIONAL([ENABLE_BIP70],[test x$enable_bip70 = xyes])
 AM_CONDITIONAL([ENABLE_BENCH],[test x$use_bench = xyes])
 AM_CONDITIONAL([USE_QRCODE], [test x$use_qr = xyes])
+AM_CONDITIONAL([USE_SSE2], [test x$use_sse2 = xyes])
 AM_CONDITIONAL([USE_LCOV],[test x$use_lcov = xyes])
 AM_CONDITIONAL([GLIBC_BACK_COMPAT],[test x$use_glibc_compat = xyes])
 AM_CONDITIONAL([HARDEN],[test x$use_hardening = xyes])
@@ -1476,6 +1531,7 @@ AC_SUBST(SHANI_CXXFLAGS)
 AC_SUBST(LIBTOOL_APP_LDFLAGS)
 AC_SUBST(USE_UPNP)
 AC_SUBST(USE_QRCODE)
+AC_SUBST(USE_SSE2)
 AC_SUBST(BOOST_LIBS)
 AC_SUBST(TESTDEFS)
 AC_SUBST(LEVELDB_TARGET_FLAGS)
@@ -1564,6 +1620,7 @@ echo "  with bench    = $use_bench"
 echo "  with upnp     = $use_upnp"
 echo "  use asm       = $use_asm"
 echo "  sanitizers    = $use_sanitizers"
+echo "  scrypt sse2   = $use_sse2"
 echo "  debug enabled = $enable_debug"
 echo "  gprof enabled = $enable_gprof"
 echo "  werror        = $enable_werror"

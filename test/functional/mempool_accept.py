@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2017-2018 The Litecoin Core developers
+=======
+# Copyright (c) 2017-2018 The Bitcoin Core developers
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test mempool acceptance of raw transactions."""
@@ -37,6 +41,11 @@ class MempoolAcceptanceTest(LitecoinTestFramework):
         self.num_nodes = 1
         self.extra_args = [[
             '-txindex',
+<<<<<<< HEAD
+=======
+            '-mempoolreplacement=1',
+            '-reindex',  # Need reindex for txindex
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
             '-acceptnonstdtxn=0',  # Try to mimic main-net
         ]] * self.num_nodes
 
@@ -215,7 +224,7 @@ class MempoolAcceptanceTest(LitecoinTestFramework):
 
         self.log.info('A transaction with too large output value')
         tx.deserialize(BytesIO(hex_str_to_bytes(raw_tx_reference)))
-        tx.vout[0].nValue = 21000000 * COIN + 1
+        tx.vout[0].nValue = 84000000 * COIN + 1
         self.check_mempool_result(
             result_expected=[{'txid': tx.rehash(), 'allowed': False, 'reject-reason': '16: bad-txns-vout-toolarge'}],
             rawtxs=[bytes_to_hex_str(tx.serialize())],
@@ -224,7 +233,7 @@ class MempoolAcceptanceTest(LitecoinTestFramework):
         self.log.info('A transaction with too large sum of output values')
         tx.deserialize(BytesIO(hex_str_to_bytes(raw_tx_reference)))
         tx.vout = [tx.vout[0]] * 2
-        tx.vout[0].nValue = 21000000 * COIN
+        tx.vout[0].nValue = 84000000 * COIN
         self.check_mempool_result(
             result_expected=[{'txid': tx.rehash(), 'allowed': False, 'reject-reason': '16: bad-txns-txouttotal-toolarge'}],
             rawtxs=[bytes_to_hex_str(tx.serialize())],

@@ -32,7 +32,11 @@ class RawTransactionsTest(LitecoinTestFramework):
     def skip_test_if_missing_module(self):
         self.skip_if_no_wallet()
 
+<<<<<<< HEAD
     def setup_network(self):
+=======
+    def setup_network(self, split=False):
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         self.setup_nodes()
 
         connect_nodes_bi(self.nodes, 0, 1)
@@ -659,7 +663,7 @@ class RawTransactionsTest(LitecoinTestFramework):
         inputs = []
         outputs = {self.nodes[3].getnewaddress() : 1}
         rawtx = self.nodes[3].createrawtransaction(inputs, outputs)
-        result = self.nodes[3].fundrawtransaction(rawtx) # uses min_relay_tx_fee (set by settxfee)
+        result = self.nodes[3].fundrawtransaction(rawtx, {"feeRate": 1*min_relay_tx_fee}) # uses min_relay_tx_fee (set by settxfee)
         result2 = self.nodes[3].fundrawtransaction(rawtx, {"feeRate": 2*min_relay_tx_fee})
         result3 = self.nodes[3].fundrawtransaction(rawtx, {"feeRate": 10*min_relay_tx_fee})
         result_fee_rate = result['fee'] * 1000 / count_bytes(result['hex'])

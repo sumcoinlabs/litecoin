@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2019 The Litecoin Core developers
+=======
+// Copyright (c) 2011-2018 The Bitcoin Core developers
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 

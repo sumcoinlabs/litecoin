@@ -123,7 +123,11 @@
     </message>
     <message>
         <source>Litecoin</source>
+<<<<<<< HEAD
         <translation>Биткойн</translation>
+=======
+        <translation>Litecoin</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -222,7 +226,11 @@
     <name>Intro</name>
     <message>
         <source>Litecoin</source>
+<<<<<<< HEAD
         <translation>Биткойн</translation>
+=======
+        <translation>Litecoin</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Error</source>

@@ -69,7 +69,11 @@ class Variant(collections.namedtuple("Variant", "call data rescan prune")):
     def check(self, txid=None, amount=None, confirmations=None):
         """Verify that listtransactions/listreceivedbyaddress return expected values."""
 
+<<<<<<< HEAD
         txs = self.node.listtransactions(label=self.label, count=10000, include_watchonly=True)
+=======
+        txs = self.node.listtransactions(label=self.label, count=10000, skip=0, include_watchonly=True)
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         assert_equal(len(txs), self.expected_txs)
 
         addresses = self.node.listreceivedbyaddress(minconf=0, include_watchonly=True, address_filter=self.address['address'])
@@ -134,15 +138,24 @@ class ImportRescanTest(LitecoinTestFramework):
 
         self.add_nodes(self.num_nodes, extra_args=extra_args)
 
+<<<<<<< HEAD
         # Import keys with pruning disabled
         self.start_nodes(extra_args=[[]] * self.num_nodes)
         for n in self.nodes:
             n.importprivkey(privkey=n.get_deterministic_priv_key().key, label='coinbase')
+=======
+        # Import keys
+        self.start_nodes(extra_args=[[]] * self.num_nodes)
+        super().import_deterministic_coinbase_privkeys()
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         self.stop_nodes()
 
         self.start_nodes()
         for i in range(1, self.num_nodes):
             connect_nodes(self.nodes[i], 0)
+
+    def import_deterministic_coinbase_privkeys(self):
+        pass
 
     def run_test(self):
         # Create one transaction on node 0 with a unique amount for

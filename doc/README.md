@@ -3,9 +3,15 @@ Litecoin Core
 
 Setup
 ---------------------
+<<<<<<< HEAD
 Litecoin Core is the original Litecoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Litecoin transactions, which requires a few hundred gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
 To download Litecoin Core, visit [litecoincore.org](https://litecoincore.org/en/download/).
+=======
+Litecoin Core is the original Litecoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Litecoin transactions (which is currently more than 7 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+
+To download Litecoin Core, visit [litecoin.org](https://litecoin.org).
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 Running
 ---------------------
@@ -28,10 +34,17 @@ Drag Litecoin Core to your applications folder, and then run Litecoin Core.
 
 ### Need Help?
 
+<<<<<<< HEAD
 * See the documentation at the [Litecoin Wiki](https://en.litecoin.it/wiki/Main_Page)
 for help and more information.
 * Ask for help on [#litecoin](http://webchat.freenode.net?channels=litecoin) on Freenode. If you don't have an IRC client, use [webchat here](http://webchat.freenode.net?channels=litecoin).
 * Ask for help on the [LitecoinTalk](https://litecointalk.org/) forums, in the [Technical Support board](https://litecointalk.org/index.php?board=4.0).
+=======
+* See the documentation at the [Litecoin Wiki](https://litecoin.info/)
+for help and more information.
+* Ask for help on [#litecoin](http://webchat.freenode.net?channels=litecoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=litecoin).
+* Ask for help on the [LitecoinTalk](https://litecointalk.io/) forums.
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 Building
 ---------------------
@@ -54,7 +67,10 @@ The Litecoin repo's [root README](/README.md) contains relevant information on t
 - [Productivity Notes](productivity.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
+<<<<<<< HEAD
 - [Source Code Documentation (External Link)](https://dev.visucore.com/litecoin/doxygen/)
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [JSON-RPC Interface](JSON-RPC-interface.md)
@@ -65,9 +81,14 @@ The Litecoin repo's [root README](/README.md) contains relevant information on t
 - [Benchmarking](benchmarking.md)
 
 ### Resources
+<<<<<<< HEAD
 * Discuss on the [LitecoinTalk](https://litecointalk.org/) forums, in the [Development & Technical Discussion board](https://litecointalk.org/index.php?board=6.0).
 * Discuss project-specific development on #litecoin-core-dev on Freenode. If you don't have an IRC client, use [webchat here](http://webchat.freenode.net/?channels=litecoin-core-dev).
 * Discuss general Litecoin development on #litecoin-dev on Freenode. If you don't have an IRC client, use [webchat here](http://webchat.freenode.net/?channels=litecoin-dev).
+=======
+* Discuss on the [LitecoinTalk](https://litecointalk.io/) forums.
+* Discuss general Litecoin development on #litecoin-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=litecoin-dev).
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

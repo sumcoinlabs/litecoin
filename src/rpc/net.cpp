@@ -215,6 +215,7 @@ static UniValue addnode(const JSONRPCRequest& request)
     if (request.fHelp || request.params.size() != 2 ||
         (strCommand != "onetry" && strCommand != "add" && strCommand != "remove"))
         throw std::runtime_error(
+<<<<<<< HEAD
             RPCHelpMan{"addnode",
                 "\nAttempts to add or remove a node from the addnode list.\n"
                 "Or try a connection to a node once.\n"
@@ -230,6 +231,20 @@ static UniValue addnode(const JSONRPCRequest& request)
             + HelpExampleRpc("addnode", "\"192.168.0.6:8333\", \"onetry\"")
                 },
             }.ToString());
+=======
+            "addnode \"node\" \"add|remove|onetry\"\n"
+            "\nAttempts to add or remove a node from the addnode list.\n"
+            "Or try a connection to a node once.\n"
+            "Nodes added using addnode (or -connect) are protected from DoS disconnection and are not required to be\n"
+            "full nodes/support SegWit as other outbound peers are (though such peers will not be synced from).\n"
+            "\nArguments:\n"
+            "1. \"node\"     (string, required) The node (see getpeerinfo for nodes)\n"
+            "2. \"command\"  (string, required) 'add' to add a node to the list, 'remove' to remove a node from the list, 'onetry' to try a connection to the node once\n"
+            "\nExamples:\n"
+            + HelpExampleCli("addnode", "\"192.168.0.6:9333\" \"onetry\"")
+            + HelpExampleRpc("addnode", "\"192.168.0.6:9333\", \"onetry\"")
+        );
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
     if(!g_connman)
         throw JSONRPCError(RPC_CLIENT_P2P_DISABLED, "Error: Peer-to-peer functionality missing or disabled");
@@ -320,7 +335,11 @@ static UniValue getaddednodeinfo(const JSONRPCRequest& request)
             "    \"connected\" : true|false,          (boolean) If connected\n"
             "    \"addresses\" : [                    (list of objects) Only when connected = true\n"
             "       {\n"
+<<<<<<< HEAD
             "         \"address\" : \"192.168.0.201:8333\",  (string) The litecoin server IP and port we're connected to\n"
+=======
+            "         \"address\" : \"192.168.0.201:9333\",  (string) The litecoin server IP and port we're connected to\n"
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
             "         \"connected\" : \"outbound\"           (string) connection, inbound or outbound\n"
             "       }\n"
             "     ]\n"

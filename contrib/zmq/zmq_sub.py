@@ -6,7 +6,11 @@
 """
     ZMQ example using python3's asyncio
 
+<<<<<<< HEAD
     Litecoin should be started with the command line arguments:
+=======
+    Litecoind should be started with the command line arguments:
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         litecoind -testnet -daemon \
                 -zmqpubrawtx=tcp://127.0.0.1:28332 \
                 -zmqpubrawblock=tcp://127.0.0.1:28332 \

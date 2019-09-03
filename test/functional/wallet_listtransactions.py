@@ -29,6 +29,9 @@ class ListTransactionsTest(LitecoinTestFramework):
     def skip_test_if_missing_module(self):
         self.skip_if_no_wallet()
 
+    def skip_test_if_missing_module(self):
+        self.skip_if_no_wallet()
+
     def run_test(self):
         self.nodes[0].generate(1)  # Get out of IBD
         self.sync_all()
@@ -98,12 +101,18 @@ class ListTransactionsTest(LitecoinTestFramework):
         txid = self.nodes[1].sendtoaddress(multisig["address"], 0.1)
         self.nodes[1].generate(1)
         self.sync_all()
+<<<<<<< HEAD
         assert len(self.nodes[0].listtransactions(label="watchonly", count=100, include_watchonly=False)) == 0
         assert_array_result(self.nodes[0].listtransactions(label="watchonly", count=100, include_watchonly=True),
+=======
+        assert len(self.nodes[0].listtransactions(label="watchonly", count=100, skip=0, include_watchonly=False)) == 0
+        assert_array_result(self.nodes[0].listtransactions(label="watchonly", count=100, skip=0, include_watchonly=True),
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
                             {"category": "receive", "amount": Decimal("0.1")},
                             {"txid": txid, "label": "watchonly"})
 
-        self.run_rbf_opt_in_test()
+        # Litecoin has RBF disabled
+        # self.run_rbf_opt_in_test()
 
     # Check that the opt-in-rbf flag works properly, for sent and received
     # transactions.

@@ -1,11 +1,19 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2018 The Litecoin Core developers
+=======
+# Copyright (c) 2018 The Bitcoin Core developers
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the wallet balance RPC methods."""
 from decimal import Decimal
 
+<<<<<<< HEAD
 from test_framework.test_framework import LitecoinTestFramework
+=======
+from test_framework.test_framework import BitcoinTestFramework
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
@@ -37,10 +45,18 @@ def create_transactions(node, address, amt, fees):
 
     return txs
 
+<<<<<<< HEAD
 class WalletTest(LitecoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
         self.setup_clean_chain = True
+=======
+class WalletTest(BitcoinTestFramework):
+    def set_test_params(self):
+        self.num_nodes = 2
+        self.setup_clean_chain = True
+        self.extra_args = [["-mempoolreplacement=1"], ["-mempoolreplacement=1"]]
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
     def skip_test_if_missing_module(self):
         self.skip_if_no_wallet()
@@ -67,7 +83,11 @@ class WalletTest(LitecoinTestFramework):
         assert_equal(self.nodes[0].getbalance("*", 1, True), 50)
         assert_equal(self.nodes[0].getbalance(minconf=1), 50)
 
+<<<<<<< HEAD
         # Send 40 LTC from 0 to 1 and 60 LTC from 1 to 0.
+=======
+        # Send 40 BTC from 0 to 1 and 60 BTC from 1 to 0.
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         txs = create_transactions(self.nodes[0], self.nodes[1].getnewaddress(), 40, [Decimal('0.01')])
         self.nodes[0].sendrawtransaction(txs[0]['hex'])
         self.nodes[1].sendrawtransaction(txs[0]['hex'])  # sending on both nodes is faster than waiting for propagation
@@ -129,6 +149,7 @@ class WalletTest(LitecoinTestFramework):
         # getbalance with minconf=2 will show the new balance.
         assert_equal(self.nodes[1].getbalance(minconf=2), Decimal('0'))
 
+<<<<<<< HEAD
         # check mempool transactions count for wallet unconfirmed balance after
         # dynamically loading the wallet.
         before = self.nodes[1].getunconfirmedbalance()
@@ -141,5 +162,7 @@ class WalletTest(LitecoinTestFramework):
         assert_equal(before + Decimal('0.1'), after)
 
 
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 if __name__ == '__main__':
     WalletTest().main()

@@ -17,7 +17,13 @@ from test_framework.script import CScript, OP_TRUE, OP_DROP
 from test_framework.test_framework import LitecoinTestFramework
 from test_framework.util import assert_equal, get_bip9_status, satoshi_round, sync_blocks, wait_until
 
+<<<<<<< HEAD
 # TestP2PConn: A peer we use to send messages to litecoind, and store responses.
+=======
+VB_TOP_BITS = 0x20000000
+
+# TestP2PConn: A peer we use to send messages to bitcoind, and store responses.
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 class TestP2PConn(P2PInterface):
     def __init__(self):
         super().__init__()
@@ -109,7 +115,7 @@ class CompactBlocksTest(LitecoinTestFramework):
         tip = node.getbestblockhash()
         mtp = node.getblockheader(tip)['mediantime']
         block = create_block(int(tip, 16), create_coinbase(height + 1), mtp + 1)
-        block.nVersion = 4
+        block.nVersion = VB_TOP_BITS
         if segwit:
             add_witness_commitment(block)
         block.solve()

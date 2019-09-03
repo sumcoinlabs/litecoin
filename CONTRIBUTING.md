@@ -14,25 +14,37 @@ purposes. As such there are repository "maintainers" who are responsible for
 merging pull requests as well as a "lead maintainer" who is responsible for the
 release cycle, overall merging, moderation and appointment of maintainers.
 
+<<<<<<< HEAD
 If you're looking for somewhere to start contributing, check out the
 [good first issue](https://github.com/litecoin/litecoin/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 list.
 
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 Communication Channels
 ----------------------
 
 Most communication about Litecoin Core development happens on IRC, in the
+<<<<<<< HEAD
 #litecoin-core-dev channel on Freenode. The easiest way to participate on IRC is
 with the web client, [webchat.freenode.net](https://webchat.freenode.net/). Chat
 history logs can be found
 on [http://www.erisian.com.au/litecoin-core-dev/](http://www.erisian.com.au/litecoin-core-dev/)
 and [http://gnusha.org/litecoin-core-dev/](http://gnusha.org/litecoin-core-dev/).
+=======
+#litecoin-dev channel on Freenode. The easiest way to participate on IRC is
+with the web client, [webchat.freenode.net](https://webchat.freenode.net/).
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 Discussion about code base improvements happens in GitHub issues and on pull
 requests.
 
 The developer
+<<<<<<< HEAD
 [mailing list](https://lists.linuxfoundation.org/mailman/listinfo/litecoin-dev)
+=======
+[mailing list](https://groups.google.com/forum/#!forum/litecoin-dev)
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 should be used to discuss complicated or controversial changes before working on
 a patch set.
 

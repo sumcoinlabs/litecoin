@@ -115,7 +115,11 @@ static bool AppInit(int argc, char* argv[])
         // Error out when loose non-argument tokens are encountered on command line
         for (int i = 1; i < argc; i++) {
             if (!IsSwitchChar(argv[i][0])) {
+<<<<<<< HEAD
                 tfm::format(std::cerr, "Error: Command line contains unexpected token '%s', see litecoind -h for a list of options.\n", argv[i]);
+=======
+                fprintf(stderr, "Error: Command line contains unexpected token '%s', see litecoind -h for a list of options.\n", argv[i]);
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
                 return false;
             }
         }
@@ -147,7 +151,11 @@ static bool AppInit(int argc, char* argv[])
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 #endif
+<<<<<<< HEAD
             tfm::format(std::cout, "Litecoin server starting\n");
+=======
+            fprintf(stdout, "Litecoin server starting\n");
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
             // Daemonize
             if (daemon(1, 0)) { // don't chdir (1), do close FDs (0)

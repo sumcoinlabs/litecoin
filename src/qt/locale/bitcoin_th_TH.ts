@@ -158,6 +158,17 @@
         <translation>&amp;เปลี่ยนรหัสผ่าน...</translation>
     </message>
     <message>
+<<<<<<< HEAD
+=======
+        <source>&amp;Sending addresses...</source>
+        <translation>&amp;ที่เก็บเงิน ที่จะส่ง litecoin</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>&amp;ที่เก็บเงิน ที่จะรับ litecoin</translation>
+    </message>
+    <message>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Open &amp;URI...</source>
         <translation>เปิด &amp;URI</translation>
     </message>
@@ -192,6 +203,13 @@
     <message>
         <source>Litecoin</source>
         <translation>Litecoin</translation>
+<<<<<<< HEAD
+=======
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>กระเป๋าเงิน</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Send</source>
@@ -304,10 +322,13 @@
     <message>
         <source>Show the %1 help message to get a list with possible Litecoin command-line options</source>
         <translation>แสดง %1 ข้อความช่วยเหลือ เพื่อแสดงรายการ ตัวเลือกที่เป็นไปได้สำหรับ Litecoin command-line</translation>
+<<<<<<< HEAD
     </message>
     <message>
         <source>&amp;Window</source>
         <translation>&amp;วันโดว์</translation>
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>%1 client</source>

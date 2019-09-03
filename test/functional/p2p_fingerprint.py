@@ -30,6 +30,9 @@ class P2PFingerprintTest(LitecoinTestFramework):
         self.setup_clean_chain = True
         self.num_nodes = 1
 
+    def skip_test_if_missing_module(self):
+        self.skip_if_no_wallet()
+
     # Build a chain of blocks on top of given one
     def build_chain(self, nblocks, prev_hash, prev_height, prev_median_time):
         blocks = []
@@ -37,6 +40,7 @@ class P2PFingerprintTest(LitecoinTestFramework):
             coinbase = create_coinbase(prev_height + 1)
             block_time = prev_median_time + 1
             block = create_block(int(prev_hash, 16), coinbase, block_time)
+            block.nVersion = 0x20000000
             block.solve()
 
             blocks.append(block)

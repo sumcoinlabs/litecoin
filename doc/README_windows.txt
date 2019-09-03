@@ -19,5 +19,9 @@ depending on the speed of your computer and network connection, the synchronizat
 process can take anywhere from a few hours to a day or more.
 
 See the litecoin wiki at:
+<<<<<<< HEAD
   https://en.litecoin.it/wiki/Main_Page
+=======
+  https://litecoin.info/
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 for more help and information.

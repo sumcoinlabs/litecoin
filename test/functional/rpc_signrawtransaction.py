@@ -20,6 +20,9 @@ class SignRawTransactionsTest(LitecoinTestFramework):
     def skip_test_if_missing_module(self):
         self.skip_if_no_wallet()
 
+    def skip_test_if_missing_module(self):
+        self.skip_if_no_wallet()
+
     def successful_signing_test(self):
         """Create and sign a valid raw transaction with one input.
 
@@ -52,6 +55,14 @@ class SignRawTransactionsTest(LitecoinTestFramework):
         """Test correct error reporting when trying to sign a locked output"""
         self.nodes[0].encryptwallet("password")
 
+        rawTx = '020000000156b958f78e3f24e0b2f4e4db1255426b0902027cb37e3ddadb52e37c3557dddb0000000000ffffffff01c0a6b929010000001600149a2ee8c77140a053f36018ac8124a6ececc1668a00000000'
+
+        assert_raises_rpc_error(-13, "Please enter the wallet passphrase with walletpassphrase first", self.nodes[0].signrawtransactionwithwallet, rawTx)
+
+    def test_with_lock_outputs(self):
+        """Test correct error reporting when trying to sign a locked output"""
+        self.nodes[0].encryptwallet("password")
+        self.restart_node(0)
         rawTx = '020000000156b958f78e3f24e0b2f4e4db1255426b0902027cb37e3ddadb52e37c3557dddb0000000000ffffffff01c0a6b929010000001600149a2ee8c77140a053f36018ac8124a6ececc1668a00000000'
 
         assert_raises_rpc_error(-13, "Please enter the wallet passphrase with walletpassphrase first", self.nodes[0].signrawtransactionwithwallet, rawTx)
@@ -172,7 +183,10 @@ class SignRawTransactionsTest(LitecoinTestFramework):
     def run_test(self):
         self.successful_signing_test()
         self.script_verification_error_test()
+<<<<<<< HEAD
         self.witness_script_test()
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         self.test_with_lock_outputs()
 
 

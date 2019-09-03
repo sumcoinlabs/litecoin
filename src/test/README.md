@@ -40,7 +40,11 @@ sense to simply use this framework rather than require developers to
 configure some other framework (we want as few impediments to creating
 unit tests as possible).
 
+<<<<<<< HEAD
 The build system is setup to compile an executable called `test_litecoin`
+=======
+The build system is setup to compile an executable called "test_litecoin"
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 that runs all of the unit tests.  The main source file is called
 test_litecoin.cpp. To add a new unit test file to our test suite you need
 to add the file to `src/Makefile.test.include`. The pattern is to create

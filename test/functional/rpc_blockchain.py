@@ -49,9 +49,17 @@ class BlockchainTest(LitecoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
+<<<<<<< HEAD
 
     def run_test(self):
         self.mine_chain()
+=======
+
+    def skip_test_if_missing_module(self):
+        self.skip_if_no_wallet()
+
+    def run_test(self):
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         self.restart_node(0, extra_args=['-stopatheight=207', '-prune=1'])  # Set extra args with pruning after rescan is complete
 
         self._test_getblockchaininfo()
@@ -287,6 +295,7 @@ class BlockchainTest(LitecoinTestFramework):
 
         def solve_and_send_block(prevhash, height, time):
             b = create_block(prevhash, create_coinbase(height), time)
+            b.nVersion = 0x20000000
             b.solve()
             node.p2p.send_message(msg_block(b))
             node.p2p.sync_with_ping()

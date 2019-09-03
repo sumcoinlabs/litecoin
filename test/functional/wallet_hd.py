@@ -23,6 +23,16 @@ class WalletHDTest(LitecoinTestFramework):
 
     def skip_test_if_missing_module(self):
         self.skip_if_no_wallet()
+<<<<<<< HEAD
+=======
+
+    def run_test(self):
+        # Make sure can't switch off usehd after wallet creation
+        self.stop_node(1)
+        self.nodes[1].assert_start_raises_init_error(['-usehd=0'], "Error: Error loading : You can't disable HD on an already existing HD wallet")
+        self.start_node(1)
+        connect_nodes_bi(self.nodes, 0, 1)
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
     def run_test(self):
         # Make sure we use hd, keep masterkeyid

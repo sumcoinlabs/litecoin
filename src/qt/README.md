@@ -50,7 +50,11 @@ Various dialogs, e.g. to open a URL. Inherit from [QDialog](https://doc.qt.io/qt
 
 ### paymentserver.(h/cpp)
 
+<<<<<<< HEAD
 Used to process BIP21 and BIP70 (see https://github.com/litecoin/litecoin/pull/11622) payment URI / requests. Also handles URI based application switching (e.g. when following a litecoin:... link from a browser).
+=======
+Used to process BIP21 and BIP70 (see https://github.com/bitcoin/bitcoin/pull/11622) payment URI / requests. Also handles URI based application switching (e.g. when following a litecoin:... link from a browser).
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 ### walletview.(h/cpp)
 

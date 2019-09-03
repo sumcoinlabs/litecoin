@@ -12,7 +12,11 @@ static const unsigned char pchIPv4[12] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0xff, 0
 static const unsigned char pchOnionCat[] = {0xFD,0x87,0xD8,0x7E,0xEB,0x43};
 
 // 0xFD + sha256("litecoin")[0:5]
+<<<<<<< HEAD
 static const unsigned char g_internal_prefix[] = { 0xFD, 0x6B, 0x88, 0xC0, 0x87, 0x24 };
+=======
+static const unsigned char g_internal_prefix[] = { 0xFD, 0x6C, 0xE9, 0xFE, 0x45, 0x49 };
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 CNetAddr::CNetAddr()
 {

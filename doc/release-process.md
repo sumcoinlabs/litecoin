@@ -5,8 +5,12 @@ Before every release candidate:
 
 * Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/litecoin/litecoin/blob/master/doc/translation_process.md#synchronising-translations).
 
+<<<<<<< HEAD
 * Update manpages, see [gen-manpages.sh](https://github.com/litecoin/litecoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
 * Update release candidate version in `configure.ac` (`CLIENT_VERSION_RC`)
+=======
+* Update manpages, see [gen-manpages.sh](https://github.com/litecoin-project/litecoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 Before every minor and major release:
 
@@ -35,10 +39,17 @@ If you're using the automated script (found in [contrib/gitian-build.py](/contri
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
+<<<<<<< HEAD
     git clone https://github.com/litecoin-core/gitian.sigs.git
     git clone https://github.com/litecoin-core/litecoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
     git clone https://github.com/litecoin/litecoin.git
+=======
+    git clone https://github.com/litecoin-project/gitian.sigs.ltc.git
+    git clone https://github.com/litecoin-project/litecoin-detached-sigs.git
+    git clone https://github.com/devrandom/gitian-builder.git
+    git clone https://github.com/litecoin-project/litecoin.git
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 ### Litecoin maintainers/release engineers, suggestion for writing release notes
 
@@ -70,9 +81,9 @@ Setup Gitian descriptors:
     git checkout v${VERSION}
     popd
 
-Ensure your gitian.sigs are up-to-date if you wish to gverify your builds against other Gitian signatures.
+Ensure your gitian.sigs.ltc are up-to-date if you wish to gverify your builds against other Gitian signatures.
 
-    pushd ./gitian.sigs
+    pushd ./gitian.sigs.ltc
     git pull
     popd
 
@@ -116,7 +127,11 @@ The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
 ### Build and sign Litecoin Core for Linux, Windows, and macOS:
 
+    export GITIAN_THREADS=2
+    export GITIAN_MEMORY=3000
+    
     pushd ./gitian-builder
+<<<<<<< HEAD
     ./bin/gbuild --num-make 2 --memory 3000 --commit litecoin=v${VERSION} ../litecoin/contrib/gitian-descriptors/gitian-linux.yml
     ./bin/gsign --signer "$SIGNER" --release ${VERSION}-linux --destination ../gitian.sigs/ ../litecoin/contrib/gitian-descriptors/gitian-linux.yml
     mv build/out/litecoin-*.tar.gz build/out/src/litecoin-*.tar.gz ../
@@ -128,6 +143,19 @@ The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
     ./bin/gbuild --num-make 2 --memory 3000 --commit litecoin=v${VERSION} ../litecoin/contrib/gitian-descriptors/gitian-osx.yml
     ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../litecoin/contrib/gitian-descriptors/gitian-osx.yml
+=======
+    ./bin/gbuild --num-make $GITIAN_THREADS --memory $GITIAN_MEMORY --commit litecoin=v${VERSION} ../litecoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-linux --destination ../gitian.sigs.ltc/ ../litecoin/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/litecoin-*.tar.gz build/out/src/litecoin-*.tar.gz ../
+
+    ./bin/gbuild --num-make $GITIAN_THREADS --memory $GITIAN_MEMORY --commit litecoin=v${VERSION} ../litecoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-unsigned --destination ../gitian.sigs.ltc/ ../litecoin/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/litecoin-*-win-unsigned.tar.gz inputs/litecoin-win-unsigned.tar.gz
+    mv build/out/litecoin-*.zip build/out/litecoin-*.exe ../
+
+    ./bin/gbuild --num-make $GITIAN_THREADS --memory $GITIAN_MEMORY --commit litecoin=v${VERSION} ../litecoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.ltc/ ../litecoin/contrib/gitian-descriptors/gitian-osx.yml
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     mv build/out/litecoin-*-osx-unsigned.tar.gz inputs/litecoin-osx-unsigned.tar.gz
     mv build/out/litecoin-*.tar.gz build/out/litecoin-*.dmg ../
     popd
@@ -138,7 +166,11 @@ Build output expected:
   2. linux 32-bit and 64-bit dist tarballs (`litecoin-${VERSION}-linux[32|64].tar.gz`)
   3. windows 32-bit and 64-bit unsigned installers and dist zips (`litecoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `litecoin-${VERSION}-win[32|64].zip`)
   4. macOS unsigned installer and dist tarball (`litecoin-${VERSION}-osx-unsigned.dmg`, `litecoin-${VERSION}-osx64.tar.gz`)
+<<<<<<< HEAD
   5. Gitian signatures (in `gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
+=======
+  5. Gitian signatures (in `gitian.sigs.ltc/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
@@ -147,16 +179,22 @@ Add other gitian builders keys to your gpg keyring, and/or refresh keys: See `..
 Verify the signatures
 
     pushd ./gitian-builder
+<<<<<<< HEAD
     ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../litecoin/contrib/gitian-descriptors/gitian-linux.yml
     ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../litecoin/contrib/gitian-descriptors/gitian-win.yml
     ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../litecoin/contrib/gitian-descriptors/gitian-osx.yml
+=======
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-linux ../litecoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-unsigned ../litecoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-unsigned ../litecoin/contrib/gitian-descriptors/gitian-osx.yml
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     popd
 
 ### Next steps:
 
-Commit your signature to gitian.sigs:
+Commit your signature to gitian.sigs.ltc:
 
-    pushd gitian.sigs
+    pushd gitian.sigs.ltc
     git add ${VERSION}-linux/"${SIGNER}"
     git add ${VERSION}-win-unsigned/"${SIGNER}"
     git add ${VERSION}-osx-unsigned/"${SIGNER}"
@@ -198,14 +236,23 @@ Codesigner only: Commit the detached codesign payloads:
 Non-codesigners: wait for Windows/macOS detached signatures:
 
 - Once the Windows/macOS builds each have 3 matching signatures, they will be signed with their respective release keys.
+<<<<<<< HEAD
 - Detached signatures will then be committed to the [litecoin-detached-sigs](https://github.com/litecoin-core/litecoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+=======
+- Detached signatures will then be committed to the [litecoin-detached-sigs](https://github.com/litecoin-project/litecoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 Create (and optionally verify) the signed macOS binary:
 
     pushd ./gitian-builder
     ./bin/gbuild -i --commit signature=v${VERSION} ../litecoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+<<<<<<< HEAD
     ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../litecoin/contrib/gitian-descriptors/gitian-osx-signer.yml
     ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../litecoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+=======
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-signed --destination ../gitian.sigs.ltc/ ../litecoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../litecoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     mv build/out/litecoin-osx-signed.dmg ../litecoin-${VERSION}-osx.dmg
     popd
 
@@ -213,19 +260,24 @@ Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
     ./bin/gbuild -i --commit signature=v${VERSION} ../litecoin/contrib/gitian-descriptors/gitian-win-signer.yml
+<<<<<<< HEAD
     ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../litecoin/contrib/gitian-descriptors/gitian-win-signer.yml
     ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../litecoin/contrib/gitian-descriptors/gitian-win-signer.yml
+=======
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-signed --destination ../gitian.sigs.ltc/ ../litecoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-signed ../litecoin/contrib/gitian-descriptors/gitian-win-signer.yml
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     mv build/out/litecoin-*win64-setup.exe ../litecoin-${VERSION}-win64-setup.exe
     mv build/out/litecoin-*win32-setup.exe ../litecoin-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed macOS/Windows binaries:
 
-    pushd gitian.sigs
+    pushd gitian.sigs.ltc
     git add ${VERSION}-osx-signed/"${SIGNER}"
     git add ${VERSION}-win-signed/"${SIGNER}"
     git commit -a
-    git push  # Assuming you can push to the gitian.sigs tree
+    git push  # Assuming you can push to the gitian.sigs.ltc tree
     popd
 
 ### After 3 or more people have gitian-built and their results match:
@@ -264,13 +316,15 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
+<<<<<<< HEAD
 - Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the litecoin.org server
   into `/var/www/bin/litecoin-core-${VERSION}`
+=======
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the litecoin.org server.
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
-- A `.torrent` will appear in the directory after a few minutes. Optionally help seed this torrent. To get the `magnet:` URI use:
-```bash
-transmission-show -m <torrent file>
 ```
+<<<<<<< HEAD
 Insert the magnet URI into the announcement sent to mailing lists. This permits
 people without access to `litecoin.org` to download the binary distribution.
 Also put it into the `optional_magnetlink:` slot in the YAML file for
@@ -290,6 +344,9 @@ litecoin.org (see below for litecoin.org update instructions).
 
   - After the pull request is merged, the website will automatically show the newest version within 15 minutes, as well
     as update the OS download links. Ping @saivann/@harding (saivann/harding on Freenode) in case anything goes wrong
+=======
+- Update litecoin.org version
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 - Update other repositories and websites for new version
 
@@ -301,6 +358,7 @@ litecoin.org (see below for litecoin.org update instructions).
 
       - Notify BlueMatt so that he can start building [the PPAs](https://launchpad.net/~litecoin/+archive/ubuntu/litecoin)
 
+<<<<<<< HEAD
       - Create a new branch for the major release "0.xx" (used to build the snap package)
 
       - Notify MarcoFalke so that he can start building the snap package
@@ -330,9 +388,22 @@ litecoin.org (see below for litecoin.org update instructions).
   - litecoin-dev and litecoin-core-dev mailing list
 
   - Litecoin Core announcements list https://litecoincore.org/en/list/announcements/join/
+=======
+  - litecoin-dev and litecoin-dev mailing list
+
+  - blog.litecoin.org blog post
+
+  - Update title of #litecoin and #litecoin-dev on Freenode IRC
+
+  - Optionally twitter, reddit /r/Litecoin, ... but this will usually sort out itself
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
   - Update title of #litecoin on Freenode IRC
 
+<<<<<<< HEAD
   - Optionally twitter, reddit /r/Litecoin, ... but this will usually sort out itself
+=======
+  - Create a [new GitHub release](https://github.com/litecoin-project/litecoin/releases/new) with a link to the archived release notes.
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
   - Celebrate

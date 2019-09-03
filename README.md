@@ -1,9 +1,15 @@
 Litecoin Core integration/staging tree
 =====================================
 
+<<<<<<< HEAD
 [![Build Status](https://travis-ci.org/litecoin/litecoin.svg?branch=master)](https://travis-ci.org/litecoin/litecoin)
 
 https://litecoincore.org
+=======
+[![Build Status](https://travis-ci.org/litecoin-project/litecoin.svg?branch=master)](https://travis-ci.org/litecoin-project/litecoin)
+
+https://litecoin.org
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 What is Litecoin?
 ----------------
@@ -15,8 +21,12 @@ out collectively by the network. Litecoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
+<<<<<<< HEAD
 the Litecoin Core software, see https://litecoincore.org/en/download/, or read the
 [original whitepaper](https://litecoincore.org/litecoin.pdf).
+=======
+the Litecoin Core software, see [https://litecoin.org](https://litecoin.org).
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 License
 -------
@@ -28,11 +38,21 @@ Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
+<<<<<<< HEAD
 completely stable. [Tags](https://github.com/litecoin/litecoin/tags) are created
+=======
+completely stable. [Tags](https://github.com/litecoin-project/litecoin/tags) are created
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 regularly to indicate new official, stable release versions of Litecoin Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
 and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).
+
+The developer [mailing list](https://groups.google.com/forum/#!forum/litecoin-dev)
+should be used to discuss complicated or controversial changes before working
+on a patch set.
+
+Developer IRC can be found on Freenode at #litecoin-dev.
 
 Testing
 -------
@@ -65,13 +85,21 @@ not straightforward.
 Translations
 ------------
 
+<<<<<<< HEAD
 Changes to translations as well as new translations can be submitted to
 [Litecoin Core's Transifex page](https://www.transifex.com/projects/p/litecoin/).
+=======
+We only accept translation fixes that are submitted through [Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/bitcoin/).
+Translations are converted to Litecoin periodically.
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 Translations are periodically pulled from Transifex and merged into the git repository. See the
 [translation process](doc/translation_process.md) for details on how this works.
 
 **Important**: We do not accept translation changes as GitHub pull requests because the next
 pull from Transifex would automatically overwrite them again.
+<<<<<<< HEAD
 
 Translators should also subscribe to the [mailing list](https://groups.google.com/forum/#!forum/litecoin-translators).
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5

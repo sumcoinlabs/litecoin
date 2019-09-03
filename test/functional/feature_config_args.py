@@ -14,6 +14,12 @@ class ConfArgsTest(LitecoinTestFramework):
         self.setup_clean_chain = True
         self.num_nodes = 1
 
+<<<<<<< HEAD
+=======
+    def skip_test_if_missing_module(self):
+        self.skip_if_no_wallet()
+
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     def test_config_file_parser(self):
         # Assume node is stopped
 
@@ -30,6 +36,7 @@ class ConfArgsTest(LitecoinTestFramework):
         self.nodes[0].assert_start_raises_init_error(expected_msg='Error reading configuration file: parse error on line 1: nono, if you intended to specify a negated option, use nono=1 instead')
 
         with open(inc_conf_file_path, 'w', encoding='utf-8') as conf:
+<<<<<<< HEAD
             conf.write('server=1\nrpcuser=someuser\nrpcpassword=some#pass')
         self.nodes[0].assert_start_raises_init_error(expected_msg='Error reading configuration file: parse error on line 3, using # in rpcpassword can be ambiguous and should be avoided')
 
@@ -47,6 +54,8 @@ class ConfArgsTest(LitecoinTestFramework):
         self.nodes[0].stop_node(expected_stderr='Warning: Section [testnet] is not recognized.' + os.linesep + 'Warning: Section [testnot] is not recognized.')
 
         with open(inc_conf_file_path, 'w', encoding='utf-8') as conf:
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
             conf.write('')  # clear
 
     def run_test(self):

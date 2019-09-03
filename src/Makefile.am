@@ -85,6 +85,7 @@ if BUILD_BITCOIND
   bin_PROGRAMS += litecoind
 endif
 
+<<<<<<< HEAD
 if BUILD_BITCOIN_CLI
   bin_PROGRAMS += litecoin-cli
 endif
@@ -95,6 +96,10 @@ if ENABLE_WALLET
 if BUILD_BITCOIN_WALLET
   bin_PROGRAMS += litecoin-wallet
 endif
+=======
+if BUILD_BITCOIN_UTILS
+  bin_PROGRAMS += litecoin-cli litecoin-tx
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 endif
 
 .PHONY: FORCE check-symbols check-security
@@ -330,9 +335,15 @@ liblitecoin_wallet_tool_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 # crypto primitives library
+<<<<<<< HEAD
 crypto_liblitecoin_crypto_base_a_CPPFLAGS = $(AM_CPPFLAGS)
 crypto_liblitecoin_crypto_base_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 crypto_liblitecoin_crypto_base_a_SOURCES = \
+=======
+crypto_libbitcoin_crypto_base_a_CPPFLAGS = $(AM_CPPFLAGS) $(SSL_CFLAGS)
+crypto_libbitcoin_crypto_base_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libbitcoin_crypto_base_a_SOURCES = \
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
   crypto/aes.cpp \
   crypto/aes.h \
   crypto/chacha20.h \
@@ -344,6 +355,9 @@ crypto_liblitecoin_crypto_base_a_SOURCES = \
   crypto/hmac_sha512.h \
   crypto/ripemd160.cpp \
   crypto/ripemd160.h \
+  crypto/scrypt.cpp \
+  crypto/scrypt-sse2.cpp \
+  crypto/scrypt.h \
   crypto/sha1.cpp \
   crypto/sha1.h \
   crypto/sha256.cpp \
@@ -481,14 +495,23 @@ liblitecoin_cli_a_SOURCES = \
 nodist_liblitecoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
+<<<<<<< HEAD
 # litecoind binary #
 litecoind_SOURCES = litecoind.cpp
+=======
+# bitcoind binary #
+litecoind_SOURCES = bitcoind.cpp
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 litecoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 litecoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 litecoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
+<<<<<<< HEAD
 litecoind_SOURCES += litecoind-res.rc
+=======
+litecoind_SOURCES += bitcoind-res.rc
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 endif
 
 litecoind_LDADD = \
@@ -506,16 +529,27 @@ litecoind_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
+<<<<<<< HEAD
 litecoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
 # litecoin-cli binary #
 litecoin_cli_SOURCES = litecoin-cli.cpp
+=======
+litecoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+
+# bitcoin-cli binary #
+litecoin_cli_SOURCES = bitcoin-cli.cpp
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 litecoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
 litecoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 litecoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
+<<<<<<< HEAD
 litecoin_cli_SOURCES += litecoin-cli-res.rc
+=======
+litecoin_cli_SOURCES += bitcoin-cli-res.rc
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 endif
 
 litecoin_cli_LDADD = \
@@ -524,17 +558,29 @@ litecoin_cli_LDADD = \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
+<<<<<<< HEAD
 litecoin_cli_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # litecoin-tx binary #
 litecoin_tx_SOURCES = litecoin-tx.cpp
+=======
+litecoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+#
+
+# bitcoin-tx binary #
+litecoin_tx_SOURCES = bitcoin-tx.cpp
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 litecoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 litecoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 litecoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
+<<<<<<< HEAD
 litecoin_tx_SOURCES += litecoin-tx-res.rc
+=======
+litecoin_tx_SOURCES += bitcoin-tx-res.rc
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 endif
 
 litecoin_tx_LDADD = \
@@ -583,10 +629,17 @@ if GLIBC_BACK_COMPAT
   liblitecoinconsensus_la_SOURCES += compat/glibc_compat.cpp
 endif
 
+<<<<<<< HEAD
 liblitecoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
 liblitecoinconsensus_la_LIBADD = $(LIBSECP256K1)
 liblitecoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
 liblitecoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+=======
+libbitcoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
+libbitcoinconsensus_la_LIBADD = $(LIBSECP256K1) $(CRYPTO_LIBS)
+libbitcoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL $(SSL_CFLAGS)
+libbitcoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 endif
 #

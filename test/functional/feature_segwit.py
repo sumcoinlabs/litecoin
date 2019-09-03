@@ -50,17 +50,29 @@ class SegWitTest(LitecoinTestFramework):
                 "-rpcserialversion=0",
                 "-vbparams=segwit:0:999999999999",
                 "-addresstype=legacy",
+<<<<<<< HEAD
+=======
+                "-deprecatedrpc=addwitnessaddress",
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
             ],
             [
                 "-blockversion=4",
                 "-rpcserialversion=1",
                 "-vbparams=segwit:0:999999999999",
                 "-addresstype=legacy",
+<<<<<<< HEAD
+=======
+                "-deprecatedrpc=addwitnessaddress",
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
             ],
             [
                 "-blockversion=536870915",
                 "-vbparams=segwit:0:999999999999",
                 "-addresstype=legacy",
+<<<<<<< HEAD
+=======
+                "-deprecatedrpc=addwitnessaddress",
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
             ],
         ]
 

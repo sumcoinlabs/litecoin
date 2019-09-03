@@ -68,7 +68,11 @@ from test_framework.util import (
 )
 
 
+<<<<<<< HEAD
 class AddressTypeTest(LitecoinTestFramework):
+=======
+class AddressTypeTest(BitcoinTestFramework):
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     def set_test_params(self):
         self.num_nodes = 6
         self.extra_args = [

@@ -74,6 +74,10 @@
 const int64_t nStartupTime = GetTime();
 
 const char * const BITCOIN_CONF_FILENAME = "litecoin.conf";
+<<<<<<< HEAD:src/util/system.cpp
+=======
+const char * const BITCOIN_PID_FILENAME = "litecoin.pid";
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5:src/util.cpp
 
 ArgsManager gArgs;
 
@@ -793,7 +797,11 @@ static std::string TrimString(const std::string& str, const std::string& pattern
     return str.substr(front, end - front + 1);
 }
 
+<<<<<<< HEAD:src/util/system.cpp
 static bool GetConfigOptions(std::istream& stream, std::string& error, std::vector<std::pair<std::string, std::string>>& options, std::set<std::string>& sections)
+=======
+static bool GetConfigOptions(std::istream& stream, std::string& error, std::vector<std::pair<std::string, std::string>> &options)
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5:src/util.cpp
 {
     std::string str, prefix;
     std::string::size_type pos;
@@ -808,9 +816,13 @@ static bool GetConfigOptions(std::istream& stream, std::string& error, std::vect
         str = TrimString(str, pattern);
         if (!str.empty()) {
             if (*str.begin() == '[' && *str.rbegin() == ']') {
+<<<<<<< HEAD:src/util/system.cpp
                 const std::string section = str.substr(1, str.size() - 2);
                 sections.insert(section);
                 prefix = section + '.';
+=======
+                prefix = str.substr(1, str.size() - 2) + '.';
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5:src/util.cpp
             } else if (*str.begin() == '-') {
                 error = strprintf("parse error on line %i: %s, options in configuration file must be specified without leading -", linenr, str);
                 return false;
@@ -822,9 +834,12 @@ static bool GetConfigOptions(std::istream& stream, std::string& error, std::vect
                     return false;
                 }
                 options.emplace_back(name, value);
+<<<<<<< HEAD:src/util/system.cpp
                 if ((pos = name.rfind('.')) != std::string::npos) {
                     sections.insert(name.substr(0, pos));
                 }
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5:src/util.cpp
             } else {
                 error = strprintf("parse error on line %i: %s", linenr, str);
                 if (str.size() >= 2 && str.substr(0, 2) == "no") {
@@ -842,8 +857,12 @@ bool ArgsManager::ReadConfigStream(std::istream& stream, std::string& error, boo
 {
     LOCK(cs_args);
     std::vector<std::pair<std::string, std::string>> options;
+<<<<<<< HEAD:src/util/system.cpp
     m_config_sections.clear();
     if (!GetConfigOptions(stream, error, options, m_config_sections)) {
+=======
+    if (!GetConfigOptions(stream, error, options)) {
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5:src/util.cpp
         return false;
     }
     for (const std::pair<std::string, std::string>& option : options) {
@@ -1207,9 +1226,17 @@ std::string CopyrightHolders(const std::string& strPrefix)
 {
     std::string strCopyrightHolders = strPrefix + strprintf(_(COPYRIGHT_HOLDERS), _(COPYRIGHT_HOLDERS_SUBSTITUTION));
 
+<<<<<<< HEAD:src/util/system.cpp
     // Check for untranslated substitution to make sure Litecoin Core copyright is not removed by accident
     if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("Litecoin Core") == std::string::npos) {
         strCopyrightHolders += "\n" + strPrefix + "The Litecoin Core developers";
+=======
+    // Check for untranslated substitution to make sure Bitcoin Core copyright is not removed by accident
+    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("Bitcoin Core") == std::string::npos) {
+        std::string strYear = strPrefix;
+        strYear.replace(strYear.find("2011"), sizeof("2011")-1, "2009");
+        strCopyrightHolders += "\n" + strYear + "The Bitcoin Core developers";
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5:src/util.cpp
     }
     return strCopyrightHolders;
 }

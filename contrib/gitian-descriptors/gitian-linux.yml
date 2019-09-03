@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 name: "litecoin-linux-0.18"
+=======
+name: "litecoin-linux-0.17"
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 enable_cache: true
 suites:
 - "bionic"
@@ -32,7 +36,11 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
+<<<<<<< HEAD
 - "url": "https://github.com/litecoin/litecoin.git"
+=======
+- "url": "https://github.com/litecoin-project/litecoin.git"
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
   "dir": "litecoin"
 files: []
 script: |
@@ -180,9 +188,20 @@ script: |
     find . -name "lib*.la" -delete
     find . -name "lib*.a" -delete
     rm -rf ${DISTNAME}/lib/pkgconfig
+<<<<<<< HEAD
     find ${DISTNAME}/bin -type f -executable -print0 | xargs -0 -n1 -I{} ../contrib/devtools/split-debug.sh {} {} {}.dbg
     find ${DISTNAME}/lib -type f -print0 | xargs -0 -n1 -I{} ../contrib/devtools/split-debug.sh {} {} {}.dbg
     cp ../doc/README.md ${DISTNAME}/
+=======
+ 
+    # Litecoin: Delete libbitcoin from binary distribution for now, see #192
+    rm -rf ${DISTNAME}/lib/
+    rm -rf ${DISTNAME}/include/
+    # Litecoin: ends
+ 
+    find ${DISTNAME}/bin -type f -executable -exec ../contrib/devtools/split-debug.sh {} {} {}.dbg \;
+    #find ${DISTNAME}/lib -type f -exec ../contrib/devtools/split-debug.sh {} {} {}.dbg \; # Litecoin: see issue 192
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     find ${DISTNAME} -not -name "*.dbg" | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ${OUTDIR}/${DISTNAME}-${i}.tar.gz
     find ${DISTNAME} -name "*.dbg" | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ${OUTDIR}/${DISTNAME}-${i}-debug.tar.gz
     cd ../../

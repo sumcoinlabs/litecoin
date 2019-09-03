@@ -45,6 +45,12 @@ static const CRPCConvertParam vRPCConvertParams[] =
     { "listreceivedbyaddress", 0, "minconf" },
     { "listreceivedbyaddress", 1, "include_empty" },
     { "listreceivedbyaddress", 2, "include_watchonly" },
+<<<<<<< HEAD
+=======
+    { "listreceivedbyaccount", 0, "minconf" },
+    { "listreceivedbyaccount", 1, "include_empty" },
+    { "listreceivedbyaccount", 2, "include_watchonly" },
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     { "listreceivedbylabel", 0, "minconf" },
     { "listreceivedbylabel", 1, "include_empty" },
     { "listreceivedbylabel", 2, "include_watchonly" },

@@ -71,7 +71,11 @@
     </message>
     <message>
         <source>These are your Litecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+<<<<<<< HEAD
         <translation>Това са Вашите Биткойн адреси,благодарение на които ще получавате плащания.Препоръчително е да използвате нови адреси за получаване на всяка транзакция.</translation>
+=======
+        <translation>Това са Вашите Litecoin адреси,благодарение на които ще получавате плащания.Препоръчително е да използвате нови адреси за получаване на всяка транзакция.</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,7 +180,7 @@
         <translation>Потвърдете на шифрирането на портфейла</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LITECOINS&lt;/b&gt;!</source>
         <translation>ВНИМАНИЕ: Ако шифрирате вашият портфейл и изгубите паролата си, &lt;b&gt;ЩЕ ИЗГУБИТЕ ВСИЧКИТЕ СИ БИТКОИНИ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -383,11 +387,19 @@
     </message>
     <message>
         <source>Sign messages with your Litecoin addresses to prove you own them</source>
+<<<<<<< HEAD
         <translation>Пишете съобщения със своя Биткойн адрес за да докажете,че е ваш.</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Litecoin addresses</source>
         <translation>Потвърждаване на съобщения  за да се знае,че са написани с дадените Биткойн адреси.</translation>
+=======
+        <translation>Пишете съобщения със своя Litecoin адрес за да докажете,че е ваш.</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Litecoin addresses</source>
+        <translation>Потвърждаване на съобщения  за да се знае,че са написани с дадените Litecoin адреси.</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;File</source>
@@ -407,7 +419,11 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and litecoin: URIs)</source>
+<<<<<<< HEAD
         <translation>Изискване на плащания(генерира QR кодове и биткойн: URIs)</translation>
+=======
+        <translation>Изискване на плащания(генерира QR кодове и Litecoin: URIs)</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -419,7 +435,11 @@
     </message>
     <message>
         <source>Open a litecoin: URI or payment request</source>
+<<<<<<< HEAD
         <translation>Отворете биткойн: URI  или заявка за плащане</translation>
+=======
+        <translation>Отворете Litecoin: URI  или заявка за плащане</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -463,7 +483,11 @@
     </message>
     <message>
         <source>Show the %1 help message to get a list with possible Litecoin command-line options</source>
+<<<<<<< HEAD
         <translation>Покажи %1 помощно съобщение за да получиш лист с възможни Биткойн команди</translation>
+=======
+        <translation>Покажи %1 помощно съобщение за да получиш лист с възможни Litecoin команди</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>default wallet</source>
@@ -537,7 +561,11 @@
     </message>
     <message>
         <source>A fatal error occurred. Litecoin can no longer continue safely and will quit.</source>
+<<<<<<< HEAD
         <translation>Възникна фатална грешка. Биткойн не може да продължи безопасно и ще се изключи.</translation>
+=======
+        <translation>Възникна фатална грешка. Litecoin не може да продължи безопасно и ще се изключи.</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
 </context>
 <context>
@@ -908,6 +936,7 @@
         <translation>Отваряне на входящия порт чрез &amp;UPnP</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Accept connections from outside.</source>
         <translation>Позволи външни връзки</translation>
     </message>
@@ -918,6 +947,10 @@
     <message>
         <source>Connect to the Litecoin network through a SOCKS5 proxy.</source>
         <translation>Свързване с Биткойн мрежата чрез SOCKS5  прокси.</translation>
+=======
+        <source>Connect to the Litecoin network through a SOCKS5 proxy.</source>
+        <translation>Свързване с Litecoin мрежата чрез SOCKS5  прокси.</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1079,7 +1112,11 @@
     </message>
     <message>
         <source>Cannot start litecoin: click-to-pay handler</source>
+<<<<<<< HEAD
         <translation>Биткойн не можe да се стартира: click-to-pay handler</translation>
+=======
+        <translation>Litecoin не можe да се стартира: click-to-pay handler</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>URI handling</source>
@@ -1161,7 +1198,11 @@
     </message>
     <message>
         <source>Enter a Litecoin address (e.g. %1)</source>
+<<<<<<< HEAD
         <translation>Въведете Биткойн адрес (например: %1)</translation>
+=======
+        <translation>Въведете Litecoin адрес (например: %1)</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>%1 d</source>
@@ -1702,7 +1743,11 @@
     </message>
     <message>
         <source>Warning: Invalid Litecoin address</source>
+<<<<<<< HEAD
         <translation>Внимание: Невалиден Биткойн адрес</translation>
+=======
+        <translation>Внимание: Невалиден Litecoin адрес</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2330,7 +2375,11 @@
     <name>litecoin-core</name>
     <message>
         <source>Litecoin Core</source>
+<<<<<<< HEAD
         <translation>Биткойн ядро</translation>
+=======
+        <translation>Litecoin ядро</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>Do you want to rebuild the block database now?</source>

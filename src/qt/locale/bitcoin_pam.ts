@@ -122,6 +122,13 @@
         <translation>&amp;Alilan ing Passphrase...</translation>
     </message>
     <message>
+<<<<<<< HEAD
+=======
+        <source>&amp;Receiving addresses...</source>
+        <translation>Address king pamag-Tanggap</translation>
+    </message>
+    <message>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Send coins to a Litecoin address</source>
         <translation>Magpadalang barya king Litecoin address</translation>
     </message>
@@ -148,6 +155,13 @@
     <message>
         <source>Litecoin</source>
         <translation>Litecoin</translation>
+<<<<<<< HEAD
+=======
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Wallet</translation>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     </message>
     <message>
         <source>&amp;Show / Hide</source>

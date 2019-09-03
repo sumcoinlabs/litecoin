@@ -111,6 +111,7 @@ class TestNode():
 
     def get_deterministic_priv_key(self):
         """Return a deterministic priv key in base58, that only depends on the node's index"""
+<<<<<<< HEAD
         AddressKeyPair = collections.namedtuple('AddressKeyPair', ['address', 'key'])
         PRIV_KEYS = [
             # address , privkey
@@ -145,6 +146,22 @@ class TestNode():
             self.log.exception("Unable to get memory usage")
             return None
 
+=======
+        PRIV_KEYS = [
+            # adress , privkey
+            ('mjTkW3DjgyZck4KbiRusZsqTgaYTxdSz6z', 'cVpF924EspNh8KjYsfhgY96mmxvT6DgdWiTYMtMjuM74hJaU5psW'),
+            ('msX6jQXvxiNhx3Q62PKeLPrhrqZQdSimTg', 'cUxsWyKyZ9MAQTaAhUQWJmBbSvHMwSmuv59KgxQV7oZQU3PXN3KE'),
+            ('mnonCMyH9TmAsSj3M59DsbH8H63U3RKoFP', 'cTrh7dkEAeJd6b3MRX9bZK8eRmNqVCMH3LSUkE3dSFDyzjU38QxK'),
+            ('mqJupas8Dt2uestQDvV2NH3RU8uZh2dqQR', 'cVuKKa7gbehEQvVq717hYcbE9Dqmq7KEBKqWgWrYBa2CKKrhtRim'),
+            ('msYac7Rvd5ywm6pEmkjyxhbCDKqWsVeYws', 'cQDCBuKcjanpXDpCqacNSjYfxeQj8G6CAtH1Dsk3cXyqLNC4RPuh'),
+            ('n2rnuUnwLgXqf9kk2kjvVm8R5BZK1yxQBi', 'cQakmfPSLSqKHyMFGwAqKHgWUiofJCagVGhiB4KCainaeCSxeyYq'),
+            ('myzuPxRwsf3vvGzEuzPfK9Nf2RfwauwYe6', 'cQMpDLJwA8DBe9NcQbdoSb1BhmFxVjWD5gRyrLZCtpuF9Zi3a9RK'),
+            ('mumwTaMtbxEPUswmLBBN3vM9oGRtGBrys8', 'cSXmRKXVcoouhNNVpcNKFfxsTsToY5pvB9DVsFksF1ENunTzRKsy'),
+            ('mpV7aGShMkJCZgbW7F6iZgrvuPHjZjH9qg', 'cSoXt6tm3pqy43UMabY6eUTmR3eSUYFtB2iNQDGgb3VUnRsQys2k'),
+        ]
+        return PRIV_KEYS[self.index]
+
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     def _node_msg(self, msg: str) -> str:
         """Return a modified msg that identifies this node by its index as a debugging aid."""
         return "[node %d] %s" % (self.index, msg)
@@ -199,9 +216,12 @@ class TestNode():
 
         self.running = True
         self.log.debug("litecoind started, waiting for RPC to come up")
+<<<<<<< HEAD
 
         if self.start_perf:
             self._start_perf()
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
     def wait_for_rpc_connection(self):
         """Sets up an RPC connection to the litecoind process. Returns False if unable to connect."""
@@ -235,10 +255,13 @@ class TestNode():
                     raise
             time.sleep(1.0 / poll_per_s)
         self._raise_assertion_error("Unable to connect to litecoind")
+<<<<<<< HEAD
 
     def generate(self, nblocks, maxtries=1000000):
         self.log.debug("TestNode.generate() dispatches `generate` call to `generatetoaddress`")
         return self.generatetoaddress(nblocks=nblocks, address=self.get_deterministic_priv_key().address, maxtries=maxtries)
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
     def get_wallet_rpc(self, wallet_name):
         if self.use_cli:
@@ -314,6 +337,7 @@ class TestNode():
                 if re.search(re.escape(expected_msg), log, flags=re.MULTILINE) is None:
                     self._raise_assertion_error('Expected message "{}" does not partially match log:\n\n{}\n\n'.format(expected_msg, print_log))
 
+<<<<<<< HEAD
     @contextlib.contextmanager
     def assert_memory_usage_stable(self, *, increase_allowed=0.03):
         """Context manager that allows the user to assert that a node's memory usage (RSS)
@@ -419,6 +443,8 @@ class TestNode():
             report_cmd = "perf report -i {}".format(output_path)
             self.log.info("See perf output by running '{}'".format(report_cmd))
 
+=======
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     def assert_start_raises_init_error(self, extra_args=None, expected_msg=None, match=ErrorMatch.FULL_TEXT, *args, **kwargs):
         """Attempt to start the node and expect it to raise an error.
 
@@ -461,6 +487,17 @@ class TestNode():
                     assert_msg = "litecoind should have exited with expected error " + expected_msg
                 self._raise_assertion_error(assert_msg)
 
+<<<<<<< HEAD
+=======
+    def node_encrypt_wallet(self, passphrase):
+        """"Encrypts the wallet.
+
+        This causes litecoind to shutdown, so this method takes
+        care of cleaning up resources."""
+        self.encryptwallet(passphrase)
+        self.wait_until_stopped()
+
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
     def add_p2p_connection(self, p2p_conn, *, wait_for_verack=True, **kwargs):
         """Add a p2p connection to the node.
 
@@ -543,8 +580,13 @@ class TestNodeCLI():
 
     def send_cli(self, command=None, *args, **kwargs):
         """Run litecoin-cli command. Deserializes returned string as python object."""
+<<<<<<< HEAD
         pos_args = [arg_to_cli(arg) for arg in args]
         named_args = [str(key) + "=" + arg_to_cli(value) for (key, value) in kwargs.items()]
+=======
+        pos_args = [str(arg).lower() if type(arg) is bool else str(arg) for arg in args]
+        named_args = [str(key) + "=" + str(value) for (key, value) in kwargs.items()]
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         assert not (pos_args and named_args), "Cannot use positional arguments and named arguments in the same litecoin-cli call"
         p_args = [self.binary, "-datadir=" + self.datadir] + self.options
         if named_args:

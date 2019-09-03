@@ -38,7 +38,11 @@
   <true/>
 
   <key>CFBundleIdentifier</key>
+<<<<<<< HEAD
   <string>org.litecoinfoundation.Litecoin-Qt</string>
+=======
+  <string>org.litecoin.Litecoin-Qt</string>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -95,6 +99,9 @@
     <string>NSApplication</string>
 
   <key>NSHighResolutionCapable</key>
+    <string>True</string>
+
+  <key>NSRequiresAquaSystemAppearance</key>
     <string>True</string>
 
   <key>NSRequiresAquaSystemAppearance</key>

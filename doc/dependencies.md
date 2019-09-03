@@ -24,10 +24,17 @@ These are the dependencies currently used by Litecoin Core. You can find instruc
 | protobuf | [2.6.1](https://github.com/google/protobuf/releases) |  | No |  |  |
 | Python (tests) |  | [3.5](https://www.python.org/downloads) |  |  |  |
 | qrencode | [3.4.4](https://fukuchi.org/works/qrencode) |  | No |  |  |
+<<<<<<< HEAD
 | Qt | [5.9.7](https://download.qt.io/official_releases/qt/) | [5.5.1](https://github.com/litecoin/litecoin/issues/13478) | No |  |  |
 | XCB |  |  |  |  | [Yes](https://github.com/litecoin/litecoin/blob/master/depends/packages/qt.mk#L87) (Linux only) |
 | xkbcommon |  |  |  |  | [Yes](https://github.com/litecoin/litecoin/blob/master/depends/packages/qt.mk#L86) (Linux only) |
 | ZeroMQ | [4.3.1](https://github.com/zeromq/libzmq/releases) | 4.0.0 | No |  |  |
+=======
+| Qt | [5.9.6](https://download.qt.io/official_releases/qt/) | 5.x | No |  |  |
+| XCB |  |  |  |  | [Yes](https://github.com/bitcoin/bitcoin/blob/master/depends/packages/qt.mk#L87) (Linux only) |
+| xkbcommon |  |  |  |  | [Yes](https://github.com/bitcoin/bitcoin/blob/master/depends/packages/qt.mk#L86) (Linux only) |
+| ZeroMQ | [4.3.1](https://github.com/zeromq/libzmq/releases) |  | No |  |  |
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 | zlib | [1.2.11](https://zlib.net/) |  |  |  | No |
 
 Controlling dependencies

@@ -1,9 +1,15 @@
 Fuzz-testing Litecoin Core
 ==========================
 
+<<<<<<< HEAD
 A special test harness in `src/test/fuzz/` is provided for each fuzz target to
 provide an easy entry point for fuzzers and the like. In this document we'll
 describe how to use it with AFL and libFuzzer.
+=======
+A special test harness `test_litecoin_fuzzy` is provided to provide an easy
+entry point for fuzzers and the like. In this document we'll describe how to
+use it with AFL.
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 ## Preparing fuzzing
 
@@ -49,7 +55,11 @@ To build Litecoin Core using AFL instrumentation (this assumes that the
 ./configure --disable-ccache --disable-shared --enable-tests --enable-fuzz --disable-wallet --disable-bench --with-utils=no --with-daemon=no --with-libs=no --with-gui=no CC=${AFLPATH}/afl-gcc CXX=${AFLPATH}/afl-g++
 export AFL_HARDEN=1
 cd src/
+<<<<<<< HEAD
 make
+=======
+make test/test_litecoin_fuzzy
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 ```
 We disable ccache because we don't want to pollute the ccache with instrumented
 objects, and similarly don't want to use non-instrumented cached objects linked
@@ -58,7 +68,11 @@ in.
 The fuzzing can be sped up significantly (~200x) by using `afl-clang-fast` and
 `afl-clang-fast++` in place of `afl-gcc` and `afl-g++` when compiling. When
 compiling using `afl-clang-fast`/`afl-clang-fast++` the resulting
+<<<<<<< HEAD
 binary will be instrumented in such a way that the AFL
+=======
+`test_litecoin_fuzzy` binary will be instrumented in such a way that the AFL
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 features "persistent mode" and "deferred forkserver" can be used. See
 https://github.com/mcarpenter/afl/tree/master/llvm_mode for details.
 
@@ -83,8 +97,12 @@ found in the `compiler-rt` runtime libraries package).
 To build all fuzz targets with libFuzzer, run
 
 ```
+<<<<<<< HEAD
 ./configure --disable-ccache --disable-wallet --disable-bench --with-utils=no --with-daemon=no --with-libs=no --with-gui=no --enable-fuzz --with-sanitizers=fuzzer,address CC=clang CXX=clang++
 make
+=======
+$AFLPATH/afl-fuzz -i ${AFLIN} -o ${AFLOUT} -m52 -- test/test_litecoin_fuzzy
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 ```
 
 The fuzzer needs some inputs to work on, but the inputs or seeds can be used

@@ -24,6 +24,7 @@ def password_to_hmac(salt, password):
     return m.hexdigest()
 
 def main():
+<<<<<<< HEAD
     parser = ArgumentParser(description='Create login credentials for a JSON-RPC user')
     parser.add_argument('username', help='the username for authentication')
     parser.add_argument('password', help='leave empty to generate a random password or specify "-" to prompt for password', nargs='?')
@@ -41,6 +42,24 @@ def main():
     print('String to be appended to litecoin.conf:')
     print('rpcauth={0}:{1}${2}'.format(args.username, salt, password_hmac))
     print('Your password:\n{0}'.format(args.password))
+=======
+    if len(sys.argv) < 2:
+        sys.stderr.write('Please include username (and an optional password, will generate one if not provided) as an argument.\n')
+        sys.exit(0)
+
+    username = sys.argv[1]
+
+    salt = generate_salt()
+    if len(sys.argv) > 2:
+        password = sys.argv[2]
+    else:
+        password = generate_password()
+    password_hmac = password_to_hmac(salt, password)
+
+    print('String to be appended to litecoin.conf:')
+    print('rpcauth={0}:{1}${2}'.format(username, salt, password_hmac))
+    print('Your password:\n{0}'.format(password))
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 
 if __name__ == '__main__':
     main()

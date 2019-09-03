@@ -22,6 +22,14 @@
 
 #include <cmath>
 
+<<<<<<< HEAD
+=======
+static const uint64_t GB_BYTES = 1000000000LL;
+/* Minimum free space (in GB) needed for data directory */
+constexpr uint64_t BLOCK_CHAIN_SIZE = 22;
+/* Minimum free space (in GB) needed for data directory when pruned; Does not include prune target */
+static const uint64_t CHAIN_STATE_SIZE = 3;
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
 /* Total required space (in GB) depending on user choice (prune, not prune) */
 static uint64_t requiredSpace;
 
@@ -124,8 +132,13 @@ Intro::Intro(QWidget *parent, uint64_t blockchain_size, uint64_t chain_state_siz
 
     ui->lblExplanation1->setText(ui->lblExplanation1->text()
         .arg(tr(PACKAGE_NAME))
+<<<<<<< HEAD
         .arg(m_blockchain_size)
         .arg(2009)
+=======
+        .arg(BLOCK_CHAIN_SIZE)
+        .arg(2011)
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         .arg(tr("Litecoin"))
     );
     ui->lblExplanation2->setText(ui->lblExplanation2->text().arg(tr(PACKAGE_NAME)));

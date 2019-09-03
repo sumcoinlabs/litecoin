@@ -221,7 +221,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LITECOINS&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -237,7 +237,11 @@
     </message>
     <message>
         <location line="-56"/>
+<<<<<<< HEAD
         <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
+=======
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -435,7 +439,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="-1034"/>
+=======
+        <location line="-880"/>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Send coins to a Litecoin address</source>
         <translation>Send coins to a Litecoin address</translation>
     </message>
@@ -465,7 +473,11 @@
         <translation>&amp;Verify message...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="+724"/>
+=======
+        <location line="+570"/>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Litecoin</source>
         <translation>Litecoin</translation>
     </message>
@@ -525,7 +537,11 @@
         <translation>Tabs toolbar</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="-271"/>
+=======
+        <location line="-158"/>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Request payments (generates QR codes and litecoin: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -550,7 +566,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <location line="+540"/>
+=======
+        <location line="+410"/>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>%n active connection(s) to Litecoin network</source>
         <translation>
             <numerusform>%n active connection to Litecoin network</numerusform>
@@ -611,6 +631,7 @@
         <translation>Up to date</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="-657"/>
         <source>&amp;Sending addresses</source>
         <translation type="unfinished"></translation>
@@ -688,6 +709,10 @@
     <message>
         <location line="+12"/>
         <source>Main Window</source>
+=======
+        <location line="-494"/>
+        <source>Show the %1 help message to get a list with possible Litecoin command-line options</source>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -777,7 +802,11 @@
         <translation>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location filename="../litecoin.cpp" line="+392"/>
+=======
+        <location filename="../bitcoin.cpp" line="+529"/>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>A fatal error occurred. Litecoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1135,7 +1164,11 @@
         <translation>Use a custom data directory:</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location filename="../intro.cpp" line="+22"/>
+=======
+        <location filename="../intro.cpp" line="+20"/>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Litecoin</source>
         <translation type="unfinished">Litecoin</translation>
     </message>
@@ -1738,7 +1771,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="-529"/>
+=======
+        <location line="-398"/>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Cannot start litecoin: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1753,7 +1790,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="-53"/>
+=======
+        <location line="-41"/>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>&apos;litecoin://&apos; is not a valid URI. Use &apos;litecoin:&apos; instead.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1912,7 +1953,11 @@
         <translation type="unfinished">Amount</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location filename="../guiutil.cpp" line="+108"/>
+=======
+        <location filename="../guiutil.cpp" line="+115"/>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Enter a Litecoin address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2853,7 +2898,22 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="+112"/>
+=======
+        <location line="+80"/>
+        <location line="+13"/>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for litecoin transactions than the network can process.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>(read the tooltip)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Recommended:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4194,7 +4254,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location line="-170"/>
+=======
+        <location line="-184"/>
+>>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
         <source>Litecoin Core</source>
         <translation type="unfinished">Litecoin Core</translation>
     </message>
