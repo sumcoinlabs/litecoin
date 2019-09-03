@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2018 The Bitcoin Core developers
+// Copyright (c) 2011-2018 The Litecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -36,7 +36,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the Bitcoin Qt UI.
+/** Utility functions used by the Litecoin Qt UI.
  */
 namespace GUIUtil
 {
@@ -50,10 +50,10 @@ namespace GUIUtil
     // Set up widget for address
     void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent);
 
-    // Parse "bitcoin:" URI into recipient object, return true on successful parsing
-    bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out);
-    bool parseBitcoinURI(QString uri, SendCoinsRecipient *out);
-    QString formatBitcoinURI(const SendCoinsRecipient &info);
+    // Parse "litecoin:" URI into recipient object, return true on successful parsing
+    bool parseLitecoinURI(const QUrl &uri, SendCoinsRecipient *out);
+    bool parseLitecoinURI(QString uri, SendCoinsRecipient *out);
+    QString formatLitecoinURI(const SendCoinsRecipient &info);
 
     // Returns true if given address+amount meets "dust" definition
     bool isDust(interfaces::Node& node, const QString& address, const CAmount& amount);
@@ -123,7 +123,7 @@ namespace GUIUtil
     void openDebugLogfile();
 
     // Open the config file
-    bool openBitcoinConf();
+    bool openLitecoinConf();
 
     /** Qt event filter that intercepts ToolTipChange events, and replaces the tooltip with a rich text
       representation if needed. This assures that Qt can word-wrap long tooltip messages.

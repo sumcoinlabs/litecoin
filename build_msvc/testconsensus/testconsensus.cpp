@@ -1,7 +1,7 @@
 #include <iostream>
 
-// bitcoin includes.
-#include <..\src\script\bitcoinconsensus.h>
+// litecoin includes.
+#include <..\src\script\litecoinconsensus.h>
 #include <..\src\primitives\transaction.h>
 #include <..\src\script\script.h>
 #include <..\src\streams.h>
@@ -27,7 +27,7 @@ CMutableTransaction BuildSpendingTransaction(const CScript& scriptSig, const CSc
 
 int main()
 {
-    std::cout << "bitcoinconsensus version: " << bitcoinconsensus_version() << std::endl;
+    std::cout << "litecoinconsensus version: " << litecoinconsensus_version() << std::endl;
 
     CScript pubKeyScript;
     pubKeyScript << OP_1 << OP_0 << OP_1;
@@ -40,8 +40,8 @@ int main()
     CDataStream stream(SER_NETWORK, PROTOCOL_VERSION);
     stream << vanillaSpendTx;
 
-    bitcoinconsensus_error err;
-    auto op0Result = bitcoinconsensus_verify_script_with_amount(pubKeyScript.data(), pubKeyScript.size(), amount, (const unsigned char*)&stream[0], stream.size(), 0, bitcoinconsensus_SCRIPT_FLAGS_VERIFY_ALL, &err);
+    litecoinconsensus_error err;
+    auto op0Result = litecoinconsensus_verify_script_with_amount(pubKeyScript.data(), pubKeyScript.size(), amount, (const unsigned char*)&stream[0], stream.size(), 0, litecoinconsensus_SCRIPT_FLAGS_VERIFY_ALL, &err);
     std::cout << "Op0 result: " << op0Result << ", error code " << err << std::endl;
 
     getchar();
