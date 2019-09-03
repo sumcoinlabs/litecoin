@@ -46,11 +46,11 @@ versions of Tor see [Section 3](#3-automatically-listen-on-tor).*
 
 	HiddenServiceDir /var/lib/tor/litecoin-service/
 <<<<<<< HEAD
-	HiddenServicePort 8333 127.0.0.1:8333
+	HiddenServicePort 9333 127.0.0.1:9333
 	HiddenServicePort 18333 127.0.0.1:18333
 
 The directory can be different of course, but (both) port numbers should be equal to
-your litecoind's P2P listen port (8333 by default).
+your litecoind's P2P listen port (9333 by default).
 =======
 	HiddenServicePort 9333 127.0.0.1:9333
 	HiddenServicePort 19335 127.0.0.1:19335

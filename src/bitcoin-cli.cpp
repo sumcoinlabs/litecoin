@@ -54,7 +54,7 @@ static void SetupCliArgs()
     gArgs.AddArg("-rpcuser=<user>", "Username for JSON-RPC connections", false, OptionsCategory::OPTIONS);
     gArgs.AddArg("-rpcwait", "Wait for RPC server to start", false, OptionsCategory::OPTIONS);
 <<<<<<< HEAD
-    gArgs.AddArg("-rpcwallet=<walletname>", "Send RPC for non-default wallet on RPC server (needs to exactly match corresponding -wallet option passed to litecoind). This changes the RPC endpoint used, e.g. http://127.0.0.1:8332/wallet/<walletname>", false, OptionsCategory::OPTIONS);
+    gArgs.AddArg("-rpcwallet=<walletname>", "Send RPC for non-default wallet on RPC server (needs to exactly match corresponding -wallet option passed to litecoind). This changes the RPC endpoint used, e.g. http://127.0.0.1:9332/wallet/<walletname>", false, OptionsCategory::OPTIONS);
 =======
     gArgs.AddArg("-rpcwallet=<walletname>", "Send RPC for non-default wallet on RPC server (needs to exactly match corresponding -wallet option passed to litecoind)", false, OptionsCategory::OPTIONS);
 >>>>>>> 28c3cad38365b51883be89e7a306ac7eae1d9ba5
